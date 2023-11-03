@@ -3,14 +3,19 @@
 #include <SDL.h>
 #include <string>
 
+using namespace std;
+
 class TextureManager
 {
 public:
-	std::map<std::string, SDL_Texture*> m_textureMap;
+	map<string, SDL_Texture*> m_textureMap;
 	TextureManager();
 	~TextureManager();
 
-	SDL_Texture* Load(const std::string fileName, bool useTransparancy, SDL_Renderer* PRenderer);
-	void Unload(const std::string fileName);
+
+	SDL_Texture* Load(const string fileName, bool useTransparancy, SDL_Renderer* PRenderer);
+
+	void Unload(const string fileName);
+
 };
 

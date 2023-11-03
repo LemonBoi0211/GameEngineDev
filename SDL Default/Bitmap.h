@@ -22,8 +22,6 @@ public:
 
 	void Draw();
 
-	/// <summary>
-	/// Updates the Bitmap logic
-	/// </summary>
+	// Updates the Bitmap logic
 	void Update(); 
 };

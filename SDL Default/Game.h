@@ -35,9 +35,10 @@ public:
 	~Game();
 	
 	void SetDisplayColour(Uint8 R, Uint8 G, Uint8 B, Uint8 A);
+	void UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour);
+
 	void Update();
 	void CheckEvents();
-	void UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour);
 	void Run();
 };
 

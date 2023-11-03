@@ -3,6 +3,7 @@
 #include "Input.h"
 #include "Bitmap.h"
 #include <iostream>
+#include <SDL_ttf.h>
 
 
 	Game::Game()
@@ -55,7 +56,6 @@
 		m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15);
 		m_pBigFont = TTF_OpenFont("assets/DejaVuSans.ttf", 50);
 
-		
 	}
 
 	void Game::UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour) 

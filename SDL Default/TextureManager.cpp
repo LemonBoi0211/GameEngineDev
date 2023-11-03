@@ -1,6 +1,6 @@
 #include "TextureManager.h"
 
-
+using namespace std;
 
 TextureManager::TextureManager()
 {
@@ -16,7 +16,7 @@ TextureManager::~TextureManager()
 	}
 }
 
-void TextureManager::Unload(const std::string fileName)
+void TextureManager::Unload(const string fileName)
 {
 	auto searchResult = m_textureMap.find(fileName);
 	if(searchResult != m_textureMap.end())
@@ -27,7 +27,7 @@ void TextureManager::Unload(const std::string fileName)
 	}
 }
 
-SDL_Texture* TextureManager::Load(const std::string fileName, bool useTransparancy, SDL_Renderer* PRenderer)
+SDL_Texture* TextureManager::Load(const string fileName, bool useTransparancy, SDL_Renderer* PRenderer)
 {
 	SDL_Texture* m_pbitmapTexture = nullptr;
 	
@@ -66,3 +66,4 @@ SDL_Texture* TextureManager::Load(const std::string fileName, bool useTransparan
 	}
 	return m_pbitmapTexture;
 }
+
