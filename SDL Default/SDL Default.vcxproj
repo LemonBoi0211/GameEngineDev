@@ -87,11 +87,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Administrator\OneDrive - University of Suffolk\Desktop\S252884\GameEngineDev\GameEngineDev\Libraries\SDL2-2.28.3\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Administrator\OneDrive - University of Suffolk\Desktop\S252884\GameEngineDev\Libraries\SDL2-2.28.3\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\Administrator\OneDrive - University of Suffolk\Desktop\S252884\GameEngineDev\GameEngineDev\Libraries\SDL2-2.28.3\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>C:\Users\Administrator\OneDrive - University of Suffolk\Desktop\S252884\GameEngineDev\GameEngineDev\Libraries\SDL2-2.28.3\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Administrator\OneDrive - University of Suffolk\Desktop\S252884\GameEngineDev\Libraries\SDL2-2.28.3\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\Administrator\OneDrive - University of Suffolk\Desktop\S252884\GameEngineDev\GameEngineDev\Libraries\SDL2-2.28.3\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

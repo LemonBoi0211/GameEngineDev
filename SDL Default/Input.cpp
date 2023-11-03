@@ -82,11 +82,11 @@ void Input::Update(void)
 }
 
 
-
 bool Input::KeyIsPressed(KEYS_PRESSED_LIST key)
 {
 	return m_keysPressed[key];
 }
+
 
 Input::~Input()
 {

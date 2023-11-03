@@ -66,5 +66,3 @@ SDL_Texture* TextureManager::Load(const std::string fileName, bool useTransparan
 	}
 	return m_pbitmapTexture;
 }
-
-

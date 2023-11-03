@@ -1,8 +1,6 @@
 #include "SDL.h"
 #include "game.h"
 
-#include "bitmap.h"
-
 int main(int argc, char* argv[]) 
 {
 	Game* game = new Game();
@@ -17,6 +15,5 @@ int main(int argc, char* argv[])
 
 	return 0;
 }
-
 
 //bitmap ("name", texturemanager(file location), 10,10)
