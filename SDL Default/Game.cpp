@@ -4,6 +4,10 @@
 #include "Bitmap.h"
 #include <iostream>
 #include <SDL_ttf.h>
+#include "imgui.h"
+#include "backends/imgui_impl_sdl.h"
+#include "imgui_sdl.h"
+#include "imgui_internal.h"
 
 
 	Game::Game()
@@ -16,15 +20,19 @@
 		SDL_Init(SDL_INIT_VIDEO);
 		TTF_Init();
 
+		
+
 		//create the window
 		m_Window = SDL_CreateWindow(
 			"My First Window",  //title
-			250,                //initial x pos
-			50,                 //initial y pos
-			640,                //width in pixels
-			480,                //height in pixels
-			0                   //window behaviour flags(ignore atm)
+			SDL_WINDOWPOS_CENTERED,        //initial x pos
+			SDL_WINDOWPOS_CENTERED,        //initial y pos
+			1200,                           //width in pixels
+			1000,                          //height in pixels
+			SDL_WINDOW_RESIZABLE          //window behaviour flags(ignore atm)
+			
 		);
+
 
 		if (!m_Window)
 		{
@@ -48,6 +56,22 @@
 			getchar();
 			return;
 		}
+
+		//ImGUI Setup
+
+		IMGUI_CHECKVERSION();
+		ImGui::CreateContext();
+		SDL_DisplayMode DisplayMode;
+		SDL_GetCurrentDisplayMode(0, &DisplayMode);
+		ImGuiSDL::Initialize(m_Renderer, DisplayMode.w, DisplayMode.h);
+		ImGuiIO& io = ImGui::GetIO();
+		(void)io;
+		io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+		//io.ConfigFlags |= ImGuiConfigFlags_DockingEnabled;
+		io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
+		ImGui::StyleColorsDark();
+
+		ImGui_ImplSDL2_InitForOpenGL(m_Window, SDL_GL_GetCurrentContext());
 
 		//create monster bitmap
 		m_monsterTransKeyed = new Bitmap(m_Renderer, "./assets/monsterTrans.bmp", 300, 100);
@@ -118,7 +142,6 @@
 				if (++b > 255) b = 0;
 			}
 
-
 			SetDisplayColour(r, g, b, a);
 			Update();
 		}
@@ -140,6 +163,10 @@
 
 	void Game::Update()
 	{
+		//clear and create new ImGui frame
+		ImGui::NewFrame();
+		ImGui_ImplSDL2_NewFrame(m_Window);
+
 		//clears display
 		SDL_RenderClear(m_Renderer);
 
@@ -163,6 +190,43 @@
 		string testString = "Test Number: ";
 		testString += to_string(testNumber);
 		UpdateText(testString, 50, 210, m_pBigFont, { 255,255,255 });
+
+		//my imgui test windows
+		ImGui::Begin("Test Window");
+
+		//show controls
+		ImGui::Text("Hover Over Me For Game Controls");
+		if (ImGui::IsItemHovered())
+			ImGui::SetTooltip("WASD to Move, Esc to Quit");
+
+		//button for counting
+		ImGui::AlignTextToFramePadding();
+		ImGui::Text("Hold to Count Fast:");
+		ImGui::SameLine();
+		static int counter = 0;
+		float spacing = ImGui::GetStyle().ItemInnerSpacing.x;
+		ImGui::PushButtonRepeat(true);
+
+		if (ImGui::Button("Press to Count"))
+		{
+			ImGui::SameLine(0.0f, spacing);
+			counter++;
+		}
+
+		ImGui::PopButtonRepeat();
+		ImGui::SameLine();
+		ImGui::Text("%d", counter);
+
+		ImGui::End();
+
+		//imgui demo
+		bool show = true;
+		//ShowExampleAppDockSpace(&show);
+
+		ImGui::ShowDemoWindow(nullptr);
+
+		ImGui::Render();
+		ImGuiSDL::Render(ImGui::GetDrawData());
 
 		//shows what drawn
 		SDL_RenderPresent(m_Renderer);

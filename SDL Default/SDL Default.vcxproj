@@ -19,6 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Libraries\imgui-master\backends\imgui_impl_sdl.cpp" />
+    <ClCompile Include="..\Libraries\imgui-master\imgui.cpp" />
+    <ClCompile Include="..\Libraries\imgui-master\imgui_demo.cpp" />
+    <ClCompile Include="..\Libraries\imgui-master\imgui_draw.cpp" />
+    <ClCompile Include="..\Libraries\imgui-master\imgui_tables.cpp" />
+    <ClCompile Include="..\Libraries\imgui-master\imgui_widgets.cpp" />
+    <ClCompile Include="..\Libraries\imgui_sdl-master\imgui_sdl.cpp" />
     <ClCompile Include="Bitmap.cpp" />
     <ClCompile Include="DebugLogger.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -27,6 +34,10 @@
     <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Libraries\imgui-master\backends\imgui_impl_sdl.h" />
+    <ClInclude Include="..\Libraries\imgui-master\imgui.h" />
+    <ClInclude Include="..\Libraries\imgui-master\imgui_internal.h" />
+    <ClInclude Include="..\Libraries\imgui_sdl-master\imgui_sdl.h" />
     <ClInclude Include="Bitmap.h" />
     <ClInclude Include="DebugLogger.h" />
     <ClInclude Include="Game.h" />
@@ -87,11 +98,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Administrator\OneDrive - University of Suffolk\Desktop\S252884\GameEngineDev\Libraries\SDL2-2.28.3\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Administrator\OneDrive - University of Suffolk\Desktop\S252884\GameEngineDev\Libraries\SDL2-2.28.3\include;../Libraries\imgui_sdl-master;../Libraries\imgui-master;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\Administrator\OneDrive - University of Suffolk\Desktop\S252884\GameEngineDev\Libraries\SDL2-2.28.3\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>C:\Users\Administrator\OneDrive - University of Suffolk\Desktop\S252884\GameEngineDev\Libraries\SDL2-2.28.3\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Administrator\OneDrive - University of Suffolk\Desktop\S252884\GameEngineDev\Libraries\SDL2-2.28.3\include;../Libraries\imgui_sdl-master;../Libraries\imgui-master;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\Administrator\OneDrive - University of Suffolk\Desktop\S252884\GameEngineDev\Libraries\SDL2-2.28.3\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

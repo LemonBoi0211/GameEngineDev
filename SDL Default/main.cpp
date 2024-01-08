@@ -1,5 +1,12 @@
 #include "SDL.h"
-#include "game.h"
+#include <SDL_ttf.h>
+
+#include "imgui.h"
+#include "backends/imgui_impl_sdl.h"
+#include "imgui_sdl.h"
+#include "imgui_internal.h"
+
+#include "Game.h"
 
 int main(int argc, char* argv[]) 
 {
@@ -9,7 +16,7 @@ int main(int argc, char* argv[])
 	{
 		game->Run();
 	}
-	
+
 	delete game; 
 	game = nullptr; 
 
