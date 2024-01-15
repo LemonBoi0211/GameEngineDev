@@ -4,13 +4,13 @@
 #include <SDL.h>
 #include "SDL_ttf.h"
 #include <stdio.h>
+#include <vector>
 
 using namespace std;
 
 struct SDL_Window;
 struct SDL_Renderer;
 class Bitmap;
-
 
 
 class Game 
@@ -29,6 +29,10 @@ private:
 
 	//stuff for display color
 	Uint8 r = 127, g = 127, b = 127, a = 255;
+
+	//stuff for Imgui
+	vector<Bitmap*> content;
+	Bitmap* AssetMousDrag;
 
 public:
 	Game();

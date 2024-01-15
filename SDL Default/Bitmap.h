@@ -20,6 +20,11 @@ public:
 	Bitmap(SDL_Renderer* renderer, std::string fileName,int xpos, int ypos, bool useTransparency = true);
 	~Bitmap();
 
+	SDL_Texture* GetTextureRef() 
+	{
+		return m_pbitmapTexture;
+	}
+
 	void Draw();
 
 	// Updates the Bitmap logic

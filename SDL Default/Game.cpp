@@ -8,6 +8,7 @@
 #include "backends/imgui_impl_sdl.h"
 #include "imgui_sdl.h"
 #include "imgui_internal.h"
+#include <filesystem>
 
 
 	Game::Game()
@@ -73,6 +74,36 @@
 
 		ImGui_ImplSDL2_InitForOpenGL(m_Window, SDL_GL_GetCurrentContext());
 
+		//ImGUI asset window
+		std::string path = "../SDL Default/assets";
+		for (const auto& entry : std::filesystem::directory_iterator(path)) //directory_iterator(path) //recursive_
+		{
+			if (entry.path().extension() == ".bmp" || entry.path().extension() == ".jpg" || entry.path().extension() == ".png")
+			{
+				Bitmap* Asset = new Bitmap(m_Renderer, entry.path().string(), 0, 0, true);
+				content.push_back(Asset);
+
+			}
+			else if (entry.is_directory())
+			{
+				std::cout << "dir " << entry << std::endl;
+			}
+			//debug
+			std::cout << entry.path() << std::endl;
+		}
+
+		//if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && AssetMousDrag != nullptr)
+		//{
+		//	cout << "Test" << endl;
+		//	int x, y;
+		//	SDL_GetMouseState(&x, &y);
+		//	Sprite* s = new Sprite(m_Renderer, AssetMousDrag->FileName, x, y, true, &io, AssetMousDrag->ObjectName);
+		//	//s->Transfrom.ParentSet(GameWindow::Instance().GetHirarcy());
+		//	sceneRoot.Children.push_back(&s->M_Transform);
+
+		//	AssetMousDrag = nullptr;
+		//}
+
 		//create monster bitmap
 		m_monsterTransKeyed = new Bitmap(m_Renderer, "./assets/monsterTrans.bmp", 300, 100);
 
@@ -120,6 +151,21 @@
 			SDL_FreeSurface(surface);
 	}
 
+
+	void Game::SetDisplayColour(Uint8 R, Uint8 G, Uint8 B, Uint8 A)
+	{
+		if (m_Renderer)
+		{
+			int result = SDL_SetRenderDrawColor(
+				m_Renderer,
+				R,
+				G,
+				B,
+				A
+			);
+		}
+	}
+
 	void Game::Run()
 	{
 		while (!Input::Instance()->KeyIsPressed(KEY_ESCAPE))
@@ -144,20 +190,6 @@
 
 			SetDisplayColour(r, g, b, a);
 			Update();
-		}
-	}
-
-	void Game::SetDisplayColour(Uint8 R, Uint8 G, Uint8 B, Uint8 A)
-	{
-		if (m_Renderer)
-		{
-			int result = SDL_SetRenderDrawColor(
-				m_Renderer,
-				R,
-				G,
-				B,
-				A
-			);
 		}
 	}
 
@@ -218,6 +250,36 @@
 		ImGui::Text("%d", counter);
 
 		ImGui::End();
+
+
+		//asset editor gui
+		ImGui::Begin("Editor");
+		ImGui::BeginChild("Content Window", ImVec2(), true);
+		//ImGui::BeginTable("Content browser", 3);
+		
+		for (int i = 0; i < content.size(); i++)
+		{
+			ImGui::PushID(i);
+
+			ImGui::ImageButton((ImTextureID)content[i]->GetTextureRef(), { 100,100 });
+
+
+			//for dragging
+			if (ImGui::BeginDragDropSource())
+			{
+				AssetMousDrag = content[i];
+				ImGui::Image((ImTextureID)content[i]->GetTextureRef(), { 100,100 });
+				ImGui::EndDragDropSource();
+			}
+			ImGui::PopID();
+			ImGui::SameLine();
+		}
+
+		//ImGui::EndTabItem();
+
+		ImGui::EndChild();
+		ImGui::End();
+
 
 		//imgui demo
 		bool show = true;
