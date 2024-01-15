@@ -1,11 +1,6 @@
 #include "SDL.h"
 #include <SDL_ttf.h>
 
-#include "imgui.h"
-#include "backends/imgui_impl_sdl.h"
-#include "imgui_sdl.h"
-#include "imgui_internal.h"
-
 #include "Game.h"
 
 int main(int argc, char* argv[]) 

@@ -172,7 +172,7 @@
 		{
 			Input::Instance()->Update();
 
-			//change colour of bg
+			//change colour of background with respective keys
 			if (Input::Instance()->KeyIsPressed(KEY_R))
 			{
 				if (++r > 255) r = 0;
