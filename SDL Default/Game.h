@@ -23,6 +23,9 @@ private:
 	//bitmaps
 	Bitmap* m_monsterTransKeyed;
 
+	//scene hierarchy
+	vector<Bitmap*> sceneHier;
+
 	//font stuff
 	TTF_Font* m_pSmallFont;
 	TTF_Font* m_pBigFont;

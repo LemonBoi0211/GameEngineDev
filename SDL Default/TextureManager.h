@@ -17,5 +17,12 @@ public:
 
 	void Unload(const string fileName);
 
+	static TextureManager* GetInstance();
+	
+
+private:
+
+	static TextureManager* instance;
+
 };
 

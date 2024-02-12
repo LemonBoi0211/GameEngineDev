@@ -1,6 +1,8 @@
 #include <string>
 #include "bitmap.h"
 
+#include "TextureManager.h"
+
 #include "Input.h"
 
 #include "SDL.h"
@@ -11,6 +13,8 @@ using namespace std;
 Bitmap::Bitmap(SDL_Renderer* renderer, string fileName,int xpos, int ypos, bool useTransparency ) 
 {
 	m_pRenderer = renderer;
+
+	FileName = fileName;
 
 	m_x = xpos;
 	m_y = ypos;
@@ -29,7 +33,9 @@ Bitmap::Bitmap(SDL_Renderer* renderer, string fileName,int xpos, int ypos, bool 
 			SDL_SetColorKey(m_pbitmapSurface, SDL_TRUE, colourKey);
 		}
 
-		m_pbitmapTexture = SDL_CreateTextureFromSurface(m_pRenderer, m_pbitmapSurface);
+		//m_pbitmapTexture = SDL_CreateTextureFromSurface(m_pRenderer, m_pbitmapSurface);
+		m_pbitmapTexture = TextureManager::GetInstance()->Load(FileName, true, m_pRenderer);
+
 		if (!m_pbitmapTexture)
 		{
 			printf("Texture For Bitmap '%s' Not Loaded! \n", fileName.c_str());
@@ -68,6 +74,31 @@ void Bitmap::Update()
 	{
 		m_x++;
 	}
+}
+
+void Bitmap::GuiDraw()
+{
+	ImGui::Begin("ObjName");
+
+	//button for counting
+	ImGui::AlignTextToFramePadding();
+	ImGui::Text("Hold to Count Fast:");
+	ImGui::SameLine();
+	static int counter = 0;
+	float spacing = ImGui::GetStyle().ItemInnerSpacing.x;
+	ImGui::PushButtonRepeat(true);
+
+	if (ImGui::Button("Press to Count"))
+	{
+		ImGui::SameLine(0.0f, spacing);
+		counter++;
+	}
+
+	ImGui::PopButtonRepeat();
+	ImGui::SameLine();
+	ImGui::Text("%d", counter);
+
+	ImGui::End();
 }
 
 Bitmap::~Bitmap() 

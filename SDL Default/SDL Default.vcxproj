@@ -42,6 +42,7 @@
     <ClInclude Include="DebugLogger.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="I_GUIWindow.h" />
     <ClInclude Include="TextureManager.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

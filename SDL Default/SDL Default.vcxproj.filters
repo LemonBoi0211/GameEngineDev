@@ -86,5 +86,8 @@
     <ClInclude Include="..\Libraries\imgui-master\backends\imgui_impl_sdl.h">
       <Filter>ImGUI</Filter>
     </ClInclude>
+    <ClInclude Include="I_GUIWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

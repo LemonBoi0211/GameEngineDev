@@ -27,6 +27,15 @@ void TextureManager::Unload(const string fileName)
 	}
 }
 
+TextureManager* TextureManager::GetInstance()
+{
+	if (!instance)
+	{
+		instance = new TextureManager();
+	}
+	return instance;
+}
+
 SDL_Texture* TextureManager::Load(const string fileName, bool useTransparancy, SDL_Renderer* PRenderer)
 {
 	SDL_Texture* m_pbitmapTexture = nullptr;
@@ -67,3 +76,4 @@ SDL_Texture* TextureManager::Load(const string fileName, bool useTransparancy, S
 	return m_pbitmapTexture;
 }
 
+TextureManager* TextureManager::instance = 0;

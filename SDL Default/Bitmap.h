@@ -1,12 +1,12 @@
 #pragma once
-
+#include "I_GUIWindow.h"
 #include <string>
 
 struct SDL_Surface;
 struct SDL_Texture;
 struct SDL_Renderer;
 
-class Bitmap 
+class Bitmap:public I_GUIWindow
 {
 private:
 
@@ -27,6 +27,11 @@ public:
 
 	void Draw();
 
+	std::string FileName;
+
 	// Updates the Bitmap logic
 	void Update(); 
+
+	// Inherited via I_GUIWindow
+	void GuiDraw() override;
 };

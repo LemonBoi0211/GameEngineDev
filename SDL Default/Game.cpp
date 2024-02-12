@@ -9,6 +9,7 @@
 #include "imgui_sdl.h"
 #include "imgui_internal.h"
 #include <filesystem>
+#include <io.h>
 
 
 	Game::Game()
@@ -25,13 +26,12 @@
 
 		//create the window
 		m_Window = SDL_CreateWindow(
-			"My First Window",  //title
+			"My First Window",             //title
 			SDL_WINDOWPOS_CENTERED,        //initial x pos
 			SDL_WINDOWPOS_CENTERED,        //initial y pos
-			1200,                           //width in pixels
+			1200,                          //width in pixels
 			1000,                          //height in pixels
-			SDL_WINDOW_RESIZABLE          //window behaviour flags(ignore atm)
-			
+			SDL_WINDOW_RESIZABLE           //window behaviour flags(ignore atm)
 		);
 
 
@@ -74,6 +74,7 @@
 
 		ImGui_ImplSDL2_InitForOpenGL(m_Window, SDL_GL_GetCurrentContext());
 
+
 		//ImGUI asset window
 		std::string path = "../SDL Default/assets";
 		for (const auto& entry : std::filesystem::directory_iterator(path)) //directory_iterator(path) //recursive_
@@ -92,17 +93,6 @@
 			std::cout << entry.path() << std::endl;
 		}
 
-		//if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && AssetMousDrag != nullptr)
-		//{
-		//	cout << "Test" << endl;
-		//	int x, y;
-		//	SDL_GetMouseState(&x, &y);
-		//	Sprite* s = new Sprite(m_Renderer, AssetMousDrag->FileName, x, y, true, &io, AssetMousDrag->ObjectName);
-		//	//s->Transfrom.ParentSet(GameWindow::Instance().GetHirarcy());
-		//	sceneRoot.Children.push_back(&s->M_Transform);
-
-		//	AssetMousDrag = nullptr;
-		//}
 
 		//create monster bitmap
 		m_monsterTransKeyed = new Bitmap(m_Renderer, "./assets/monsterTrans.bmp", 300, 100);
@@ -113,6 +103,7 @@
 
 	}
 
+	//method for adding and using font for text
 	void Game::UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour) 
 	{
 		SDL_Surface* surface = nullptr;
@@ -151,7 +142,7 @@
 			SDL_FreeSurface(surface);
 	}
 
-
+	//allows control of changing the bg colour
 	void Game::SetDisplayColour(Uint8 R, Uint8 G, Uint8 B, Uint8 A)
 	{
 		if (m_Renderer)
@@ -165,6 +156,7 @@
 			);
 		}
 	}
+
 
 	void Game::Run()
 	{
@@ -193,6 +185,7 @@
 		}
 	}
 
+	//main game loop
 	void Game::Update()
 	{
 		//clear and create new ImGui frame
@@ -222,6 +215,20 @@
 		string testString = "Test Number: ";
 		testString += to_string(testNumber);
 		UpdateText(testString, 50, 210, m_pBigFont, { 255,255,255 });
+
+		//scene hierarchy stuff
+		for (Bitmap* bmpScene:sceneHier)
+		{
+			bmpScene->Draw();
+		}
+
+		//Scene Hierarchy Window
+		ImGui::Begin("Scene Hierarchy", 0, ImGuiWindowFlags_NoMove);
+
+
+
+		ImGui::End();
+
 
 		//my imgui test windows
 		ImGui::Begin("Test Window");
@@ -253,6 +260,21 @@
 
 
 		//asset editor gui
+
+		if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && AssetMousDrag != nullptr)
+		{
+			cout << "Test" << endl;
+			int x, y;
+			SDL_GetMouseState(&x, &y);
+			Bitmap* s = new Bitmap(m_Renderer, AssetMousDrag->FileName, x, y, true);
+			//s->Transfrom.ParentSet(GameWindow::Instance().GetHierarcy());
+			//sceneRoot.Children.push_back(&s->M_Transform);
+			sceneHier.push_back(s);
+
+			AssetMousDrag = nullptr;
+		}
+
+
 		ImGui::Begin("Editor");
 		ImGui::BeginChild("Content Window", ImVec2(), true);
 		//ImGui::BeginTable("Content browser", 3);
@@ -279,6 +301,9 @@
 
 		ImGui::EndChild();
 		ImGui::End();
+
+
+		
 
 
 		//imgui demo
