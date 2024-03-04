@@ -215,17 +215,26 @@
 		string testString = "Test Number: ";
 		testString += to_string(testNumber);
 		UpdateText(testString, 50, 210, m_pBigFont, { 255,255,255 });
-
+		
 		//scene hierarchy stuff
 		for (Bitmap* bmpScene:sceneHier)
 		{
 			bmpScene->Draw();
+			ImGui::Text("%d", gameObj);
 		}
 
 		//Scene Hierarchy Window
-		ImGui::Begin("Scene Hierarchy", 0, ImGuiWindowFlags_NoMove);
+		ImGui::Begin("Scene Hierarchy", 0);
 
+		for (int i = 0; i < sceneHier.size(); i++)
+		{
+			ImGui::PushID(i);
 
+			ImGui::Text("%s", sceneHier);
+			
+
+			ImGui::PopID();
+		}
 
 		ImGui::End();
 
@@ -263,7 +272,7 @@
 
 		if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && AssetMousDrag != nullptr)
 		{
-			cout << "Test" << endl;
+			//cout << "Test" << endl;
 			int x, y;
 			SDL_GetMouseState(&x, &y);
 			Bitmap* s = new Bitmap(m_Renderer, AssetMousDrag->FileName, x, y, true);
@@ -275,7 +284,7 @@
 		}
 
 
-		ImGui::Begin("Editor");
+		ImGui::Begin("Asset Editor");
 		ImGui::BeginChild("Content Window", ImVec2(), true);
 		//ImGui::BeginTable("Content browser", 3);
 		
@@ -304,7 +313,6 @@
 
 
 		
-
 
 		//imgui demo
 		bool show = true;
