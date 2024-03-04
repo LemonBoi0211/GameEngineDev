@@ -97,6 +97,8 @@
 		//create monster bitmap
 		m_monsterTransKeyed = new Bitmap(m_Renderer, "./assets/monsterTrans.bmp", 300, 100);
 
+		sceneHier.push_back(m_monsterTransKeyed);
+
 		//read in font
 		m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15);
 		m_pBigFont = TTF_OpenFont("assets/DejaVuSans.ttf", 50);
@@ -220,7 +222,6 @@
 		for (Bitmap* bmpScene:sceneHier)
 		{
 			bmpScene->Draw();
-			ImGui::Text("%d", gameObj);
 		}
 
 		//Scene Hierarchy Window
@@ -230,8 +231,14 @@
 		{
 			ImGui::PushID(i);
 
-			ImGui::Text("%s", sceneHier);
+			ImGui::Text("%s", sceneHier[i]->FileName.c_str());
 			
+			if(ImGui::BeginPopupContextItem(std::to_string(i).c_str(),ImGuiMouseButton_Left))
+			{
+				ImGui::Text("Test");
+
+				ImGui::EndPopup();
+			}
 
 			ImGui::PopID();
 		}
