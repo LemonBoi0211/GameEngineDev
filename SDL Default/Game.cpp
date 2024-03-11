@@ -13,8 +13,35 @@
 #include "Profiler.h"
 
 
-	Game::Game()
+Bitmap* Game::gameobjSelect(ImVec2 mousePos)
+{
+	for (Bitmap* gameObj: sceneHier)
 	{
+		if (mousePos.x >= gameObj->GetOBJPosX() && mousePos.x <= gameObj->GetOBJPosX() + gameObj->GetObjWidth() 
+			&& mousePos.y >= gameObj->GetOBJPosY() && mousePos.y <= gameObj->GetOBJPosY() + gameObj->GetObjHeight())
+		{
+			return gameObj;
+		}
+		
+	}
+
+	return nullptr;
+}
+
+
+//6. Ability to parent and parent objects to each other in the hierarchy
+//not started
+//
+//7. A performance stats window and profiler window
+//in progress
+//
+//8. Save and load functionality
+//not started
+//dont forget flame graph is commented out
+
+
+Game::Game()
+{
 		m_Window = nullptr;
 		m_Renderer = nullptr;
 
@@ -93,6 +120,8 @@
 			std::cout << entry.path() << std::endl;
 		}
 
+		//Details Panel
+		detailsPanel = new DetailsPanel();
 
 		//create monster bitmap
 		m_monsterTransKeyed = new Bitmap(m_Renderer, "./assets/monsterTrans.bmp", 300, 100);
@@ -104,7 +133,7 @@
 		m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15);
 		m_pBigFont = TTF_OpenFont("assets/DejaVuSans.ttf", 50);
 
-	}
+}
 
 	//method for adding and using font for text
 	void Game::UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour) 
@@ -203,6 +232,21 @@
 		SDL_RenderClear(m_Renderer);
 
 		CheckEvents();
+
+		//select and move gameobjects
+		if (ImGui::IsMouseDown(ImGuiMouseButton_Left))
+		{
+			auto gameObj = gameobjSelect(ImGui::GetMousePos());
+			if (gameObj != nullptr)
+			{
+				gameObj->SetOBJPosX(ImGui::GetMousePos().x - (gameObj->GetObjWidth() / 2));
+				gameObj->SetOBJPosY(ImGui::GetMousePos().y - (gameObj->GetObjHeight() / 2));
+				detailsPanel->ChangeObj(gameObj);
+			}
+		}
+
+		//details panel update
+		detailsPanel->Update();
 
 		m_monsterTransKeyed->Update();
 		//display bitmap
@@ -324,7 +368,6 @@
 		ImGui::End();
 
 
-		
 
 		//imgui demo
 		bool show = true;
@@ -338,7 +381,7 @@
 		//shows what drawn
 		SDL_RenderPresent(m_Renderer);
 
-		SDL_Delay(16);
+		SDL_Delay(8);
 
 	}
 
@@ -369,5 +412,11 @@
 		if (m_Window)
 		{
 			SDL_DestroyWindow(m_Window);
+		}
+
+		if (detailsPanel)
+		{
+			delete detailsPanel;	
+			detailsPanel = nullptr;
 		}
 	}

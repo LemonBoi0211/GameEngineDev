@@ -34,4 +34,15 @@ public:
 
 	// Inherited via I_GUIWindow
 	void GuiDraw() override;
+
+	//Get Set m_x m_y
+	int GetOBJPosX();
+	int SetOBJPosX(int newObjX);
+
+	int GetOBJPosY();
+	int SetOBJPosY(int newObjY);
+
+	//Get bmp/obj width and height
+	int GetObjWidth();
+	int GetObjHeight();
 };

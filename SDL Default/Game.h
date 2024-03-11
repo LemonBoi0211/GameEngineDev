@@ -5,6 +5,7 @@
 #include "SDL_ttf.h"
 #include <stdio.h>
 #include <vector>
+#include "DetailsPanel.h"
 
 using namespace std;
 
@@ -12,6 +13,7 @@ struct SDL_Window;
 struct SDL_Renderer;
 class Bitmap;
 
+struct ImVec2;
 
 class Game 
 {
@@ -37,6 +39,8 @@ private:
 	//stuff for Imgui
 	vector<Bitmap*> content;
 	Bitmap* AssetMousDrag;
+	Bitmap* gameobjSelect(ImVec2 mousePos);
+	DetailsPanel* detailsPanel;
 
 public:
 	Game();

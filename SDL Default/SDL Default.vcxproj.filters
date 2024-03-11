@@ -33,9 +33,6 @@
     <ClCompile Include="TextureManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DebugLogger.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\Libraries\imgui_sdl-master\imgui_sdl.cpp">
       <Filter>ImGUI</Filter>
     </ClCompile>
@@ -63,6 +60,9 @@
     <ClCompile Include="FlameGraph.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DetailsPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -75,9 +75,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TextureManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DebugLogger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Libraries\imgui_sdl-master\imgui_sdl.h">
@@ -99,6 +96,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FlameGraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DetailsPanel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

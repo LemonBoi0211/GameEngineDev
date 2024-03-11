@@ -2,6 +2,7 @@
 #include "SDL.h"
 #include "Input.h"
 #include "Game.h"
+#include <backends/imgui_impl_sdl.h>
 
 Input::Input() 
 {
@@ -15,6 +16,8 @@ void Input::Update(void)
 {
 	while (SDL_PollEvent(&m_event) != NULL) 
 	{
+		ImGui_ImplSDL2_ProcessEvent(&m_event);
+
 		if (m_event.type == SDL_KEYDOWN) 
 		{
 			SDL_Keycode keyPressed = m_event.key.keysym.sym;

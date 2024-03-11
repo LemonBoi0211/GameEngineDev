@@ -27,7 +27,7 @@
     <ClCompile Include="..\Libraries\imgui-master\imgui_widgets.cpp" />
     <ClCompile Include="..\Libraries\imgui_sdl-master\imgui_sdl.cpp" />
     <ClCompile Include="Bitmap.cpp" />
-    <ClCompile Include="DebugLogger.cpp" />
+    <ClCompile Include="DetailsPanel.cpp" />
     <ClCompile Include="FlameGraph.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Input.cpp" />
@@ -41,7 +41,7 @@
     <ClInclude Include="..\Libraries\imgui-master\imgui_internal.h" />
     <ClInclude Include="..\Libraries\imgui_sdl-master\imgui_sdl.h" />
     <ClInclude Include="Bitmap.h" />
-    <ClInclude Include="DebugLogger.h" />
+    <ClInclude Include="DetailsPanel.h" />
     <ClInclude Include="FlameGraph.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Input.h" />

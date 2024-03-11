@@ -55,6 +55,35 @@ void Bitmap::Draw()
 	
 }
 
+int Bitmap::GetOBJPosX()
+{
+	return m_x;
+}
+int Bitmap::SetOBJPosX(int newObjX)
+{
+	m_x = newObjX;
+	return m_x;
+}
+int Bitmap::GetOBJPosY()
+{
+	return m_y;
+}
+int Bitmap::SetOBJPosY(int newObjY)
+{
+	m_y = newObjY;
+	return m_y;
+}
+
+int Bitmap::GetObjWidth()
+{
+	return m_pbitmapSurface->w;
+}
+
+int Bitmap::GetObjHeight()
+{
+	return m_pbitmapSurface->h;
+}
+
 //update for the bitmap to allow the sprite to be moved via player input
 void Bitmap::Update()
 {
@@ -74,6 +103,8 @@ void Bitmap::Update()
 	{
 		m_x++;
 	}
+
+	
 }
 
 void Bitmap::GuiDraw()
