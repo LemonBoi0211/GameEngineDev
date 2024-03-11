@@ -25,6 +25,7 @@ private:
 
 	//scene hierarchy
 	vector<Bitmap*> sceneHier;
+	vector<Bitmap*> sceneTwo;
 
 	//font stuff
 	TTF_Font* m_pSmallFont;

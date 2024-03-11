@@ -10,6 +10,7 @@
 #include "imgui_internal.h"
 #include <filesystem>
 #include <io.h>
+#include "Profiler.h"
 
 
 	Game::Game()
@@ -22,7 +23,6 @@
 		SDL_Init(SDL_INIT_VIDEO);
 		TTF_Init();
 
-		
 
 		//create the window
 		m_Window = SDL_CreateWindow(
@@ -98,6 +98,7 @@
 		m_monsterTransKeyed = new Bitmap(m_Renderer, "./assets/monsterTrans.bmp", 300, 100);
 
 		sceneHier.push_back(m_monsterTransKeyed);
+		sceneTwo.push_back(m_monsterTransKeyed);
 
 		//read in font
 		m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15);
@@ -144,7 +145,7 @@
 			SDL_FreeSurface(surface);
 	}
 
-	//allows control of changing the bg colour
+	//allows control of changing the background colour
 	void Game::SetDisplayColour(Uint8 R, Uint8 G, Uint8 B, Uint8 A)
 	{
 		if (m_Renderer)
@@ -190,6 +191,10 @@
 	//main game loop
 	void Game::Update()
 	{
+		{
+			auto tempProf = Profile("mainUpdate");
+		}
+
 		//clear and create new ImGui frame
 		ImGui::NewFrame();
 		ImGui_ImplSDL2_NewFrame(m_Window);
