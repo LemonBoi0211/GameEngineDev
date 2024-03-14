@@ -28,6 +28,7 @@
     <ClCompile Include="..\Libraries\imgui_sdl-master\imgui_sdl.cpp" />
     <ClCompile Include="Bitmap.cpp" />
     <ClCompile Include="DetailsPanel.cpp" />
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="FlameGraph.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Input.cpp" />
@@ -42,6 +43,7 @@
     <ClInclude Include="..\Libraries\imgui_sdl-master\imgui_sdl.h" />
     <ClInclude Include="Bitmap.h" />
     <ClInclude Include="DetailsPanel.h" />
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="FlameGraph.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Input.h" />

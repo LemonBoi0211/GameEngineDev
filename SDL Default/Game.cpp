@@ -11,6 +11,8 @@
 #include <filesystem>
 #include <io.h>
 #include "Profiler.h"
+#include <fstream>
+#include "TextureManager.h"
 
 
 Bitmap* Game::gameobjSelect(ImVec2 mousePos)
@@ -27,17 +29,6 @@ Bitmap* Game::gameobjSelect(ImVec2 mousePos)
 
 	return nullptr;
 }
-
-
-//6. Ability to parent and parent objects to each other in the hierarchy
-//not started
-//
-//7. A performance stats window and profiler window
-//in progress
-//
-//8. Save and load functionality
-//not started
-//dont forget flame graph is commented out
 
 
 Game::Game()
@@ -121,7 +112,7 @@ Game::Game()
 		}
 
 		//Details Panel
-		detailsPanel = new DetailsPanel();
+		detailsPanel = new DetailsPanel(&sceneHier);
 
 		//create monster bitmap
 		m_monsterTransKeyed = new Bitmap(m_Renderer, "./assets/monsterTrans.bmp", 300, 100);
@@ -189,7 +180,7 @@ Game::Game()
 		}
 	}
 
-
+	//change background colour with RGB keys
 	void Game::Run()
 	{
 		while (!Input::Instance()->KeyIsPressed(KEY_ESCAPE))
@@ -216,6 +207,65 @@ Game::Game()
 			Update();
 		}
 	}
+
+	//save and load functions
+	void Game::Save()
+	{
+		string saveFileName = "..\\saves\\sceneData.dat";
+		ofstream outFile;
+		outFile.open(saveFileName, fstream::trunc);
+
+		for (Bitmap* bits : sceneHier)
+		{
+			outFile << bits->SaveData();
+			outFile << "\n";
+		}
+		outFile.close();
+	}
+
+	vector<string> getData(string data)
+	{
+		vector<string>returnVec;
+		string currentLine = "";
+		data.erase(data.cbegin());
+		for(char ch: data)
+		{
+			if (ch == '-')
+			{
+				returnVec.push_back(currentLine);
+				currentLine = "";
+			}
+			else if (ch == '|')
+			{
+				returnVec.push_back(currentLine);
+				break;
+			}
+			else
+			{
+				currentLine.push_back(ch);
+			}
+		}
+		return returnVec;
+	}
+
+	void Game::Load()
+	{
+		std::vector<Bitmap*> loadScene;
+		ifstream inFile ("..\\saves\\sceneData.dat");
+		string fileLine = " ";
+		while (getline(inFile, fileLine))
+		{
+			vector<string>sepData = getData(fileLine);
+			loadScene.push_back(new Bitmap(m_Renderer, sepData[0], stoi(sepData[1]), stoi(sepData[2])));
+		}
+
+
+		sceneHier = loadScene;
+	}
+
+	//collsion detection stuff
+
+
 
 	//main game loop
 	void Game::Update()
@@ -267,6 +317,28 @@ Game::Game()
 		testString += to_string(testNumber);
 		UpdateText(testString, 50, 210, m_pBigFont, { 255,255,255 });
 		
+
+		//save and load buttons
+		if(ImGui::BeginMainMenuBar());
+		{
+			if (ImGui::BeginMenu("File"))
+			{
+				if (ImGui::MenuItem("Save"))
+				{
+					Save();
+				}
+				if (ImGui::MenuItem("Load"))
+				{
+					Load();
+				}
+				ImGui::EndMenu();
+			}
+
+			ImGui::EndMainMenuBar();
+		}
+		
+		
+
 		//scene hierarchy stuff
 		for (Bitmap* bmpScene:sceneHier)
 		{
@@ -275,6 +347,8 @@ Game::Game()
 
 		//Scene Hierarchy Window
 		ImGui::Begin("Scene Hierarchy", 0);
+
+		
 
 		for (int i = 0; i < sceneHier.size(); i++)
 		{

@@ -5,8 +5,9 @@
 #include "imgui_sdl.h"
 #include "imgui_internal.h"
 
-DetailsPanel::DetailsPanel()
+DetailsPanel::DetailsPanel(std::vector<Bitmap*>* hier)
 {
+	this->hier = hier;
 
 }
 
@@ -55,6 +56,16 @@ void DetailsPanel::Update()
 	}
 	selectedObjDeets->SetOBJPosY(valasintY);
 
+	if (selectedObjDeets != *hier->cbegin())
+	{
+		if (ImGui::Button("Delete"))
+		{
+			auto it = std::find(hier->begin(), hier->end(), selectedObjDeets);
+			hier->erase(it);
+			delete selectedObjDeets;
+			selectedObjDeets = nullptr;
+		}
+	}
 
 	ImGui::End();
 }

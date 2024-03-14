@@ -42,6 +42,7 @@ private:
 	Bitmap* gameobjSelect(ImVec2 mousePos);
 	DetailsPanel* detailsPanel;
 
+
 public:
 	Game();
 	~Game();
@@ -52,6 +53,13 @@ public:
 	void Update();
 	void CheckEvents();
 	void Run();
+
+	//save and load stuff
+	void Save();
+	void Load();
+
+	//collision things
+	bool Collision(Bitmap* B, vector<Bitmap*> listofBitmaps);
 };
 
 

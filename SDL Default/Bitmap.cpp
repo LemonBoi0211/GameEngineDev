@@ -84,6 +84,21 @@ int Bitmap::GetObjHeight()
 	return m_pbitmapSurface->h;
 }
 
+string Bitmap::SaveData()
+{
+	string gObjdata = "@";
+	gObjdata += FileName;
+	gObjdata += "-";
+
+	gObjdata += to_string(m_x);
+	gObjdata += "-";
+
+	gObjdata += to_string(m_y);
+	gObjdata += "|";
+
+	return gObjdata;
+}
+
 //update for the bitmap to allow the sprite to be moved via player input
 void Bitmap::Update()
 {
@@ -134,8 +149,5 @@ void Bitmap::GuiDraw()
 
 Bitmap::~Bitmap() 
 {
-	if(m_pbitmapTexture)
-		SDL_DestroyTexture(m_pbitmapTexture);
-	if (m_pbitmapSurface)
-		SDL_FreeSurface(m_pbitmapSurface);
+	
 }

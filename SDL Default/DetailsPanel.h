@@ -1,11 +1,12 @@
 #pragma once
+#include <vector>
 
 class Bitmap;
 
 class DetailsPanel
 {
 public:
-	DetailsPanel();
+	DetailsPanel(std::vector<Bitmap*>* hier);
 	~DetailsPanel();
 	
 	void Update();
@@ -13,5 +14,5 @@ public:
 
 private:
 	Bitmap* selectedObjDeets;
-
+	std::vector<Bitmap*>* hier;
 };
