@@ -269,23 +269,23 @@ Game::Game()
 
 
 
-	//main game loop
+	///main game loop
 	void Game::Update()
 	{
 		{
 			auto tempProf = Profile("mainUpdate");
 		}
 
-		//clear and create new ImGui frame
+		///clear and create new ImGui frame
 		ImGui::NewFrame();
 		ImGui_ImplSDL2_NewFrame(m_Window);
 
-		//clears display
+		///clears display
 		SDL_RenderClear(m_Renderer);
 
 		CheckEvents();
 
-		//select and move gameobjects
+		///select and move gameobjects
 		if (ImGui::IsMouseDown(ImGuiMouseButton_Left))
 		{
 			auto gameObj = gameobjSelect(ImGui::GetMousePos());
@@ -297,14 +297,16 @@ Game::Game()
 			}
 		}
 
-		//details panel update
+		///details panel update
 		detailsPanel->Update();
 
 		m_monsterTransKeyed->Update();
-		//display bitmap
+		///display bitmap
 		m_monsterTransKeyed->Draw();
+		
 
-		//draws text
+
+		///draws text
 		UpdateText("Small Red", 50, 10, m_pSmallFont, { 255,0,0 });
 		UpdateText("Big Blue", 50, 40, m_pBigFont, { 0,0,255 });
 
@@ -320,7 +322,7 @@ Game::Game()
 		UpdateText(testString, 50, 210, m_pBigFont, { 255,255,255 });
 		
 
-		//save and load buttons
+		///save and load buttons
 		if(ImGui::BeginMainMenuBar());
 		{
 			if (ImGui::BeginMenu("File"))
@@ -341,13 +343,13 @@ Game::Game()
 		
 		
 
-		//scene hierarchy stuff
+		///scene hierarchy stuff
 		for (Bitmap* bmpScene:sceneHier)
 		{
 			bmpScene->Draw();
 		}
 
-		//Scene Hierarchy Window
+		///Scene Hierarchy Window
 		ImGui::Begin("Scene Hierarchy", 0);
 
 		
@@ -371,15 +373,15 @@ Game::Game()
 		ImGui::End();
 
 
-		//my imgui test windows
+		///my imgui test windows
 		ImGui::Begin("Test Window");
 
-		//show controls
+		///show controls
 		ImGui::Text("Hover Over Me For Game Controls");
 		if (ImGui::IsItemHovered())
 			ImGui::SetTooltip("WASD to Move, Esc to Quit");
 
-		//button for counting
+		///button for counting
 		ImGui::AlignTextToFramePadding();
 		ImGui::Text("Hold to Count Fast:");
 		ImGui::SameLine();
@@ -400,16 +402,15 @@ Game::Game()
 		ImGui::End();
 
 
-		//asset editor gui
+		///asset editor gui
 
 		if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && assetMousDrag != nullptr)
 		{
-			//cout << "Test" << endl;
+			
 			int x, y;
 			SDL_GetMouseState(&x, &y);
 			Bitmap* s = new Bitmap(m_Renderer, assetMousDrag->FileName, x, y, true);
-			//s->Transfrom.ParentSet(GameWindow::Instance().GetHierarcy());
-			//sceneRoot.Children.push_back(&s->M_Transform);
+			
 			sceneHier.push_back(s);
 
 			assetMousDrag = nullptr;
@@ -418,7 +419,6 @@ Game::Game()
 
 		ImGui::Begin("Asset Editor");
 		ImGui::BeginChild("Content Window", ImVec2(), true);
-		//ImGui::BeginTable("Content browser", 3);
 		
 		for (int i = 0; i < content.size(); i++)
 		{
@@ -427,7 +427,7 @@ Game::Game()
 			ImGui::ImageButton((ImTextureID)content[i]->GetTextureRef(), { 100,100 });
 
 
-			//for dragging
+			///for dragging
 			if (ImGui::BeginDragDropSource())
 			{
 				assetMousDrag = content[i];
@@ -438,23 +438,21 @@ Game::Game()
 			ImGui::SameLine();
 		}
 
-		//ImGui::EndTabItem();
 
 		ImGui::EndChild();
 		ImGui::End();
 
 
 
-		//imgui demo
+		///imgui demo
 		bool show = true;
-		//ShowExampleAppDockSpace(&show);
 
 		ImGui::ShowDemoWindow(nullptr);
 
 		ImGui::Render();
 		ImGuiSDL::Render(ImGui::GetDrawData());
 
-		//shows what drawn
+		///shows what drawn
 		SDL_RenderPresent(m_Renderer);
 
 		SDL_Delay(8);
@@ -469,14 +467,14 @@ Game::Game()
 	Game::~Game()
 	{
 		
-		//clean up
-		//destroy reverse order
+		///clean up
+		///destroy reverse order
 
-		//destroy fonts
+		///destroy fonts
 		TTF_CloseFont(m_pBigFont);
 		TTF_CloseFont(m_pSmallFont);
 
-		//destroy bitmaps
+		///destroy bitmaps
 		if (m_monsterTransKeyed)
 			delete m_monsterTransKeyed;
 

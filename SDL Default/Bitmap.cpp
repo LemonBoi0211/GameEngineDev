@@ -22,11 +22,7 @@ Bitmap::Bitmap(SDL_Renderer* renderer, string fileName,int xpos, int ypos, bool 
 	mPosX = xpos;
 	mPosY = ypos;
 
-	//int width = GetObjWidth();
-
-
-	//mCollider.r = width / 2;
-	ShiftCollider();
+	
 
 
 	m_pbitmapSurface = SDL_LoadBMP(fileName.c_str());
@@ -52,6 +48,10 @@ Bitmap::Bitmap(SDL_Renderer* renderer, string fileName,int xpos, int ypos, bool 
 			printf("%s\n", SDL_GetError());
 		}
 	}
+
+	int width = GetObjWidth();
+	mCollider.r = width / 2;
+	ShiftCollider();
 }
 
 //draws the bitmap
