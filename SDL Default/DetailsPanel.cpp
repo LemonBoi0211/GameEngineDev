@@ -5,17 +5,21 @@
 #include "imgui_sdl.h"
 #include "imgui_internal.h"
 
+/// @brief allows the bitmaps to be scene in the scene hier panel and thier respective details
+/// @param hier 
 DetailsPanel::DetailsPanel(std::vector<Bitmap*>* hier)
 {
 	this->hier = hier;
 
 }
 
+/// @brief Deconstructor function
 DetailsPanel::~DetailsPanel()
 {
 
 }
 
+/// @brief main update for the details panel
 void DetailsPanel::Update()
 {
 	if (selectedObjDeets == nullptr)
@@ -70,6 +74,8 @@ void DetailsPanel::Update()
 	ImGui::End();
 }
 
+/// @brief allows for the ability to show diff details for different objects
+/// @param objChangeto 
 void DetailsPanel::ChangeObj(Bitmap* objChangeto)
 {
 	selectedObjDeets = objChangeto;

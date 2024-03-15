@@ -3,6 +3,7 @@
 
 class Bitmap;
 
+/// @brief main details panel setup 
 class DetailsPanel
 {
 public:

@@ -9,6 +9,7 @@ TextureManager::TextureManager()
 
 }
 
+/// @brief Texture manager deconstructor
 TextureManager::~TextureManager()
 {
 	for (auto value : m_textureMap)
@@ -18,6 +19,8 @@ TextureManager::~TextureManager()
 	}
 }
 
+/// @brief unloads textures within the program
+/// @param fileName 
 void TextureManager::Unload(const string fileName)
 {
 	auto searchResult = m_textureMap.find(fileName);
@@ -38,6 +41,11 @@ TextureManager* TextureManager::GetInstance()
 	return instance;
 }
 
+/// @brief loads a texture based on the file name
+/// @param fileName 
+/// @param useTransparancy 
+/// @param PRenderer 
+/// @return 
 SDL_Texture* TextureManager::Load(const string fileName, bool useTransparancy, SDL_Renderer* PRenderer)
 {
 	SDL_Texture* m_pbitmapTexture = nullptr;

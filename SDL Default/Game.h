@@ -18,25 +18,25 @@ struct ImVec2;
 class Game 
 {
 private:
-	//sdl stuff
+	/// @brief sdl stuff
 	SDL_Window* m_Window;
 	SDL_Renderer *m_Renderer;
 
-	//bitmaps
+	/// @brief bitmaps
 	Bitmap* m_monsterTransKeyed;
 
-	//scene hierarchy
+	/// @brief scene hierarchy
 	vector<Bitmap*> sceneHier;
 	vector<Bitmap*> sceneTwo;
 
-	//font stuff
+	/// @brief font variable names for setup
 	TTF_Font* m_pSmallFont;
 	TTF_Font* m_pBigFont;
 
-	//stuff for display color
+	/// @brief stuff for display color
 	Uint8 r = 127, g = 127, b = 127, a = 255;
 
-	//stuff for Imgui
+	/// @brief stuff for Imgui
 	vector<Bitmap*> content;
 	Bitmap* assetMousDrag;
 	Bitmap* gameobjSelect(ImVec2 mousePos);
@@ -47,14 +47,20 @@ public:
 	Game();
 	~Game();
 	
+	/// @brief 
+	/// @param R 
+	/// @param G 
+	/// @param B 
+	/// @param A 
 	void SetDisplayColour(Uint8 R, Uint8 G, Uint8 B, Uint8 A);
 	void UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour);
 
+	/// @brief 
 	void Update();
 	void CheckEvents();
 	void Run();
 
-	//save and load stuff
+	/// @brief save and load stuff
 	void Save();
 	void Load();
 

@@ -6,7 +6,7 @@
 #define WIN32_LEAN_AND_MEAN 
 #include <Windows.h>
 
-
+/// @brief data that would be stored from a sample snapshot
 struct SampleData
 {
     __int64 functionTime;

@@ -6,6 +6,7 @@ struct SDL_Surface;
 struct SDL_Texture;
 struct SDL_Renderer;
 
+/// @brief Vector2 Calculation
 struct Vector2 
 { 
 	Vector2(float x, float y) : X(x), Y(y) {};
@@ -14,6 +15,7 @@ struct Vector2
 	float Y;
 };
 
+/// @brief variables for a collision circle
 struct Circle
 {
 	int x, y;
@@ -28,6 +30,7 @@ private:
 	SDL_Texture* m_pbitmapTexture;
 	SDL_Renderer* m_pRenderer;
 
+/// @brief variables for objects and collisions positions
 protected:
 	int m_x, m_y;
 	int mPosX, mPosY;
@@ -48,10 +51,10 @@ public:
 
 	std::string FileName;
 
-	// Updates the Bitmap logic
+	/// @brief Updates the Bitmap logic
 	virtual void Update();
 
-	// Inherited via I_GUIWindow
+	/// @brief Inherited via I_GUIWindow
 	virtual void GuiDraw() override;
 
 

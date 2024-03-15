@@ -4,6 +4,7 @@
 #include "Game.h"
 #include <backends/imgui_impl_sdl.h>
 
+/// @brief for loop that goes through the enum of inputs
 Input::Input() 
 {
 	for (int i = 0; i < KEYS_PRESSED_LIST::SIZE_OF_KEYS_PRESSED_ENUM; i++)
@@ -12,6 +13,8 @@ Input::Input()
 	}
 }
 
+/// @brief main update loop for the polling of key press events
+/// @param  
 void Input::Update(void) 
 {
 	while (SDL_PollEvent(&m_event) != NULL) 
@@ -84,7 +87,9 @@ void Input::Update(void)
 	}
 }
 
-
+/// @brief a simple bool function that lets the program know if is has had a key pressed or not
+/// @param key 
+/// @return 
 bool Input::KeyIsPressed(KEYS_PRESSED_LIST key)
 {
 	return m_keysPressed[key];

@@ -14,7 +14,9 @@
 #include <fstream>
 #include "TextureManager.h"
 
-
+/// @brief 
+/// @param mousePos 
+/// @return 
 Bitmap* Game::gameobjSelect(ImVec2 mousePos)
 {
 	for (Bitmap* gameObj: sceneHier)
@@ -30,7 +32,7 @@ Bitmap* Game::gameobjSelect(ImVec2 mousePos)
 	return nullptr;
 }
 
-
+/// @brief Main Setup for the game engine
 Game::Game()
 {
 		m_Window = nullptr;
@@ -128,7 +130,12 @@ Game::Game()
 
 }
 
-	//method for adding and using font for text
+	/// @brief method for adding and using font for text
+	/// @param msg 
+	/// @param x 
+	/// @param y 
+	/// @param font 
+	/// @param colour 
 	void Game::UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour) 
 	{
 		SDL_Surface* surface = nullptr;
@@ -167,7 +174,11 @@ Game::Game()
 			SDL_FreeSurface(surface);
 	}
 
-	//allows control of changing the background colour
+	/// @brief allows control of changing the background colour
+	/// @param R 
+	/// @param G 
+	/// @param B 
+	/// @param A 
 	void Game::SetDisplayColour(Uint8 R, Uint8 G, Uint8 B, Uint8 A)
 	{
 		if (m_Renderer)
@@ -182,7 +193,7 @@ Game::Game()
 		}
 	}
 
-	//change background colour with RGB keys
+	/// @brief change background colour with RGB keys
 	void Game::Run()
 	{
 		while (!Input::Instance()->KeyIsPressed(KEY_ESCAPE))
@@ -210,9 +221,12 @@ Game::Game()
 		}
 	}
 
-	//save and load functions
+	
+
+	/// @brief Save Functions
 	void Game::Save()
 	{
+		//save and load functions
 		string saveFileName = "..\\saves\\sceneData.dat";
 		ofstream outFile;
 		outFile.open(saveFileName, fstream::trunc);
@@ -225,6 +239,9 @@ Game::Game()
 		outFile.close();
 	}
 
+	/// @brief 
+	/// @param data 
+	/// @return 
 	vector<string> getData(string data)
 	{
 		vector<string>returnVec;
@@ -250,6 +267,7 @@ Game::Game()
 		return returnVec;
 	}
 
+	/// @brief Loading Functions
 	void Game::Load()
 	{
 		std::vector<Bitmap*> loadScene;
@@ -265,11 +283,7 @@ Game::Game()
 		sceneHier = loadScene;
 	}
 
-	//collsion detection stuff
-
-
-
-	///main game loop
+	/// @brief main game loop
 	void Game::Update()
 	{
 		{
@@ -458,15 +472,16 @@ Game::Game()
 		SDL_Delay(8);
 
 	}
-
+	/// @brief 
 	void Game::CheckEvents()
 	{
 
 	}
-
+	/// @brief 
 	Game::~Game()
 	{
 		
+
 		///clean up
 		///destroy reverse order
 

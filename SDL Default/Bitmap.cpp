@@ -10,6 +10,12 @@
 
 using namespace std;
 
+/// @brief SetUp and inits for the Bitmap class
+/// @param renderer 
+/// @param fileName 
+/// @param xpos 
+/// @param ypos 
+/// @param useTransparency 
 Bitmap::Bitmap(SDL_Renderer* renderer, string fileName,int xpos, int ypos, bool useTransparency ) 
 {
 	m_pRenderer = renderer;
@@ -54,7 +60,7 @@ Bitmap::Bitmap(SDL_Renderer* renderer, string fileName,int xpos, int ypos, bool 
 	ShiftCollider();
 }
 
-//draws the bitmap
+/// @brief draws the bitmap
 void Bitmap::Draw()
 {
 	if (m_pbitmapTexture) 
@@ -64,40 +70,60 @@ void Bitmap::Draw()
 	}
 }
 
+/// @brief 
+/// @return 
 int Bitmap::GetOBJPosX()
 {
 	return m_x;
 }
+
+/// @brief 
+/// @param newObjX 
+/// @return 
 int Bitmap::SetOBJPosX(int newObjX)
 {
 	m_x = newObjX;
 	return m_x;
 }
+
+/// @brief 
+/// @return 
 int Bitmap::GetOBJPosY()
 {
 	return m_y;
 }
+
+/// @brief 
+/// @param newObjY 
+/// @return 
 int Bitmap::SetOBJPosY(int newObjY)
 {
 	m_y = newObjY;
 	return m_y;
 }
 
+/// @brief 
+/// @return 
 int Bitmap::GetObjWidth()
 {
 	return m_pbitmapSurface->w;
 }
 
+/// @brief 
+/// @return 
 int Bitmap::GetObjHeight()
 {
 	return m_pbitmapSurface->h;
 }
 
+/// @brief 
+/// @return 
 Circle& Bitmap::GetCollider()
 {
 	return mCollider;
 }
 
+/// @brief offsets collider to center of an object
 void Bitmap::ShiftCollider()
 {
 	//Align collider to center of dot
@@ -105,6 +131,10 @@ void Bitmap::ShiftCollider()
 	mCollider.y = mPosY;
 }
 
+/// @brief checks if a collision betwen 2 circles occured
+/// @param a 
+/// @param b 
+/// @return 
 bool Bitmap::checkCollision(Circle& a, Circle& b)
 {
 	//Calculate total radius squared
@@ -122,6 +152,12 @@ bool Bitmap::checkCollision(Circle& a, Circle& b)
 	return false;
 }
 
+/// @brief  squares the distance between objects for collision calcs
+/// @param x1 
+/// @param y1 
+/// @param x2 
+/// @param y2 
+/// @return 
 double Bitmap::distanceSquared(int x1, int y1, int x2, int y2)
 {
 	int deltaX = x2 - x1;
@@ -129,6 +165,8 @@ double Bitmap::distanceSquared(int x1, int y1, int x2, int y2)
 	return deltaX * deltaX + deltaY * deltaY;
 }
 
+/// @brief gives some chars for the save file to differentiate between diff things
+/// @return 
 string Bitmap::SaveData()
 {
 	string gObjdata = "@";
@@ -144,7 +182,7 @@ string Bitmap::SaveData()
 	return gObjdata;
 }
 
-//update for the bitmap to allow the sprite to be moved via player input
+/// @brief update for the bitmap to allow the sprite to be moved via player input
 void Bitmap::Update()
 {
 	if (Input::Instance()->KeyIsPressed(KEY_W))
@@ -165,6 +203,7 @@ void Bitmap::Update()
 	}
 }
 
+/// @brief  Draw Function for the Gui
 void Bitmap::GuiDraw()
 {
 	ImGui::Begin("ObjName");
@@ -190,6 +229,7 @@ void Bitmap::GuiDraw()
 	ImGui::End();
 }
 
+/// @brief Bitmap Deconstructor
 Bitmap::~Bitmap() 
 {
 	
