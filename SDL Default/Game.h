@@ -38,7 +38,7 @@ private:
 
 	//stuff for Imgui
 	vector<Bitmap*> content;
-	Bitmap* AssetMousDrag;
+	Bitmap* assetMousDrag;
 	Bitmap* gameobjSelect(ImVec2 mousePos);
 	DetailsPanel* detailsPanel;
 
@@ -58,8 +58,6 @@ public:
 	void Save();
 	void Load();
 
-	//collision things
-	bool Collision(Bitmap* B, vector<Bitmap*> listofBitmaps);
 };
 
 

@@ -14,6 +14,11 @@ struct Vector2
 	float Y;
 };
 
+struct Circle
+{
+	int x, y;
+	int r;
+};
 
 class Bitmap:public I_GUIWindow
 {
@@ -25,6 +30,10 @@ private:
 
 protected:
 	int m_x, m_y;
+	int mPosX, mPosY;
+	int mVelX, mVelY;
+	Circle mCollider;
+	static const int DOT_VEL = 1;
 
 public:
 	Bitmap(SDL_Renderer* renderer, std::string fileName,int xpos, int ypos, bool useTransparency = true);
@@ -45,6 +54,8 @@ public:
 	// Inherited via I_GUIWindow
 	virtual void GuiDraw() override;
 
+
+
 	//Get Set m_x m_y
 	virtual int GetOBJPosX();
 	virtual int SetOBJPosX(int newObjX);
@@ -55,6 +66,17 @@ public:
 	//Get bmp/obj width and height
 	virtual int GetObjWidth();
 	virtual int GetObjHeight();
+
+	//collider function
+	Circle& GetCollider();
+	void ShiftCollider();
+
+	//Circle/Circle collision detector
+	bool checkCollision(Circle& a, Circle& b);
+
+	//Calculates distance squared between two points
+	double distanceSquared(int x1, int y1, int x2, int y2);
+
 
 	//save/load stuff
 	virtual std::string SaveData();

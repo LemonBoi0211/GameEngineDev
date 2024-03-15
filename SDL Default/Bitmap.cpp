@@ -19,6 +19,16 @@ Bitmap::Bitmap(SDL_Renderer* renderer, string fileName,int xpos, int ypos, bool 
 	m_x = xpos;
 	m_y = ypos;
 
+	mPosX = xpos;
+	mPosY = ypos;
+
+	//int width = GetObjWidth();
+
+
+	//mCollider.r = width / 2;
+	ShiftCollider();
+
+
 	m_pbitmapSurface = SDL_LoadBMP(fileName.c_str());
 	if (!m_pbitmapSurface) 
 	{
@@ -49,10 +59,9 @@ void Bitmap::Draw()
 {
 	if (m_pbitmapTexture) 
 	{
-		SDL_Rect destRect = { m_x, m_y, m_pbitmapSurface->w,m_pbitmapSurface->h };
+		SDL_Rect destRect = { m_x, m_y, m_pbitmapSurface->w, m_pbitmapSurface->h };
 		SDL_RenderCopy(m_pRenderer, m_pbitmapTexture, NULL, &destRect);
 	}
-	
 }
 
 int Bitmap::GetOBJPosX()
@@ -82,6 +91,42 @@ int Bitmap::GetObjWidth()
 int Bitmap::GetObjHeight()
 {
 	return m_pbitmapSurface->h;
+}
+
+Circle& Bitmap::GetCollider()
+{
+	return mCollider;
+}
+
+void Bitmap::ShiftCollider()
+{
+	//Align collider to center of dot
+	mCollider.x = mPosX;
+	mCollider.y = mPosY;
+}
+
+bool Bitmap::checkCollision(Circle& a, Circle& b)
+{
+	//Calculate total radius squared
+	int totalRadiusSquared = a.r + b.r;
+	totalRadiusSquared = totalRadiusSquared * totalRadiusSquared;
+
+	//If the distance between the centers of the circles is less than the sum of their radii
+	if (distanceSquared(a.x, a.y, b.x, b.y) < (totalRadiusSquared))
+	{
+		//The circles have collided
+		return true;
+	}
+
+	//If not
+	return false;
+}
+
+double Bitmap::distanceSquared(int x1, int y1, int x2, int y2)
+{
+	int deltaX = x2 - x1;
+	int deltaY = y2 - y1;
+	return deltaX * deltaX + deltaY * deltaY;
 }
 
 string Bitmap::SaveData()
@@ -118,8 +163,6 @@ void Bitmap::Update()
 	{
 		m_x++;
 	}
-
-	
 }
 
 void Bitmap::GuiDraw()

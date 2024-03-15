@@ -36,6 +36,8 @@ Game::Game()
 		m_Window = nullptr;
 		m_Renderer = nullptr;
 
+		const int screenWidth = 1200;
+		const int screenHeight = 1000;
 
 		//start up
 		SDL_Init(SDL_INIT_VIDEO);
@@ -47,8 +49,8 @@ Game::Game()
 			"My First Window",             //title
 			SDL_WINDOWPOS_CENTERED,        //initial x pos
 			SDL_WINDOWPOS_CENTERED,        //initial y pos
-			1200,                          //width in pixels
-			1000,                          //height in pixels
+			screenWidth,                          //width in pixels
+			screenHeight,                          //height in pixels
 			SDL_WINDOW_RESIZABLE           //window behaviour flags(ignore atm)
 		);
 
@@ -400,17 +402,17 @@ Game::Game()
 
 		//asset editor gui
 
-		if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && AssetMousDrag != nullptr)
+		if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && assetMousDrag != nullptr)
 		{
 			//cout << "Test" << endl;
 			int x, y;
 			SDL_GetMouseState(&x, &y);
-			Bitmap* s = new Bitmap(m_Renderer, AssetMousDrag->FileName, x, y, true);
+			Bitmap* s = new Bitmap(m_Renderer, assetMousDrag->FileName, x, y, true);
 			//s->Transfrom.ParentSet(GameWindow::Instance().GetHierarcy());
 			//sceneRoot.Children.push_back(&s->M_Transform);
 			sceneHier.push_back(s);
 
-			AssetMousDrag = nullptr;
+			assetMousDrag = nullptr;
 		}
 
 
@@ -428,7 +430,7 @@ Game::Game()
 			//for dragging
 			if (ImGui::BeginDragDropSource())
 			{
-				AssetMousDrag = content[i];
+				assetMousDrag = content[i];
 				ImGui::Image((ImTextureID)content[i]->GetTextureRef(), { 100,100 });
 				ImGui::EndDragDropSource();
 			}
