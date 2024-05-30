@@ -10,6 +10,11 @@
 
 using namespace std;
 
+Bitmap::Bitmap()
+{
+
+}
+
 /// @brief SetUp and inits for the Bitmap class
 /// @param renderer 
 /// @param fileName 
@@ -185,22 +190,7 @@ string Bitmap::SaveData()
 /// @brief update for the bitmap to allow the sprite to be moved via player input
 void Bitmap::Update()
 {
-	if (Input::Instance()->KeyIsPressed(KEY_W))
-	{
-		m_y--;
-	}
-	if (Input::Instance()->KeyIsPressed(KEY_S)) 
-	{
-		m_y++;
-	}
-	if (Input::Instance()->KeyIsPressed(KEY_A))
-	{
-		m_x--;
-	}
-	if (Input::Instance()->KeyIsPressed(KEY_D))
-	{
-		m_x++;
-	}
+	
 }
 
 /// @brief  Draw Function for the Gui

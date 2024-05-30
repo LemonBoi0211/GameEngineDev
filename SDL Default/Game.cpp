@@ -14,6 +14,8 @@
 #include <fstream>
 #include "TextureManager.h"
 
+#include "Hero.h"
+
 /// @brief 
 /// @param mousePos 
 /// @return 
@@ -119,7 +121,7 @@ Game::Game()
 		detailsPanel = new DetailsPanel(&sceneHier);
 
 		//create monster bitmap
-		m_monsterTransKeyed = new Bitmap(m_Renderer, "./assets/monsterTrans.bmp", 300, 100);
+		m_monsterTransKeyed = new Hero(m_Renderer, "./assets/monsterTrans.bmp", 300, 100);
 
 		sceneHier.push_back(m_monsterTransKeyed);
 		sceneTwo.push_back(m_monsterTransKeyed);
@@ -314,9 +316,9 @@ Game::Game()
 		///details panel update
 		detailsPanel->Update();
 
-		m_monsterTransKeyed->Update();
+		/*m_monsterTransKeyed->Update();
 		///display bitmap
-		m_monsterTransKeyed->Draw();
+		m_monsterTransKeyed->Draw();*/
 		
 
 
@@ -358,6 +360,12 @@ Game::Game()
 		
 
 		///scene hierarchy stuff
+		for (Bitmap* bmpScene : sceneHier)
+		{
+			bmpScene->Update();
+		}
+
+
 		for (Bitmap* bmpScene:sceneHier)
 		{
 			bmpScene->Draw();

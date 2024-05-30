@@ -1,0 +1,62 @@
+\doxysection{Game.\+h}
+\hypertarget{_game_8h_source}{}\label{_game_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAME\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAME\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}SDL\_ttf.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}DetailsPanel.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{struct\ }SDL\_Window;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }SDL\_Renderer;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bitmap}{Bitmap}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }ImVec2;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game}{Game}}\ }
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ SDL\_Window*\ m\_Window;}
+\DoxyCodeLine{00023\ \ \ \ \ SDL\_Renderer\ *m\_Renderer;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_bitmap}{Bitmap}}*\ m\_monsterTransKeyed;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \ \ vector<Bitmap*>\ sceneHier;}
+\DoxyCodeLine{00030\ \ \ \ \ vector<Bitmap*>\ sceneTwo;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \ \ \ \ TTF\_Font*\ m\_pSmallFont;}
+\DoxyCodeLine{00034\ \ \ \ \ TTF\_Font*\ m\_pBigFont;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \ \ \ Uint8\ r\ =\ 127,\ g\ =\ 127,\ b\ =\ 127,\ a\ =\ 255;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \ \ vector<Bitmap*>\ content;}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_bitmap}{Bitmap}}*\ assetMousDrag;}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_bitmap}{Bitmap}}*\ gameobjSelect(ImVec2\ mousePos);}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_details_panel}{DetailsPanel}}*\ detailsPanel;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{\string~Game}}();}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_acf6352d2ef28ea4f70e5daeb3c60c783}{SetDisplayColour}}(Uint8\ R,\ Uint8\ G,\ Uint8\ B,\ Uint8\ A);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_ad52624318ad8015682645af96b4ac1c3}{UpdateText}}(\textcolor{keywordtype}{string}\ msg,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ TTF\_Font*\ font,\ SDL\_Color\ colour);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a1c5373c68261c54aff03e6abe40fee52}{Update}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ CheckEvents();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a96341ca5b54d90adc3ecb3bf0bcd2312}{Run}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a7c9b71a129384f3beccbac42a1d8d1ef}{Save}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a6b43d04d1e47356d918e2afa27e1985d}{Load}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

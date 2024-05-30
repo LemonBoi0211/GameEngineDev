@@ -1,0 +1,143 @@
+\doxysection{Game Class Reference}
+\hypertarget{class_game}{}\label{class_game}\index{Game@{Game}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\label{class_game_ad59df6562a58a614fda24622d3715b65} 
+{\bfseries Game} ()
+\begin{DoxyCompactList}\small\item\em Main Setup for the game engine. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{\texorpdfstring{$\sim$}{\string~}\+Game}} ()
+\item 
+void \mbox{\hyperlink{class_game_acf6352d2ef28ea4f70e5daeb3c60c783}{Set\+Display\+Colour}} (Uint8 R, Uint8 G, Uint8 B, Uint8 A)
+\begin{DoxyCompactList}\small\item\em allows control of changing the background colour \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_ad52624318ad8015682645af96b4ac1c3}{Update\+Text}} (string msg, int x, int y, TTF\+\_\+\+Font \texorpdfstring{$\ast$}{*}font, SDL\+\_\+\+Color colour)
+\begin{DoxyCompactList}\small\item\em method for adding and using font for text \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a1c5373c68261c54aff03e6abe40fee52}{Update}} ()
+\begin{DoxyCompactList}\small\item\em main game loop \end{DoxyCompactList}\item 
+\Hypertarget{class_game_a4c6e213afd7a79acdaf53225b9b6eaae}\label{class_game_a4c6e213afd7a79acdaf53225b9b6eaae} 
+void {\bfseries Check\+Events} ()
+\item 
+\Hypertarget{class_game_a96341ca5b54d90adc3ecb3bf0bcd2312}\label{class_game_a96341ca5b54d90adc3ecb3bf0bcd2312} 
+void {\bfseries Run} ()
+\begin{DoxyCompactList}\small\item\em change background colour with RGB keys \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a7c9b71a129384f3beccbac42a1d8d1ef}{Save}} ()
+\begin{DoxyCompactList}\small\item\em save and load stuff \end{DoxyCompactList}\item 
+\Hypertarget{class_game_a6b43d04d1e47356d918e2afa27e1985d}\label{class_game_a6b43d04d1e47356d918e2afa27e1985d} 
+void {\bfseries Load} ()
+\begin{DoxyCompactList}\small\item\em Loading Functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_ae3d112ca6e0e55150d2fdbc704474530}\label{class_game_ae3d112ca6e0e55150d2fdbc704474530} 
+\index{Game@{Game}!````~Game@{\texorpdfstring{$\sim$}{\string~}Game}}
+\index{````~Game@{\texorpdfstring{$\sim$}{\string~}Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Game()}{\string~Game()}}
+{\footnotesize\ttfamily Game\+::\texorpdfstring{$\sim$}{\string~}\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+clean up destroy reverse order
+
+destroy fonts
+
+destroy bitmaps
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_a7c9b71a129384f3beccbac42a1d8d1ef}\label{class_game_a7c9b71a129384f3beccbac42a1d8d1ef} 
+\index{Game@{Game}!Save@{Save}}
+\index{Save@{Save}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily void Game\+::\+Save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+save and load stuff 
+
+Save Functions. \Hypertarget{class_game_acf6352d2ef28ea4f70e5daeb3c60c783}\label{class_game_acf6352d2ef28ea4f70e5daeb3c60c783} 
+\index{Game@{Game}!SetDisplayColour@{SetDisplayColour}}
+\index{SetDisplayColour@{SetDisplayColour}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{SetDisplayColour()}{SetDisplayColour()}}
+{\footnotesize\ttfamily void Game\+::\+Set\+Display\+Colour (\begin{DoxyParamCaption}\item[{Uint8}]{R,  }\item[{Uint8}]{G,  }\item[{Uint8}]{B,  }\item[{Uint8}]{A }\end{DoxyParamCaption})}
+
+
+
+allows control of changing the background colour 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & \\
+\hline
+{\em G} & \\
+\hline
+{\em B} & \\
+\hline
+{\em A} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_a1c5373c68261c54aff03e6abe40fee52}\label{class_game_a1c5373c68261c54aff03e6abe40fee52} 
+\index{Game@{Game}!Update@{Update}}
+\index{Update@{Update}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Game\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+main game loop 
+
+clear and create new Im\+Gui frame
+
+clears display
+
+select and move gameobjects
+
+details panel update
+
+draws text
+
+save and load buttons
+
+scene hierarchy stuff
+
+Scene Hierarchy Window
+
+my imgui test windows
+
+show controls
+
+button for counting
+
+asset editor gui
+
+for dragging
+
+imgui demo
+
+shows what drawn\Hypertarget{class_game_ad52624318ad8015682645af96b4ac1c3}\label{class_game_ad52624318ad8015682645af96b4ac1c3} 
+\index{Game@{Game}!UpdateText@{UpdateText}}
+\index{UpdateText@{UpdateText}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{UpdateText()}{UpdateText()}}
+{\footnotesize\ttfamily void Game\+::\+Update\+Text (\begin{DoxyParamCaption}\item[{string}]{msg,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{TTF\+\_\+\+Font \texorpdfstring{$\ast$}{*}}]{font,  }\item[{SDL\+\_\+\+Color}]{colour }\end{DoxyParamCaption})}
+
+
+
+method for adding and using font for text 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em font} & \\
+\hline
+{\em colour} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game.\+h\item 
+Game.\+cpp\end{DoxyCompactItemize}

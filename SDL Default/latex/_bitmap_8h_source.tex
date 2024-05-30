@@ -1,0 +1,87 @@
+\doxysection{Bitmap.\+h}
+\hypertarget{_bitmap_8h_source}{}\label{_bitmap_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}I\_GUIWindow.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{struct\ }SDL\_Surface;}
+\DoxyCodeLine{00006\ \textcolor{keyword}{struct\ }SDL\_Texture;}
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }SDL\_Renderer;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vector2}{Vector2}}\ }
+\DoxyCodeLine{00011\ \{\ }
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{struct_vector2}{Vector2}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y)\ :\ X(x),\ Y(y)\ \{\};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{float}\ X;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{float}\ Y;}
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_circle}{Circle}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ r;}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bitmap}{Bitmap}}:\textcolor{keyword}{public}\ \mbox{\hyperlink{class_i___g_u_i_window}{I\_GUIWindow}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ SDL\_Surface*\ m\_pbitmapSurface;}
+\DoxyCodeLine{00030\ \ \ \ \ SDL\_Texture*\ m\_pbitmapTexture;}
+\DoxyCodeLine{00031\ \ \ \ \ SDL\_Renderer*\ m\_pRenderer;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_bitmap_a7ade805194dabe9d4ac1051fb7b44075}{m\_x}},\ m\_y;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ mPosX,\ mPosY;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ mVelX,\ mVelY;}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{struct_circle}{Circle}}\ mCollider;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ DOT\_VEL\ =\ 1;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_bitmap}{Bitmap}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_bitmap}{Bitmap}}(SDL\_Renderer*\ renderer,\ std::string\ fileName,\textcolor{keywordtype}{int}\ xpos,\ \textcolor{keywordtype}{int}\ ypos,\ \textcolor{keywordtype}{bool}\ useTransparency\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_bitmap_a72d2a301ec1eb1c8d0f3d64823659a8e}{\string~Bitmap}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ SDL\_Texture*\ GetTextureRef()}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_pbitmapTexture;}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bitmap_a6bee6c1f00faf97ad49b40a7ee56fe0e}{Draw}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ std::string\ FileName;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bitmap_af8ac45cf41d54336c9e08f4c8394532c}{Update}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bitmap_aab7b7c873a6bebda83041a77a1bec5ae}{GuiDraw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//Get\ Set\ m\_x\ m\_y}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_bitmap_a3b3ebff902b08dd8881c2d50a0a77bc3}{GetOBJPosX}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_bitmap_a8fdf9db2bb0e70fc717ae085e6a8a1e1}{SetOBJPosX}}(\textcolor{keywordtype}{int}\ newObjX);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_bitmap_a2fd01168f329d5c6af0673e742cda7c9}{GetOBJPosY}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_bitmap_ab7d516cd1e9d15c0a8ea94c3f2e6d8ad}{SetOBJPosY}}(\textcolor{keywordtype}{int}\ newObjY);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//Get\ bmp/obj\ width\ and\ height}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_bitmap_a6371f2ca249224e93293bf31a5d100e2}{GetObjWidth}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_bitmap_ae247924cfcca3b96bdd63e7046c0ab62}{GetObjHeight}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//collider\ function}}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{struct_circle}{Circle}}\&\ \mbox{\hyperlink{class_bitmap_aa98e965caac5b1c8c36c9cc8f781b723}{GetCollider}}();}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bitmap_ab6c6bb65ecb0cebb0b7b7c584816bbf9}{ShiftCollider}}();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//Circle/Circle\ collision\ detector}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_bitmap_a91289e10700660e6048e8e8e41775b39}{checkCollision}}(\mbox{\hyperlink{struct_circle}{Circle}}\&\ a,\ \mbox{\hyperlink{struct_circle}{Circle}}\&\ b);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//Calculates\ distance\ squared\ between\ two\ points}}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_bitmap_a57b9d77f88e80072e65851f0c58db927}{distanceSquared}}(\textcolor{keywordtype}{int}\ x1,\ \textcolor{keywordtype}{int}\ y1,\ \textcolor{keywordtype}{int}\ x2,\ \textcolor{keywordtype}{int}\ y2);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//save/load\ stuff}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_bitmap_a9b48953689d8923614721d0291d1a606}{SaveData}}();}
+\DoxyCodeLine{00087\ \};}
+
+\end{DoxyCode}

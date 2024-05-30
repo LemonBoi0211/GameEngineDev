@@ -24,7 +24,7 @@ struct Circle
 
 class Bitmap:public I_GUIWindow
 {
-private:
+protected:
 
 	SDL_Surface* m_pbitmapSurface;
 	SDL_Texture* m_pbitmapTexture;
@@ -39,6 +39,7 @@ protected:
 	static const int DOT_VEL = 1;
 
 public:
+	Bitmap();
 	Bitmap(SDL_Renderer* renderer, std::string fileName,int xpos, int ypos, bool useTransparency = true);
 	virtual ~Bitmap();
 
