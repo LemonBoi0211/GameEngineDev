@@ -47,7 +47,8 @@ private:
 	Bitmap* gameobjSelect(ImVec2 mousePos);
 	DetailsPanel* detailsPanel;
 
-	bool IsRunning = true;
+protected:
+	bool IsGameRunning = true;
 
 public:
 	Game();

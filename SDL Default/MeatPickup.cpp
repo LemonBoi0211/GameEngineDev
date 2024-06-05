@@ -9,7 +9,6 @@
 #include "SDL_render.h"
 #include <iostream>
 
-#include "Game.h"
 
 MeatPickup::MeatPickup(SDL_Renderer* renderer, std::string fileName, int xpos, int ypos, bool useTransparency)
 {
@@ -68,6 +67,7 @@ void MeatPickup::HandleCollisions(std::vector<Bitmap*> scenehir)
 		{
 			if (other == this) { continue; }
 			cout << "YUM YUM" << std::endl;
+
 		}
 	}
 }

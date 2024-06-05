@@ -9,6 +9,7 @@
 #include "SDL_render.h"
 #include <ostream>
 #include <iostream>
+#include "Game.h"
 
 
 Enemy::Enemy(SDL_Renderer* renderer, std::string fileName, int xpos, int ypos, bool useTransparency)
@@ -98,7 +99,6 @@ void Enemy::HandleCollisions(std::vector<Bitmap*> scenehir)
 		{
 			if (other == this) { continue; }
 			cout << "RAWR" << std::endl;
-
 			
 		}
 	}

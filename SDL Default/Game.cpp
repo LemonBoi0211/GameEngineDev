@@ -204,7 +204,7 @@ Game::Game()
 	/// @brief change background colour with RGB keys
 	void Game::Run()
 	{
-		while (IsRunning && !Input::Instance()->KeyIsPressed(KEY_ESCAPE))
+		while (IsGameRunning && !Input::Instance()->KeyIsPressed(KEY_ESCAPE))
 		{
 			Input::Instance()->Update();
 
@@ -347,9 +347,9 @@ Game::Game()
 		string MyString = "Grab The Meat, Avoid Evil Guy";
 		UpdateText(MyString, 400, 40, m_pBigFont, { 0,255,0 });
 
-		int testNumber = 69420;
-		string testString = "Test Number: ";
-		testString += to_string(testNumber);
+		int score = 000;
+		string testString = "Score: ";
+		testString += to_string(score);
 		UpdateText(testString, 400, 90, m_pBigFont, { 255,255,255 });
 		
 		///save and load buttons
@@ -477,9 +477,6 @@ Game::Game()
 
 		ImGui::EndChild();
 		ImGui::End();
-
-		
-		
 
 
 		///imgui demo
