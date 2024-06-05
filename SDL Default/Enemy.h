@@ -1,8 +1,15 @@
 #pragma once
 #include "Bitmap.h"
 
-/// @brief overrides the bitmap update so that this can have its own update
-class Enemy : public Bitmap
+
+class Enemy :public Bitmap
 {
+public:
+	Enemy(SDL_Renderer* renderer, std::string fileName, int xpos, int ypos, bool useTransparency = true);
+	~Enemy();
+
 	virtual void Update() override;
+
+	void HandleCollisions(std::vector<Bitmap*> scenehir);
+
 };

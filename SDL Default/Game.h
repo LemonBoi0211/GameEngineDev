@@ -24,6 +24,8 @@ private:
 
 	/// @brief bitmaps
 	Bitmap* m_monsterTransKeyed;
+	Bitmap* m_meatGuard;
+	Bitmap* m_meatPickup;
 
 	/// @brief scene hierarchy
 	vector<Bitmap*> sceneHier;

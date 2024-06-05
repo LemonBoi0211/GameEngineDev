@@ -51,6 +51,7 @@ Hero::Hero(SDL_Renderer* renderer, std::string fileName, int xpos, int ypos, boo
 	int width = GetObjWidth();
 	mCollider.r = width / 2;
 	ShiftCollider();
+	
 }
 
 Hero::~Hero()
@@ -60,6 +61,7 @@ Hero::~Hero()
 
 void Hero::Update()
 {
+
 	if (Input::Instance()->KeyIsPressed(KEY_W))
 	{
 		m_y--;
@@ -75,5 +77,16 @@ void Hero::Update()
 	if (Input::Instance()->KeyIsPressed(KEY_D))
 	{
 		m_x++;
+	}
+}
+
+void Hero::HandleCollisions(std::vector<Bitmap*> scenehir)
+{
+	for (Bitmap* other : scenehir)
+	{
+		if (checkCollision(this->GetCollider(), other->GetCollider()))
+		{
+			SDL_Quit;
+		}
 	}
 }

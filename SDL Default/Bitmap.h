@@ -1,12 +1,15 @@
 #pragma once
 #include "I_GUIWindow.h"
 #include <string>
+#include <vector>
 
 struct SDL_Surface;
 struct SDL_Texture;
 struct SDL_Renderer;
 
-/// @brief Vector2 Calculation
+/// @param Vector2 Calculation
+/// @brief calculates the bitmaps vector2
+/// @return Returns an X and Y value 
 struct Vector2 
 { 
 	Vector2(float x, float y) : X(x), Y(y) {};
@@ -15,7 +18,9 @@ struct Vector2
 	float Y;
 };
 
-/// @brief variables for a collision circle
+/// @param Variables for a collision circle
+/// @brief 
+/// @return 
 struct Circle
 {
 	int x, y;
@@ -37,6 +42,7 @@ protected:
 	int mVelX, mVelY;
 	Circle mCollider;
 	static const int DOT_VEL = 1;
+
 
 public:
 	Bitmap();
@@ -74,6 +80,8 @@ public:
 	//collider function
 	Circle& GetCollider();
 	void ShiftCollider();
+
+	virtual void HandleCollisions(std::vector<Bitmap*> scenehir);
 
 	//Circle/Circle collision detector
 	bool checkCollision(Circle& a, Circle& b);

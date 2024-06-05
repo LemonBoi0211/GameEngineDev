@@ -2,7 +2,6 @@
 #include "Bitmap.h"
 
 
-
 class Hero:public Bitmap
 {
 public:
@@ -11,6 +10,6 @@ public:
 
 	virtual void Update() override;
 
-
+	virtual void HandleCollisions(std::vector<Bitmap*> scenehir) override;
 
 };

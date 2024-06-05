@@ -8,6 +8,7 @@
 #include "SDL.h"
 #include "SDL_render.h"
 
+
 using namespace std;
 
 Bitmap::Bitmap()
@@ -136,6 +137,12 @@ void Bitmap::ShiftCollider()
 	mCollider.y = mPosY;
 }
 
+void Bitmap::HandleCollisions(std::vector<Bitmap*> scenehir)
+{
+
+}
+
+
 /// @brief checks if a collision betwen 2 circles occured
 /// @param a 
 /// @param b 
@@ -187,7 +194,7 @@ string Bitmap::SaveData()
 	return gObjdata;
 }
 
-/// @brief update for the bitmap to allow the sprite to be moved via player input
+
 void Bitmap::Update()
 {
 	

@@ -15,6 +15,7 @@
 #include "TextureManager.h"
 
 #include "Hero.h"
+#include "Enemy.h"
 
 /// @brief 
 /// @param mousePos 
@@ -122,8 +123,13 @@ Game::Game()
 
 		//create monster bitmap
 		m_monsterTransKeyed = new Hero(m_Renderer, "./assets/monsterTrans.bmp", 300, 100);
+		m_meatGuard = new Enemy(m_Renderer, "./assets/meatGuard.bmp", 1000, 100);
+		m_meatPickup = new Bitmap(m_Renderer, "./assets/ham.bmp", 450, 500);
 
 		sceneHier.push_back(m_monsterTransKeyed);
+		sceneHier.push_back(m_meatGuard);
+		sceneHier.push_back(m_meatPickup);
+
 		sceneTwo.push_back(m_monsterTransKeyed);
 
 		//read in font
@@ -316,28 +322,21 @@ Game::Game()
 		///details panel update
 		detailsPanel->Update();
 
-		/*m_monsterTransKeyed->Update();
-		///display bitmap
-		m_monsterTransKeyed->Draw();*/
-		
-
-
 		///draws text
-		UpdateText("Small Red", 50, 10, m_pSmallFont, { 255,0,0 });
-		UpdateText("Big Blue", 50, 40, m_pBigFont, { 0,0,255 });
+		UpdateText("Press ESC to Quit", 30, 30, m_pSmallFont, { 255,0,0 });
+		UpdateText("WASD to Move", 30, 50, m_pSmallFont, { 0,0,255 });
 
-		char char_array[] = "Big White";
-		UpdateText(char_array, 50, 140, m_pBigFont, { 255,255,255 });
+		char char_array[] = "R,G,B Changes Background Colour";
+		UpdateText(char_array, 30, 70, m_pSmallFont, { 255,255,255 });
 
-		string MyString = "Big Green";
-		UpdateText(MyString, 50, 70, m_pBigFont, { 0,255,0 });
+		string MyString = "Grab The Meat, Avoid Evil Guy";
+		UpdateText(MyString, 400, 40, m_pBigFont, { 0,255,0 });
 
 		int testNumber = 69420;
 		string testString = "Test Number: ";
 		testString += to_string(testNumber);
-		UpdateText(testString, 50, 210, m_pBigFont, { 255,255,255 });
+		UpdateText(testString, 400, 90, m_pBigFont, { 255,255,255 });
 		
-
 		///save and load buttons
 		if(ImGui::BeginMainMenuBar());
 		{
@@ -363,18 +362,18 @@ Game::Game()
 		for (Bitmap* bmpScene : sceneHier)
 		{
 			bmpScene->Update();
+			bmpScene->HandleCollisions(sceneHier);
 		}
-
 
 		for (Bitmap* bmpScene:sceneHier)
 		{
 			bmpScene->Draw();
 		}
 
+
 		///Scene Hierarchy Window
 		ImGui::Begin("Scene Hierarchy", 0);
 
-		
 
 		for (int i = 0; i < sceneHier.size(); i++)
 		{
@@ -437,7 +436,7 @@ Game::Game()
 
 			assetMousDrag = nullptr;
 		}
-
+		
 
 		ImGui::Begin("Asset Editor");
 		ImGui::BeginChild("Content Window", ImVec2(), true);
@@ -464,6 +463,8 @@ Game::Game()
 		ImGui::EndChild();
 		ImGui::End();
 
+		
+		
 
 
 		///imgui demo
@@ -498,6 +499,10 @@ Game::Game()
 		TTF_CloseFont(m_pSmallFont);
 
 		///destroy bitmaps
+		if (m_meatPickup)
+			delete m_meatPickup;
+		if (m_meatGuard)
+			delete m_meatGuard;
 		if (m_monsterTransKeyed)
 			delete m_monsterTransKeyed;
 
