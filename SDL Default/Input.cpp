@@ -14,7 +14,7 @@ Input::Input()
 }
 
 /// @brief main update loop for the polling of key press events
-/// @param  
+/// @param polls the events to check which key is pressed 
 void Input::Update(void) 
 {
 	while (SDL_PollEvent(&m_event) != NULL) 
@@ -88,8 +88,8 @@ void Input::Update(void)
 }
 
 /// @brief a simple bool function that lets the program know if is has had a key pressed or not
-/// @param key 
-/// @return 
+/// @param designate which is being pressed
+/// @return returns true or false on key press
 bool Input::KeyIsPressed(KEYS_PRESSED_LIST key)
 {
 	return m_keysPressed[key];

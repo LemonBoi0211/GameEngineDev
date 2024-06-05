@@ -11,5 +11,5 @@ public:
 	virtual void Update() override;
 
 	void HandleCollisions(std::vector<Bitmap*> scenehir);
-
+	
 };

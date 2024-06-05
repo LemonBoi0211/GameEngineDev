@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 
+class Game;
+
 struct SDL_Surface;
 struct SDL_Texture;
 struct SDL_Renderer;
@@ -46,7 +48,7 @@ protected:
 
 public:
 	Bitmap();
-	Bitmap(SDL_Renderer* renderer, std::string fileName,int xpos, int ypos, bool useTransparency = true);
+	Bitmap(SDL_Renderer* renderer, std::string fileName, int xpos, int ypos, Game* owningGame, bool useTransparency = true);
 	virtual ~Bitmap();
 
 	virtual SDL_Texture* GetTextureRef()
@@ -64,32 +66,34 @@ public:
 	/// @brief Inherited via I_GUIWindow
 	virtual void GuiDraw() override;
 
+	
 
-
-	//Get Set m_x m_y
+	/// @brief Get Set X and Y
+	/// @param allows the system to find and set the gameobjs x and y pos
+	/// @return The X and Y value and Sets X and Y values
 	virtual int GetOBJPosX();
 	virtual int SetOBJPosX(int newObjX);
 
 	virtual int GetOBJPosY();
 	virtual int SetOBJPosY(int newObjY);
 
-	//Get bmp/obj width and height
+	///Get bmp/obj width and height
 	virtual int GetObjWidth();
 	virtual int GetObjHeight();
 
-	//collider function
+	///collider function
 	Circle& GetCollider();
 	void ShiftCollider();
 
 	virtual void HandleCollisions(std::vector<Bitmap*> scenehir);
 
-	//Circle/Circle collision detector
+	///Circle/Circle collision detector
 	bool checkCollision(Circle& a, Circle& b);
 
-	//Calculates distance squared between two points
+	///Calculates distance squared between two points
 	double distanceSquared(int x1, int y1, int x2, int y2);
 
 
-	//save/load stuff
+	///save/load stuff
 	virtual std::string SaveData();
 };

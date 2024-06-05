@@ -41,7 +41,7 @@ Game::Game()
 		m_Window = nullptr;
 		m_Renderer = nullptr;
 
-		const int screenWidth = 1200;
+		const int screenWidth = 1800;
 		const int screenHeight = 1000;
 
 		//start up
@@ -106,7 +106,7 @@ Game::Game()
 		{
 			if (entry.path().extension() == ".bmp" || entry.path().extension() == ".jpg" || entry.path().extension() == ".png")
 			{
-				Bitmap* Asset = new Bitmap(m_Renderer, entry.path().string(), 0, 0, true);
+				Bitmap* Asset = new Bitmap(m_Renderer, entry.path().string(), 0, 0, this, true);
 				content.push_back(Asset);
 
 			}
@@ -122,9 +122,9 @@ Game::Game()
 		detailsPanel = new DetailsPanel(&sceneHier);
 
 		//create monster bitmap
-		m_monsterTransKeyed = new Hero(m_Renderer, "./assets/monsterTrans.bmp", 300, 100);
-		m_meatGuard = new Enemy(m_Renderer, "./assets/meatGuard.bmp", 1000, 100);
-		m_meatPickup = new Bitmap(m_Renderer, "./assets/ham.bmp", 450, 500);
+		m_monsterTransKeyed = new Hero(m_Renderer, "./assets/monsterTrans.bmp", 100, 100);
+		m_meatGuard = new Enemy(m_Renderer, "./assets/meatGuard.bmp", 1700, 50);
+		m_meatPickup = new MeatPickup(m_Renderer, "./assets/ham.bmp", 850, 500);
 
 		sceneHier.push_back(m_monsterTransKeyed);
 		sceneHier.push_back(m_meatGuard);
@@ -204,7 +204,7 @@ Game::Game()
 	/// @brief change background colour with RGB keys
 	void Game::Run()
 	{
-		while (!Input::Instance()->KeyIsPressed(KEY_ESCAPE))
+		while (IsRunning && !Input::Instance()->KeyIsPressed(KEY_ESCAPE))
 		{
 			Input::Instance()->Update();
 
@@ -284,11 +284,26 @@ Game::Game()
 		while (getline(inFile, fileLine))
 		{
 			vector<string>sepData = getData(fileLine);
-			loadScene.push_back(new Bitmap(m_Renderer, sepData[0], stoi(sepData[1]), stoi(sepData[2])));
+			loadScene.push_back(new Bitmap(m_Renderer, sepData[0], stoi(sepData[1]), stoi(sepData[2]), this));
 		}
 
 
 		sceneHier = loadScene;
+	}
+
+	Bitmap* Game::GetHero()
+	{
+		return m_monsterTransKeyed;
+	}
+
+	Bitmap* Game::GetEnemy()
+	{
+		return m_meatGuard;
+	}
+
+	Bitmap* Game::GetItem()
+	{
+		return m_meatPickup;
 	}
 
 	/// @brief main game loop
@@ -430,7 +445,7 @@ Game::Game()
 			
 			int x, y;
 			SDL_GetMouseState(&x, &y);
-			Bitmap* s = new Bitmap(m_Renderer, assetMousDrag->FileName, x, y, true);
+			Bitmap* s = new Bitmap(m_Renderer, assetMousDrag->FileName, x, y, this, true);
 			
 			sceneHier.push_back(s);
 

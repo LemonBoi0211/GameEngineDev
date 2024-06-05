@@ -6,6 +6,9 @@
 #include <stdio.h>
 #include <vector>
 #include "DetailsPanel.h"
+#include "MeatPickup.h"
+#include "Hero.h"
+#include "Enemy.h"
 
 using namespace std;
 
@@ -44,6 +47,7 @@ private:
 	Bitmap* gameobjSelect(ImVec2 mousePos);
 	DetailsPanel* detailsPanel;
 
+	bool IsRunning = true;
 
 public:
 	Game();
@@ -66,6 +70,9 @@ public:
 	void Save();
 	void Load();
 
+	Bitmap* GetHero();
+	Bitmap* GetEnemy();
+	Bitmap* GetItem();
 };
 
 

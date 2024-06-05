@@ -8,6 +8,7 @@
 #include "SDL.h"
 #include "SDL_render.h"
 #include <ostream>
+#include <iostream>
 
 
 Enemy::Enemy(SDL_Renderer* renderer, std::string fileName, int xpos, int ypos, bool useTransparency)
@@ -18,9 +19,6 @@ Enemy::Enemy(SDL_Renderer* renderer, std::string fileName, int xpos, int ypos, b
 
 	m_x = xpos;
 	m_y = ypos;
-
-	mPosX = xpos;
-	mPosY = ypos;
 
 	mVelX = 0;
 	mVelY = 0;
@@ -59,36 +57,49 @@ Enemy::~Enemy()
 
 }
 
+/// @brief Movement update for patrolling ai
+/// @param takes in and compares objects current position to screen size and applies a velocity into the opposite direction as well as shifting the colliders position to make sure its always attached
+/// @return returns velocity to the objkect to allow it to patrol
 void Enemy::Update()
 {
 	m_x += mVelX;
-	if (m_x > 900)
+	if (m_x > 1699)
 	{
 		mVelX = -3;
 	}
-	else if (m_x < 150)
+	else if (m_x < 51)
 	{
 		mVelX = 3;
 	}
 
 	m_y += mVelY;
-	if (m_y > 800)
+	if (m_y > 949)
 	{
 		mVelY = -3;
 	}
-	else if (m_y < 150)
+	else if (m_y < 51)
 	{
 		mVelY = 3;
 	}
+
+	ShiftCollider();
+
 }
 
+
+/// @brief handles collisions between itself and another object
+/// @param finds and checks collisions between itself and another object within the scene
+/// @return applies logic (in this case a simple console output) when colliding with another object
 void Enemy::HandleCollisions(std::vector<Bitmap*> scenehir)
 {
 	for (Bitmap* other : scenehir)
 	{
 		if (checkCollision(this->GetCollider(), other->GetCollider()))
 		{
-			SDL_Quit;
+			if (other == this) { continue; }
+			cout << "RAWR" << std::endl;
+
+			
 		}
 	}
 }
