@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Enemy Class Reference</title>
+<title>Game Engine Development: Enemy Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Game Engine Development
    </div>
   </td>
  </tr>
@@ -92,13 +92,11 @@ $(function(){initNavTree('class_enemy.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_enemy-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Enemy Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>overrides the bitmap update so that this can have its own update  
- <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_enemy_8h_source.html">Enemy.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -112,99 +110,227 @@ Inheritance diagram for Enemy:</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:afb830bba887b230b8d449bee81d5a23b" id="r_afb830bba887b230b8d449bee81d5a23b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb830bba887b230b8d449bee81d5a23b">Enemy</a> (SDL_Renderer *renderer, std::string fileName, int xpos, int ypos, bool useTransparency=true)</td></tr>
+<tr class="separator:afb830bba887b230b8d449bee81d5a23b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0eec4755e28c02688065f9657150ac3" id="r_ac0eec4755e28c02688065f9657150ac3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0eec4755e28c02688065f9657150ac3">~Enemy</a> ()</td></tr>
+<tr class="separator:ac0eec4755e28c02688065f9657150ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a614ad271f07ecf63cb3e665155b7e258" id="r_a614ad271f07ecf63cb3e665155b7e258"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a614ad271f07ecf63cb3e665155b7e258">Update</a> () override</td></tr>
+<tr class="memdesc:a614ad271f07ecf63cb3e665155b7e258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Movement update for patrolling ai.  <br /></td></tr>
+<tr class="separator:a614ad271f07ecf63cb3e665155b7e258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40fa63c318540917c9a2e05deb9c123a" id="r_a40fa63c318540917c9a2e05deb9c123a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40fa63c318540917c9a2e05deb9c123a">HandleCollisions</a> (std::vector&lt; <a class="el" href="class_bitmap.html">Bitmap</a> * &gt; scenehir)</td></tr>
+<tr class="memdesc:a40fa63c318540917c9a2e05deb9c123a"><td class="mdescLeft">&#160;</td><td class="mdescRight">handles collisions between itself and another object  <br /></td></tr>
+<tr class="separator:a40fa63c318540917c9a2e05deb9c123a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_bitmap"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_bitmap')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_bitmap.html">Bitmap</a></td></tr>
-<tr class="memitem:a2e5aca76ecaad32ce61ad874b74facbe inherit pub_methods_class_bitmap" id="r_a2e5aca76ecaad32ce61ad874b74facbe"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>Bitmap</b> (SDL_Renderer *renderer, std::string fileName, int xpos, int ypos, bool useTransparency=true)</td></tr>
-<tr class="separator:a2e5aca76ecaad32ce61ad874b74facbe inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72d2a301ec1eb1c8d0f3d64823659a8e inherit pub_methods_class_bitmap" id="r_a72d2a301ec1eb1c8d0f3d64823659a8e"><td class="memItemLeft" align="right" valign="top">
-virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Bitmap</b> ()</td></tr>
-<tr class="memdesc:a72d2a301ec1eb1c8d0f3d64823659a8e inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_bitmap.html">Bitmap</a> Deconstructor. <br /></td></tr>
+<tr class="memitem:aa6ef6d8c0b66664350ef4dd062db3aec inherit pub_methods_class_bitmap" id="r_aa6ef6d8c0b66664350ef4dd062db3aec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#aa6ef6d8c0b66664350ef4dd062db3aec">Bitmap</a> ()</td></tr>
+<tr class="separator:aa6ef6d8c0b66664350ef4dd062db3aec inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b98c1d189f97fc5f8d4758d854176fa inherit pub_methods_class_bitmap" id="r_a7b98c1d189f97fc5f8d4758d854176fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a7b98c1d189f97fc5f8d4758d854176fa">Bitmap</a> (SDL_Renderer *renderer, std::string fileName, int xpos, int ypos, <a class="el" href="class_game.html">Game</a> *owningGame, bool useTransparency=true)</td></tr>
+<tr class="separator:a7b98c1d189f97fc5f8d4758d854176fa inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72d2a301ec1eb1c8d0f3d64823659a8e inherit pub_methods_class_bitmap" id="r_a72d2a301ec1eb1c8d0f3d64823659a8e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a72d2a301ec1eb1c8d0f3d64823659a8e">~Bitmap</a> ()</td></tr>
+<tr class="memdesc:a72d2a301ec1eb1c8d0f3d64823659a8e inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_bitmap.html">Bitmap</a> Deconstructor.  <br /></td></tr>
 <tr class="separator:a72d2a301ec1eb1c8d0f3d64823659a8e inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10e7065b785d62c54e8639249526442d inherit pub_methods_class_bitmap" id="r_a10e7065b785d62c54e8639249526442d"><td class="memItemLeft" align="right" valign="top">
-virtual SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><b>GetTextureRef</b> ()</td></tr>
+<tr class="memitem:a10e7065b785d62c54e8639249526442d inherit pub_methods_class_bitmap" id="r_a10e7065b785d62c54e8639249526442d"><td class="memItemLeft" align="right" valign="top">virtual SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a10e7065b785d62c54e8639249526442d">GetTextureRef</a> ()</td></tr>
 <tr class="separator:a10e7065b785d62c54e8639249526442d inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bee6c1f00faf97ad49b40a7ee56fe0e inherit pub_methods_class_bitmap" id="r_a6bee6c1f00faf97ad49b40a7ee56fe0e"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Draw</b> ()</td></tr>
-<tr class="memdesc:a6bee6c1f00faf97ad49b40a7ee56fe0e inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">draws the bitmap <br /></td></tr>
+<tr class="memitem:a6bee6c1f00faf97ad49b40a7ee56fe0e inherit pub_methods_class_bitmap" id="r_a6bee6c1f00faf97ad49b40a7ee56fe0e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a6bee6c1f00faf97ad49b40a7ee56fe0e">Draw</a> ()</td></tr>
+<tr class="memdesc:a6bee6c1f00faf97ad49b40a7ee56fe0e inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">draws the bitmap  <br /></td></tr>
 <tr class="separator:a6bee6c1f00faf97ad49b40a7ee56fe0e inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab7b7c873a6bebda83041a77a1bec5ae inherit pub_methods_class_bitmap" id="r_aab7b7c873a6bebda83041a77a1bec5ae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#aab7b7c873a6bebda83041a77a1bec5ae">GuiDraw</a> () override</td></tr>
 <tr class="memdesc:aab7b7c873a6bebda83041a77a1bec5ae inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inherited via <a class="el" href="class_i___g_u_i_window.html">I_GUIWindow</a>.  <br /></td></tr>
 <tr class="separator:aab7b7c873a6bebda83041a77a1bec5ae inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b3ebff902b08dd8881c2d50a0a77bc3 inherit pub_methods_class_bitmap" id="r_a3b3ebff902b08dd8881c2d50a0a77bc3"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a3b3ebff902b08dd8881c2d50a0a77bc3">GetOBJPosX</a> ()</td></tr>
+<tr class="memdesc:a3b3ebff902b08dd8881c2d50a0a77bc3 inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Set X and Y.  <br /></td></tr>
 <tr class="separator:a3b3ebff902b08dd8881c2d50a0a77bc3 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fdf9db2bb0e70fc717ae085e6a8a1e1 inherit pub_methods_class_bitmap" id="r_a8fdf9db2bb0e70fc717ae085e6a8a1e1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a8fdf9db2bb0e70fc717ae085e6a8a1e1">SetOBJPosX</a> (int newObjX)</td></tr>
+<tr class="memdesc:a8fdf9db2bb0e70fc717ae085e6a8a1e1 inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets an objects x position  <br /></td></tr>
 <tr class="separator:a8fdf9db2bb0e70fc717ae085e6a8a1e1 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fd01168f329d5c6af0673e742cda7c9 inherit pub_methods_class_bitmap" id="r_a2fd01168f329d5c6af0673e742cda7c9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a2fd01168f329d5c6af0673e742cda7c9">GetOBJPosY</a> ()</td></tr>
 <tr class="separator:a2fd01168f329d5c6af0673e742cda7c9 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7d516cd1e9d15c0a8ea94c3f2e6d8ad inherit pub_methods_class_bitmap" id="r_ab7d516cd1e9d15c0a8ea94c3f2e6d8ad"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#ab7d516cd1e9d15c0a8ea94c3f2e6d8ad">SetOBJPosY</a> (int newObjY)</td></tr>
+<tr class="memdesc:ab7d516cd1e9d15c0a8ea94c3f2e6d8ad inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets an objects y position  <br /></td></tr>
 <tr class="separator:ab7d516cd1e9d15c0a8ea94c3f2e6d8ad inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6371f2ca249224e93293bf31a5d100e2 inherit pub_methods_class_bitmap" id="r_a6371f2ca249224e93293bf31a5d100e2"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a6371f2ca249224e93293bf31a5d100e2">GetObjWidth</a> ()</td></tr>
+<tr class="memdesc:a6371f2ca249224e93293bf31a5d100e2 inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bmp/obj width and height.  <br /></td></tr>
 <tr class="separator:a6371f2ca249224e93293bf31a5d100e2 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae247924cfcca3b96bdd63e7046c0ab62 inherit pub_methods_class_bitmap" id="r_ae247924cfcca3b96bdd63e7046c0ab62"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#ae247924cfcca3b96bdd63e7046c0ab62">GetObjHeight</a> ()</td></tr>
 <tr class="separator:ae247924cfcca3b96bdd63e7046c0ab62 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa98e965caac5b1c8c36c9cc8f781b723 inherit pub_methods_class_bitmap" id="r_aa98e965caac5b1c8c36c9cc8f781b723"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_circle.html">Circle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#aa98e965caac5b1c8c36c9cc8f781b723">GetCollider</a> ()</td></tr>
+<tr class="memdesc:aa98e965caac5b1c8c36c9cc8f781b723 inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">collider function  <br /></td></tr>
 <tr class="separator:aa98e965caac5b1c8c36c9cc8f781b723 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6c6bb65ecb0cebb0b7b7c584816bbf9 inherit pub_methods_class_bitmap" id="r_ab6c6bb65ecb0cebb0b7b7c584816bbf9"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ShiftCollider</b> ()</td></tr>
-<tr class="memdesc:ab6c6bb65ecb0cebb0b7b7c584816bbf9 inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">offsets collider to center of an object <br /></td></tr>
+<tr class="memitem:ab6c6bb65ecb0cebb0b7b7c584816bbf9 inherit pub_methods_class_bitmap" id="r_ab6c6bb65ecb0cebb0b7b7c584816bbf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#ab6c6bb65ecb0cebb0b7b7c584816bbf9">ShiftCollider</a> ()</td></tr>
+<tr class="memdesc:ab6c6bb65ecb0cebb0b7b7c584816bbf9 inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">offsets collider to center of an object  <br /></td></tr>
 <tr class="separator:ab6c6bb65ecb0cebb0b7b7c584816bbf9 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91289e10700660e6048e8e8e41775b39 inherit pub_methods_class_bitmap" id="r_a91289e10700660e6048e8e8e41775b39"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a91289e10700660e6048e8e8e41775b39">checkCollision</a> (<a class="el" href="struct_circle.html">Circle</a> &amp;a, <a class="el" href="struct_circle.html">Circle</a> &amp;b)</td></tr>
-<tr class="memdesc:a91289e10700660e6048e8e8e41775b39 inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if a collision betwen 2 circles occured  <br /></td></tr>
+<tr class="memdesc:a91289e10700660e6048e8e8e41775b39 inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">Circle/Circle collision detector.  <br /></td></tr>
 <tr class="separator:a91289e10700660e6048e8e8e41775b39 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57b9d77f88e80072e65851f0c58db927 inherit pub_methods_class_bitmap" id="r_a57b9d77f88e80072e65851f0c58db927"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a57b9d77f88e80072e65851f0c58db927">distanceSquared</a> (int x1, int y1, int x2, int y2)</td></tr>
-<tr class="memdesc:a57b9d77f88e80072e65851f0c58db927 inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">squares the distance between objects for collision calcs  <br /></td></tr>
+<tr class="memdesc:a57b9d77f88e80072e65851f0c58db927 inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates distance squared between two points.  <br /></td></tr>
 <tr class="separator:a57b9d77f88e80072e65851f0c58db927 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b48953689d8923614721d0291d1a606 inherit pub_methods_class_bitmap" id="r_a9b48953689d8923614721d0291d1a606"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a9b48953689d8923614721d0291d1a606">SaveData</a> ()</td></tr>
-<tr class="memdesc:a9b48953689d8923614721d0291d1a606 inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">gives some chars for the save file to differentiate between diff things  <br /></td></tr>
+<tr class="memdesc:a9b48953689d8923614721d0291d1a606 inherit pub_methods_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">save/load stuff  <br /></td></tr>
 <tr class="separator:a9b48953689d8923614721d0291d1a606 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_bitmap"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_bitmap')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_bitmap.html">Bitmap</a></td></tr>
-<tr class="memitem:a00bacbc40d43c963243e5af1b6fa97dc inherit pub_attribs_class_bitmap" id="r_a00bacbc40d43c963243e5af1b6fa97dc"><td class="memItemLeft" align="right" valign="top">
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>FileName</b></td></tr>
+<tr class="memitem:a00bacbc40d43c963243e5af1b6fa97dc inherit pub_attribs_class_bitmap" id="r_a00bacbc40d43c963243e5af1b6fa97dc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a00bacbc40d43c963243e5af1b6fa97dc">FileName</a></td></tr>
 <tr class="separator:a00bacbc40d43c963243e5af1b6fa97dc inherit pub_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_bitmap"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_bitmap')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_bitmap.html">Bitmap</a></td></tr>
-<tr class="memitem:a6c3365cfb162674388a9452820adf569 inherit pro_attribs_class_bitmap" id="r_a6c3365cfb162674388a9452820adf569"><td class="memItemLeft" align="right" valign="top">
-SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pbitmapSurface</b></td></tr>
+<tr class="memitem:a6c3365cfb162674388a9452820adf569 inherit pro_attribs_class_bitmap" id="r_a6c3365cfb162674388a9452820adf569"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a6c3365cfb162674388a9452820adf569">m_pbitmapSurface</a></td></tr>
 <tr class="separator:a6c3365cfb162674388a9452820adf569 inherit pro_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c48f459ff1de3f34c935ce49e0b474b inherit pro_attribs_class_bitmap" id="r_a6c48f459ff1de3f34c935ce49e0b474b"><td class="memItemLeft" align="right" valign="top">
-SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pbitmapTexture</b></td></tr>
+<tr class="memitem:a6c48f459ff1de3f34c935ce49e0b474b inherit pro_attribs_class_bitmap" id="r_a6c48f459ff1de3f34c935ce49e0b474b"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a6c48f459ff1de3f34c935ce49e0b474b">m_pbitmapTexture</a></td></tr>
 <tr class="separator:a6c48f459ff1de3f34c935ce49e0b474b inherit pro_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace621d4947809c755584af37753e652d inherit pro_attribs_class_bitmap" id="r_ace621d4947809c755584af37753e652d"><td class="memItemLeft" align="right" valign="top">
-SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pRenderer</b></td></tr>
+<tr class="memitem:ace621d4947809c755584af37753e652d inherit pro_attribs_class_bitmap" id="r_ace621d4947809c755584af37753e652d"><td class="memItemLeft" align="right" valign="top">SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#ace621d4947809c755584af37753e652d">m_pRenderer</a></td></tr>
 <tr class="separator:ace621d4947809c755584af37753e652d inherit pro_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ade805194dabe9d4ac1051fb7b44075 inherit pro_attribs_class_bitmap" id="r_a7ade805194dabe9d4ac1051fb7b44075"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_x</b></td></tr>
-<tr class="memdesc:a7ade805194dabe9d4ac1051fb7b44075 inherit pro_attribs_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">variables for objects and collisions positions <br /></td></tr>
+<tr class="memitem:a7ade805194dabe9d4ac1051fb7b44075 inherit pro_attribs_class_bitmap" id="r_a7ade805194dabe9d4ac1051fb7b44075"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a7ade805194dabe9d4ac1051fb7b44075">m_x</a></td></tr>
+<tr class="memdesc:a7ade805194dabe9d4ac1051fb7b44075 inherit pro_attribs_class_bitmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">variables for objects and collisions positions  <br /></td></tr>
 <tr class="separator:a7ade805194dabe9d4ac1051fb7b44075 inherit pro_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4eee64e60c65393ee7c13f65824dff4 inherit pro_attribs_class_bitmap" id="r_af4eee64e60c65393ee7c13f65824dff4"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_y</b></td></tr>
+<tr class="memitem:af4eee64e60c65393ee7c13f65824dff4 inherit pro_attribs_class_bitmap" id="r_af4eee64e60c65393ee7c13f65824dff4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#af4eee64e60c65393ee7c13f65824dff4">m_y</a></td></tr>
 <tr class="separator:af4eee64e60c65393ee7c13f65824dff4 inherit pro_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93bd2cdfdf202bdfffc63757c4aafa6c inherit pro_attribs_class_bitmap" id="r_a93bd2cdfdf202bdfffc63757c4aafa6c"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mPosX</b></td></tr>
+<tr class="memitem:a93bd2cdfdf202bdfffc63757c4aafa6c inherit pro_attribs_class_bitmap" id="r_a93bd2cdfdf202bdfffc63757c4aafa6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a93bd2cdfdf202bdfffc63757c4aafa6c">mPosX</a></td></tr>
 <tr class="separator:a93bd2cdfdf202bdfffc63757c4aafa6c inherit pro_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7137855cf1d4dc12b82ecd4f76fad611 inherit pro_attribs_class_bitmap" id="r_a7137855cf1d4dc12b82ecd4f76fad611"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mPosY</b></td></tr>
+<tr class="memitem:a7137855cf1d4dc12b82ecd4f76fad611 inherit pro_attribs_class_bitmap" id="r_a7137855cf1d4dc12b82ecd4f76fad611"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a7137855cf1d4dc12b82ecd4f76fad611">mPosY</a></td></tr>
 <tr class="separator:a7137855cf1d4dc12b82ecd4f76fad611 inherit pro_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6319e065c640a12ea8bb84f455b75bbc inherit pro_attribs_class_bitmap" id="r_a6319e065c640a12ea8bb84f455b75bbc"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mVelX</b></td></tr>
+<tr class="memitem:a6319e065c640a12ea8bb84f455b75bbc inherit pro_attribs_class_bitmap" id="r_a6319e065c640a12ea8bb84f455b75bbc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a6319e065c640a12ea8bb84f455b75bbc">mVelX</a></td></tr>
 <tr class="separator:a6319e065c640a12ea8bb84f455b75bbc inherit pro_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48ae0ee6d6de3b9c7a58510cd02b8bf7 inherit pro_attribs_class_bitmap" id="r_a48ae0ee6d6de3b9c7a58510cd02b8bf7"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mVelY</b></td></tr>
+<tr class="memitem:a48ae0ee6d6de3b9c7a58510cd02b8bf7 inherit pro_attribs_class_bitmap" id="r_a48ae0ee6d6de3b9c7a58510cd02b8bf7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a48ae0ee6d6de3b9c7a58510cd02b8bf7">mVelY</a></td></tr>
 <tr class="separator:a48ae0ee6d6de3b9c7a58510cd02b8bf7 inherit pro_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73576a084861a0d6d200e41eb2a92cc4 inherit pro_attribs_class_bitmap" id="r_a73576a084861a0d6d200e41eb2a92cc4"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="struct_circle.html">Circle</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mCollider</b></td></tr>
+<tr class="memitem:a73576a084861a0d6d200e41eb2a92cc4 inherit pro_attribs_class_bitmap" id="r_a73576a084861a0d6d200e41eb2a92cc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_circle.html">Circle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a73576a084861a0d6d200e41eb2a92cc4">mCollider</a></td></tr>
 <tr class="separator:a73576a084861a0d6d200e41eb2a92cc4 inherit pro_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_attribs_class_bitmap"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_static_attribs_class_bitmap')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="class_bitmap.html">Bitmap</a></td></tr>
-<tr class="memitem:a9e449fe1c5e03346f4a2a484476cc141 inherit pro_static_attribs_class_bitmap" id="r_a9e449fe1c5e03346f4a2a484476cc141"><td class="memItemLeft" align="right" valign="top">
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>DOT_VEL</b> = 1</td></tr>
+<tr class="memitem:a9e449fe1c5e03346f4a2a484476cc141 inherit pro_static_attribs_class_bitmap" id="r_a9e449fe1c5e03346f4a2a484476cc141"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a9e449fe1c5e03346f4a2a484476cc141">DOT_VEL</a> = 1</td></tr>
 <tr class="separator:a9e449fe1c5e03346f4a2a484476cc141 inherit pro_static_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>overrides the bitmap update so that this can have its own update </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afb830bba887b230b8d449bee81d5a23b" name="afb830bba887b230b8d449bee81d5a23b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb830bba887b230b8d449bee81d5a23b">&#9670;&#160;</a></span>Enemy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Enemy::Enemy </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *</td>          <td class="paramname"><span class="paramname"><em>renderer</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>fileName</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>xpos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ypos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>useTransparency</em><span class="paramdefsep"> = </span><span class="paramdefval">true</span></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0eec4755e28c02688065f9657150ac3" name="ac0eec4755e28c02688065f9657150ac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0eec4755e28c02688065f9657150ac3">&#9670;&#160;</a></span>~Enemy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Enemy::~Enemy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a40fa63c318540917c9a2e05deb9c123a" name="a40fa63c318540917c9a2e05deb9c123a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40fa63c318540917c9a2e05deb9c123a">&#9670;&#160;</a></span>HandleCollisions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy::HandleCollisions </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_bitmap.html">Bitmap</a> * &gt;</td>          <td class="paramname"><span class="paramname"><em>scenehir</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>handles collisions between itself and another object </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">finds</td><td>and checks collisions between itself and another object within the scene </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>applies logic (in this case a simple console output) when colliding with another object </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_bitmap.html#a1b6e42950d8785b2d68714dfc6baa43c">Bitmap</a>.</p>
+
+</div>
+</div>
+<a id="a614ad271f07ecf63cb3e665155b7e258" name="a614ad271f07ecf63cb3e665155b7e258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a614ad271f07ecf63cb3e665155b7e258">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy::Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Movement update for patrolling ai. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">takes</td><td>in and compares objects current position to screen size and applies a velocity into the opposite direction as well as shifting the colliders position to make sure its always attached </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns velocity to the objkect to allow it to patrol </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_bitmap.html#af8ac45cf41d54336c9e08f4c8394532c">Bitmap</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_enemy_8h_source.html">Enemy.h</a></li>
-<li><b>Enemy.cpp</b></li>
+<li><a class="el" href="_enemy_8cpp.html">Enemy.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

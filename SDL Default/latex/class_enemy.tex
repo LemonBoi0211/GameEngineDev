@@ -2,11 +2,6 @@
 \hypertarget{class_enemy}{}\label{class_enemy}\index{Enemy@{Enemy}}
 
 
-overrides the bitmap update so that this can have its own update  
-
-
-
-
 {\ttfamily \#include $<$Enemy.\+h$>$}
 
 Inheritance diagram for Enemy\+:\begin{figure}[H]
@@ -15,81 +10,153 @@ Inheritance diagram for Enemy\+:\begin{figure}[H]
 \includegraphics[height=3.000000cm]{class_enemy}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Additional Inherited Members}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_enemy_afb830bba887b230b8d449bee81d5a23b}{Enemy}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, std\+::string file\+Name, int xpos, int ypos, bool use\+Transparency=true)
+\item 
+\mbox{\hyperlink{class_enemy_ac0eec4755e28c02688065f9657150ac3}{\texorpdfstring{$\sim$}{\string~}\+Enemy}} ()
+\item 
+virtual void \mbox{\hyperlink{class_enemy_a614ad271f07ecf63cb3e665155b7e258}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Movement update for patrolling ai. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_enemy_a40fa63c318540917c9a2e05deb9c123a}{Handle\+Collisions}} (std\+::vector$<$ \mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*} $>$ scenehir)
+\begin{DoxyCompactList}\small\item\em handles collisions between itself and another object \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_bitmap}{Bitmap}}}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries Bitmap} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, std\+::string file\+Name, int xpos, int ypos, bool use\+Transparency=true)
+\mbox{\hyperlink{class_bitmap_aa6ef6d8c0b66664350ef4dd062db3aec}{Bitmap}} ()
 \item 
-virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Bitmap} ()
+\mbox{\hyperlink{class_bitmap_a7b98c1d189f97fc5f8d4758d854176fa}{Bitmap}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, std\+::string file\+Name, int xpos, int ypos, \mbox{\hyperlink{class_game}{Game}} \texorpdfstring{$\ast$}{*}owning\+Game, bool use\+Transparency=true)
+\item 
+virtual \mbox{\hyperlink{class_bitmap_a72d2a301ec1eb1c8d0f3d64823659a8e}{\texorpdfstring{$\sim$}{\string~}\+Bitmap}} ()
 \begin{DoxyCompactList}\small\item\em \doxylink{class_bitmap}{Bitmap} Deconstructor. \end{DoxyCompactList}\item 
-virtual SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} {\bfseries Get\+Texture\+Ref} ()
+virtual SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bitmap_a10e7065b785d62c54e8639249526442d}{Get\+Texture\+Ref}} ()
 \item 
-virtual void {\bfseries Draw} ()
+virtual void \mbox{\hyperlink{class_bitmap_a6bee6c1f00faf97ad49b40a7ee56fe0e}{Draw}} ()
 \begin{DoxyCompactList}\small\item\em draws the bitmap \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_bitmap_aab7b7c873a6bebda83041a77a1bec5ae}{Gui\+Draw}} () override
 \begin{DoxyCompactList}\small\item\em Inherited via \doxylink{class_i___g_u_i_window}{I\+\_\+\+GUIWindow}. \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{class_bitmap_a3b3ebff902b08dd8881c2d50a0a77bc3}{Get\+OBJPosX}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Get Set X and Y. \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{class_bitmap_a8fdf9db2bb0e70fc717ae085e6a8a1e1}{Set\+OBJPosX}} (int new\+ObjX)
-\item 
+\begin{DoxyCompactList}\small\item\em sets an objects x position \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{class_bitmap_a2fd01168f329d5c6af0673e742cda7c9}{Get\+OBJPosY}} ()
 \item 
 virtual int \mbox{\hyperlink{class_bitmap_ab7d516cd1e9d15c0a8ea94c3f2e6d8ad}{Set\+OBJPosY}} (int new\+ObjY)
-\item 
+\begin{DoxyCompactList}\small\item\em sets an objects y position \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{class_bitmap_a6371f2ca249224e93293bf31a5d100e2}{Get\+Obj\+Width}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Get bmp/obj width and height. \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{class_bitmap_ae247924cfcca3b96bdd63e7046c0ab62}{Get\+Obj\+Height}} ()
 \item 
 \mbox{\hyperlink{struct_circle}{Circle}} \& \mbox{\hyperlink{class_bitmap_aa98e965caac5b1c8c36c9cc8f781b723}{Get\+Collider}} ()
-\item 
-void {\bfseries Shift\+Collider} ()
+\begin{DoxyCompactList}\small\item\em collider function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bitmap_ab6c6bb65ecb0cebb0b7b7c584816bbf9}{Shift\+Collider}} ()
 \begin{DoxyCompactList}\small\item\em offsets collider to center of an object \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_bitmap_a91289e10700660e6048e8e8e41775b39}{check\+Collision}} (\mbox{\hyperlink{struct_circle}{Circle}} \&a, \mbox{\hyperlink{struct_circle}{Circle}} \&b)
-\begin{DoxyCompactList}\small\item\em checks if a collision betwen 2 circles occured \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Circle/\+Circle collision detector. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_bitmap_a57b9d77f88e80072e65851f0c58db927}{distance\+Squared}} (int x1, int y1, int x2, int y2)
-\begin{DoxyCompactList}\small\item\em squares the distance between objects for collision calcs \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Calculates distance squared between two points. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{class_bitmap_a9b48953689d8923614721d0291d1a606}{Save\+Data}} ()
-\begin{DoxyCompactList}\small\item\em gives some chars for the save file to differentiate between diff things \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em save/load stuff \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_bitmap}{Bitmap}}}
 \begin{DoxyCompactItemize}
 \item 
-std\+::string {\bfseries File\+Name}
+std\+::string \mbox{\hyperlink{class_bitmap_a00bacbc40d43c963243e5af1b6fa97dc}{File\+Name}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_bitmap}{Bitmap}}}
 \begin{DoxyCompactItemize}
 \item 
-SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+pbitmap\+Surface}
+SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bitmap_a6c3365cfb162674388a9452820adf569}{m\+\_\+pbitmap\+Surface}}
 \item 
-SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+pbitmap\+Texture}
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bitmap_a6c48f459ff1de3f34c935ce49e0b474b}{m\+\_\+pbitmap\+Texture}}
 \item 
-SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+p\+Renderer}
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bitmap_ace621d4947809c755584af37753e652d}{m\+\_\+p\+Renderer}}
 \item 
-int {\bfseries m\+\_\+x}
+int \mbox{\hyperlink{class_bitmap_a7ade805194dabe9d4ac1051fb7b44075}{m\+\_\+x}}
 \begin{DoxyCompactList}\small\item\em variables for objects and collisions positions \end{DoxyCompactList}\item 
-int {\bfseries m\+\_\+y}
+int \mbox{\hyperlink{class_bitmap_af4eee64e60c65393ee7c13f65824dff4}{m\+\_\+y}}
 \item 
-int {\bfseries m\+PosX}
+int \mbox{\hyperlink{class_bitmap_a93bd2cdfdf202bdfffc63757c4aafa6c}{m\+PosX}}
 \item 
-int {\bfseries m\+PosY}
+int \mbox{\hyperlink{class_bitmap_a7137855cf1d4dc12b82ecd4f76fad611}{m\+PosY}}
 \item 
-int {\bfseries m\+VelX}
+int \mbox{\hyperlink{class_bitmap_a6319e065c640a12ea8bb84f455b75bbc}{m\+VelX}}
 \item 
-int {\bfseries m\+VelY}
+int \mbox{\hyperlink{class_bitmap_a48ae0ee6d6de3b9c7a58510cd02b8bf7}{m\+VelY}}
 \item 
-\mbox{\hyperlink{struct_circle}{Circle}} {\bfseries m\+Collider}
+\mbox{\hyperlink{struct_circle}{Circle}} \mbox{\hyperlink{class_bitmap_a73576a084861a0d6d200e41eb2a92cc4}{m\+Collider}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_bitmap}{Bitmap}}}
 \begin{DoxyCompactItemize}
 \item 
-static const int {\bfseries DOT\+\_\+\+VEL} = 1
+static const int \mbox{\hyperlink{class_bitmap_a9e449fe1c5e03346f4a2a484476cc141}{DOT\+\_\+\+VEL}} = 1
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-overrides the bitmap update so that this can have its own update 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_enemy_afb830bba887b230b8d449bee81d5a23b}\label{class_enemy_afb830bba887b230b8d449bee81d5a23b} 
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Enemy()}{Enemy()}}
+{\footnotesize\ttfamily Enemy\+::\+Enemy (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer,  }\item[{std\+::string}]{file\+Name,  }\item[{int}]{xpos,  }\item[{int}]{ypos,  }\item[{bool}]{use\+Transparency = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_enemy_ac0eec4755e28c02688065f9657150ac3}\label{class_enemy_ac0eec4755e28c02688065f9657150ac3} 
+\index{Enemy@{Enemy}!````~Enemy@{\texorpdfstring{$\sim$}{\string~}Enemy}}
+\index{````~Enemy@{\texorpdfstring{$\sim$}{\string~}Enemy}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Enemy()}{\string~Enemy()}}
+{\footnotesize\ttfamily Enemy\+::\texorpdfstring{$\sim$}{\string~}\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_enemy_a40fa63c318540917c9a2e05deb9c123a}\label{class_enemy_a40fa63c318540917c9a2e05deb9c123a} 
+\index{Enemy@{Enemy}!HandleCollisions@{HandleCollisions}}
+\index{HandleCollisions@{HandleCollisions}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{HandleCollisions()}{HandleCollisions()}}
+{\footnotesize\ttfamily void Enemy\+::\+Handle\+Collisions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*} $>$}]{scenehir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+handles collisions between itself and another object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em finds} & and checks collisions between itself and another object within the scene \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+applies logic (in this case a simple console output) when colliding with another object 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_bitmap_a1b6e42950d8785b2d68714dfc6baa43c}{Bitmap}}.
+
+\Hypertarget{class_enemy_a614ad271f07ecf63cb3e665155b7e258}\label{class_enemy_a614ad271f07ecf63cb3e665155b7e258} 
+\index{Enemy@{Enemy}!Update@{Update}}
+\index{Update@{Update}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Enemy\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Movement update for patrolling ai. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em takes} & in and compares objects current position to screen size and applies a velocity into the opposite direction as well as shifting the colliders position to make sure its always attached \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns velocity to the objkect to allow it to patrol 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_bitmap_af8ac45cf41d54336c9e08f4c8394532c}{Bitmap}}.
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Enemy.\+h\item 
-Enemy.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_enemy_8h}{Enemy.\+h}}\item 
+\mbox{\hyperlink{_enemy_8cpp}{Enemy.\+cpp}}\end{DoxyCompactItemize}

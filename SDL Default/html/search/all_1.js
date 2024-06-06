@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['changeobj_0',['ChangeObj',['../class_details_panel.html#a4564f73abacdc6b5d88f281981033871',1,'DetailsPanel']]],
-  ['checkcollision_1',['checkCollision',['../class_bitmap.html#a91289e10700660e6048e8e8e41775b39',1,'Bitmap']]],
-  ['circle_2',['Circle',['../struct_circle.html',1,'']]]
+  ['bitmap_0',['Bitmap',['../class_bitmap.html',1,'Bitmap'],['../class_bitmap.html#aa6ef6d8c0b66664350ef4dd062db3aec',1,'Bitmap::Bitmap()'],['../class_bitmap.html#a7b98c1d189f97fc5f8d4758d854176fa',1,'Bitmap::Bitmap(SDL_Renderer *renderer, std::string fileName, int xpos, int ypos, Game *owningGame, bool useTransparency=true)']]],
+  ['bitmap_2ecpp_1',['Bitmap.cpp',['../_bitmap_8cpp.html',1,'']]],
+  ['bitmap_2eh_2',['Bitmap.h',['../_bitmap_8h.html',1,'']]]
 ];

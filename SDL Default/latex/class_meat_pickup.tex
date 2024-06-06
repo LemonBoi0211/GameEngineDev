@@ -1,0 +1,142 @@
+\doxysection{Meat\+Pickup Class Reference}
+\hypertarget{class_meat_pickup}{}\label{class_meat_pickup}\index{MeatPickup@{MeatPickup}}
+
+
+{\ttfamily \#include $<$Meat\+Pickup.\+h$>$}
+
+Inheritance diagram for Meat\+Pickup\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_meat_pickup}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_meat_pickup_aa4bc3d14f878db98e5cab1c134710ca2}{Meat\+Pickup}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, std\+::string file\+Name, int xpos, int ypos, bool use\+Transparency=true)
+\item 
+\mbox{\hyperlink{class_meat_pickup_aafd546afdec6cb805e27bd0fa17f9229}{\texorpdfstring{$\sim$}{\string~}\+Meat\+Pickup}} ()
+\item 
+virtual void \mbox{\hyperlink{class_meat_pickup_acc40deaf43ade11f3f3d4a6dabf1892a}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Updates the \doxylink{class_bitmap}{Bitmap} logic. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_meat_pickup_abcdb374ca9971cea40694bce39882f96}{Handle\+Collisions}} (std\+::vector$<$ \mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*} $>$ scenehir) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_bitmap}{Bitmap}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bitmap_aa6ef6d8c0b66664350ef4dd062db3aec}{Bitmap}} ()
+\item 
+\mbox{\hyperlink{class_bitmap_a7b98c1d189f97fc5f8d4758d854176fa}{Bitmap}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, std\+::string file\+Name, int xpos, int ypos, \mbox{\hyperlink{class_game}{Game}} \texorpdfstring{$\ast$}{*}owning\+Game, bool use\+Transparency=true)
+\item 
+virtual \mbox{\hyperlink{class_bitmap_a72d2a301ec1eb1c8d0f3d64823659a8e}{\texorpdfstring{$\sim$}{\string~}\+Bitmap}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_bitmap}{Bitmap} Deconstructor. \end{DoxyCompactList}\item 
+virtual SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bitmap_a10e7065b785d62c54e8639249526442d}{Get\+Texture\+Ref}} ()
+\item 
+virtual void \mbox{\hyperlink{class_bitmap_a6bee6c1f00faf97ad49b40a7ee56fe0e}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em draws the bitmap \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_bitmap_aab7b7c873a6bebda83041a77a1bec5ae}{Gui\+Draw}} () override
+\begin{DoxyCompactList}\small\item\em Inherited via \doxylink{class_i___g_u_i_window}{I\+\_\+\+GUIWindow}. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_bitmap_a3b3ebff902b08dd8881c2d50a0a77bc3}{Get\+OBJPosX}} ()
+\begin{DoxyCompactList}\small\item\em Get Set X and Y. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_bitmap_a8fdf9db2bb0e70fc717ae085e6a8a1e1}{Set\+OBJPosX}} (int new\+ObjX)
+\begin{DoxyCompactList}\small\item\em sets an objects x position \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_bitmap_a2fd01168f329d5c6af0673e742cda7c9}{Get\+OBJPosY}} ()
+\item 
+virtual int \mbox{\hyperlink{class_bitmap_ab7d516cd1e9d15c0a8ea94c3f2e6d8ad}{Set\+OBJPosY}} (int new\+ObjY)
+\begin{DoxyCompactList}\small\item\em sets an objects y position \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_bitmap_a6371f2ca249224e93293bf31a5d100e2}{Get\+Obj\+Width}} ()
+\begin{DoxyCompactList}\small\item\em Get bmp/obj width and height. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_bitmap_ae247924cfcca3b96bdd63e7046c0ab62}{Get\+Obj\+Height}} ()
+\item 
+\mbox{\hyperlink{struct_circle}{Circle}} \& \mbox{\hyperlink{class_bitmap_aa98e965caac5b1c8c36c9cc8f781b723}{Get\+Collider}} ()
+\begin{DoxyCompactList}\small\item\em collider function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bitmap_ab6c6bb65ecb0cebb0b7b7c584816bbf9}{Shift\+Collider}} ()
+\begin{DoxyCompactList}\small\item\em offsets collider to center of an object \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_bitmap_a91289e10700660e6048e8e8e41775b39}{check\+Collision}} (\mbox{\hyperlink{struct_circle}{Circle}} \&a, \mbox{\hyperlink{struct_circle}{Circle}} \&b)
+\begin{DoxyCompactList}\small\item\em Circle/\+Circle collision detector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_bitmap_a57b9d77f88e80072e65851f0c58db927}{distance\+Squared}} (int x1, int y1, int x2, int y2)
+\begin{DoxyCompactList}\small\item\em Calculates distance squared between two points. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_bitmap_a9b48953689d8923614721d0291d1a606}{Save\+Data}} ()
+\begin{DoxyCompactList}\small\item\em save/load stuff \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_bitmap}{Bitmap}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_bitmap_a00bacbc40d43c963243e5af1b6fa97dc}{File\+Name}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_bitmap}{Bitmap}}}
+\begin{DoxyCompactItemize}
+\item 
+SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bitmap_a6c3365cfb162674388a9452820adf569}{m\+\_\+pbitmap\+Surface}}
+\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bitmap_a6c48f459ff1de3f34c935ce49e0b474b}{m\+\_\+pbitmap\+Texture}}
+\item 
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bitmap_ace621d4947809c755584af37753e652d}{m\+\_\+p\+Renderer}}
+\item 
+int \mbox{\hyperlink{class_bitmap_a7ade805194dabe9d4ac1051fb7b44075}{m\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em variables for objects and collisions positions \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_bitmap_af4eee64e60c65393ee7c13f65824dff4}{m\+\_\+y}}
+\item 
+int \mbox{\hyperlink{class_bitmap_a93bd2cdfdf202bdfffc63757c4aafa6c}{m\+PosX}}
+\item 
+int \mbox{\hyperlink{class_bitmap_a7137855cf1d4dc12b82ecd4f76fad611}{m\+PosY}}
+\item 
+int \mbox{\hyperlink{class_bitmap_a6319e065c640a12ea8bb84f455b75bbc}{m\+VelX}}
+\item 
+int \mbox{\hyperlink{class_bitmap_a48ae0ee6d6de3b9c7a58510cd02b8bf7}{m\+VelY}}
+\item 
+\mbox{\hyperlink{struct_circle}{Circle}} \mbox{\hyperlink{class_bitmap_a73576a084861a0d6d200e41eb2a92cc4}{m\+Collider}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_bitmap}{Bitmap}}}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_bitmap_a9e449fe1c5e03346f4a2a484476cc141}{DOT\+\_\+\+VEL}} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_meat_pickup_aa4bc3d14f878db98e5cab1c134710ca2}\label{class_meat_pickup_aa4bc3d14f878db98e5cab1c134710ca2} 
+\index{MeatPickup@{MeatPickup}!MeatPickup@{MeatPickup}}
+\index{MeatPickup@{MeatPickup}!MeatPickup@{MeatPickup}}
+\doxysubsubsection{\texorpdfstring{MeatPickup()}{MeatPickup()}}
+{\footnotesize\ttfamily Meat\+Pickup\+::\+Meat\+Pickup (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer,  }\item[{std\+::string}]{file\+Name,  }\item[{int}]{xpos,  }\item[{int}]{ypos,  }\item[{bool}]{use\+Transparency = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_meat_pickup_aafd546afdec6cb805e27bd0fa17f9229}\label{class_meat_pickup_aafd546afdec6cb805e27bd0fa17f9229} 
+\index{MeatPickup@{MeatPickup}!````~MeatPickup@{\texorpdfstring{$\sim$}{\string~}MeatPickup}}
+\index{````~MeatPickup@{\texorpdfstring{$\sim$}{\string~}MeatPickup}!MeatPickup@{MeatPickup}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MeatPickup()}{\string~MeatPickup()}}
+{\footnotesize\ttfamily Meat\+Pickup\+::\texorpdfstring{$\sim$}{\string~}\+Meat\+Pickup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_meat_pickup_abcdb374ca9971cea40694bce39882f96}\label{class_meat_pickup_abcdb374ca9971cea40694bce39882f96} 
+\index{MeatPickup@{MeatPickup}!HandleCollisions@{HandleCollisions}}
+\index{HandleCollisions@{HandleCollisions}!MeatPickup@{MeatPickup}}
+\doxysubsubsection{\texorpdfstring{HandleCollisions()}{HandleCollisions()}}
+{\footnotesize\ttfamily void Meat\+Pickup\+::\+Handle\+Collisions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*} $>$}]{scenehir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_bitmap_a1b6e42950d8785b2d68714dfc6baa43c}{Bitmap}}.
+
+\Hypertarget{class_meat_pickup_acc40deaf43ade11f3f3d4a6dabf1892a}\label{class_meat_pickup_acc40deaf43ade11f3f3d4a6dabf1892a} 
+\index{MeatPickup@{MeatPickup}!Update@{Update}}
+\index{Update@{Update}!MeatPickup@{MeatPickup}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Meat\+Pickup\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the \doxylink{class_bitmap}{Bitmap} logic. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_bitmap_af8ac45cf41d54336c9e08f4c8394532c}{Bitmap}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_meat_pickup_8h}{Meat\+Pickup.\+h}}\item 
+\mbox{\hyperlink{_meat_pickup_8cpp}{Meat\+Pickup.\+cpp}}\end{DoxyCompactItemize}

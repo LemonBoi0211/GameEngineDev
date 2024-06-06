@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: TextureManager Class Reference</title>
+<title>Game Engine Development: TextureManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Game Engine Development
    </div>
   </td>
  </tr>
@@ -99,12 +99,15 @@ $(function(){initNavTree('class_texture_manager.html',''); initResizable(); });
   <div class="headertitle"><div class="title">TextureManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_texture_manager_8h_source.html">TextureManager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a001d6d74674961db79987e3222682576" id="r_a001d6d74674961db79987e3222682576"><td class="memItemLeft" align="right" valign="top"><a id="a001d6d74674961db79987e3222682576" name="a001d6d74674961db79987e3222682576"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>~TextureManager</b> ()</td></tr>
-<tr class="memdesc:a001d6d74674961db79987e3222682576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture manager deconstructor. <br /></td></tr>
+<tr class="memitem:ad76abb178b37cedf4514eb0154349935" id="r_ad76abb178b37cedf4514eb0154349935"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad76abb178b37cedf4514eb0154349935">TextureManager</a> ()</td></tr>
+<tr class="separator:ad76abb178b37cedf4514eb0154349935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001d6d74674961db79987e3222682576" id="r_a001d6d74674961db79987e3222682576"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a001d6d74674961db79987e3222682576">~TextureManager</a> ()</td></tr>
+<tr class="memdesc:a001d6d74674961db79987e3222682576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture manager deconstructor.  <br /></td></tr>
 <tr class="separator:a001d6d74674961db79987e3222682576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad5de907cd80953919eff92de96f094b" id="r_aad5de907cd80953919eff92de96f094b"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad5de907cd80953919eff92de96f094b">Load</a> (const string fileName, bool useTransparancy, SDL_Renderer *PRenderer)</td></tr>
 <tr class="memdesc:aad5de907cd80953919eff92de96f094b"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads a texture based on the file name  <br /></td></tr>
@@ -115,17 +118,77 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab73eee48ba8c35281558094e2f84013d" id="r_ab73eee48ba8c35281558094e2f84013d"><td class="memItemLeft" align="right" valign="top"><a id="ab73eee48ba8c35281558094e2f84013d" name="ab73eee48ba8c35281558094e2f84013d"></a>
-static <a class="el" href="class_texture_manager.html">TextureManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetInstance</b> ()</td></tr>
+<tr class="memitem:ab73eee48ba8c35281558094e2f84013d" id="r_ab73eee48ba8c35281558094e2f84013d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_texture_manager.html">TextureManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab73eee48ba8c35281558094e2f84013d">GetInstance</a> ()</td></tr>
 <tr class="separator:ab73eee48ba8c35281558094e2f84013d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a4299b7c590649af89548cf2bfb1a6eb1" id="r_a4299b7c590649af89548cf2bfb1a6eb1"><td class="memItemLeft" align="right" valign="top"><a id="a4299b7c590649af89548cf2bfb1a6eb1" name="a4299b7c590649af89548cf2bfb1a6eb1"></a>
-map&lt; string, SDL_Texture * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_textureMap</b></td></tr>
+<tr class="memitem:a4299b7c590649af89548cf2bfb1a6eb1" id="r_a4299b7c590649af89548cf2bfb1a6eb1"><td class="memItemLeft" align="right" valign="top">map&lt; string, SDL_Texture * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4299b7c590649af89548cf2bfb1a6eb1">m_textureMap</a></td></tr>
 <tr class="separator:a4299b7c590649af89548cf2bfb1a6eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad76abb178b37cedf4514eb0154349935" name="ad76abb178b37cedf4514eb0154349935"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad76abb178b37cedf4514eb0154349935">&#9670;&#160;</a></span>TextureManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TextureManager::TextureManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a001d6d74674961db79987e3222682576" name="a001d6d74674961db79987e3222682576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a001d6d74674961db79987e3222682576">&#9670;&#160;</a></span>~TextureManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TextureManager::~TextureManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Texture manager deconstructor. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab73eee48ba8c35281558094e2f84013d" name="ab73eee48ba8c35281558094e2f84013d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab73eee48ba8c35281558094e2f84013d">&#9670;&#160;</a></span>GetInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_texture_manager.html">TextureManager</a> * TextureManager::GetInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aad5de907cd80953919eff92de96f094b" name="aad5de907cd80953919eff92de96f094b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad5de907cd80953919eff92de96f094b">&#9670;&#160;</a></span>Load()</h2>
 
@@ -190,9 +253,24 @@ map&lt; string, SDL_Texture * &gt;&#160;</td><td class="memItemRight" valign="bo
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a4299b7c590649af89548cf2bfb1a6eb1" name="a4299b7c590649af89548cf2bfb1a6eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4299b7c590649af89548cf2bfb1a6eb1">&#9670;&#160;</a></span>m_textureMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">map&lt;string, SDL_Texture*&gt; TextureManager::m_textureMap</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_texture_manager_8h_source.html">TextureManager.h</a></li>
-<li><b>TextureManager.cpp</b></li>
+<li><a class="el" href="_texture_manager_8cpp.html">TextureManager.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

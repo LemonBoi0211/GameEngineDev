@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Enemy.h Source File</title>
+<title>Game Engine Development: Enemy.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Game Engine Development
    </div>
   </td>
  </tr>
@@ -99,23 +99,36 @@ $(function(){initNavTree('_enemy_8h_source.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Enemy.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;Bitmap.h&quot;</span></div>
+<a href="_enemy_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_bitmap_8h.html">Bitmap.h</a>&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_enemy.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="class_enemy.html">Enemy</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_bitmap.html">Bitmap</a></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_enemy.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="class_enemy.html">Enemy</a> :<span class="keyword">public</span> <a class="code hl_class" href="class_bitmap.html">Bitmap</a></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Update() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>};</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_function" href="class_enemy.html#afb830bba887b230b8d449bee81d5a23b">Enemy</a>(SDL_Renderer* renderer, std::string fileName, <span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos, <span class="keywordtype">bool</span> useTransparency = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_function" href="class_enemy.html#ac0eec4755e28c02688065f9657150ac3">~Enemy</a>();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_enemy.html#a614ad271f07ecf63cb3e665155b7e258">Update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_enemy.html#a40fa63c318540917c9a2e05deb9c123a">HandleCollisions</a>(std::vector&lt;Bitmap*&gt; scenehir);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>};</div>
 </div>
-<div class="ttc" id="aclass_bitmap_html"><div class="ttname"><a href="class_bitmap.html">Bitmap</a></div><div class="ttdef"><b>Definition</b> Bitmap.h:26</div></div>
-<div class="ttc" id="aclass_enemy_html"><div class="ttname"><a href="class_enemy.html">Enemy</a></div><div class="ttdoc">overrides the bitmap update so that this can have its own update</div><div class="ttdef"><b>Definition</b> Enemy.h:6</div></div>
+<div class="ttc" id="a_bitmap_8h_html"><div class="ttname"><a href="_bitmap_8h.html">Bitmap.h</a></div></div>
+<div class="ttc" id="aclass_bitmap_html"><div class="ttname"><a href="class_bitmap.html">Bitmap</a></div><div class="ttdef"><b>Definition</b> Bitmap.h:33</div></div>
+<div class="ttc" id="aclass_enemy_html"><div class="ttname"><a href="class_enemy.html">Enemy</a></div><div class="ttdef"><b>Definition</b> Enemy.h:6</div></div>
+<div class="ttc" id="aclass_enemy_html_a40fa63c318540917c9a2e05deb9c123a"><div class="ttname"><a href="class_enemy.html#a40fa63c318540917c9a2e05deb9c123a">Enemy::HandleCollisions</a></div><div class="ttdeci">void HandleCollisions(std::vector&lt; Bitmap * &gt; scenehir)</div><div class="ttdoc">handles collisions between itself and another object</div><div class="ttdef"><b>Definition</b> Enemy.cpp:94</div></div>
+<div class="ttc" id="aclass_enemy_html_a614ad271f07ecf63cb3e665155b7e258"><div class="ttname"><a href="class_enemy.html#a614ad271f07ecf63cb3e665155b7e258">Enemy::Update</a></div><div class="ttdeci">virtual void Update() override</div><div class="ttdoc">Movement update for patrolling ai.</div><div class="ttdef"><b>Definition</b> Enemy.cpp:64</div></div>
+<div class="ttc" id="aclass_enemy_html_ac0eec4755e28c02688065f9657150ac3"><div class="ttname"><a href="class_enemy.html#ac0eec4755e28c02688065f9657150ac3">Enemy::~Enemy</a></div><div class="ttdeci">~Enemy()</div><div class="ttdef"><b>Definition</b> Enemy.cpp:56</div></div>
+<div class="ttc" id="aclass_enemy_html_afb830bba887b230b8d449bee81d5a23b"><div class="ttname"><a href="class_enemy.html#afb830bba887b230b8d449bee81d5a23b">Enemy::Enemy</a></div><div class="ttdeci">Enemy(SDL_Renderer *renderer, std::string fileName, int xpos, int ypos, bool useTransparency=true)</div><div class="ttdef"><b>Definition</b> Enemy.cpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Enemy.h</b></li>
+    <li class="navelem"><a class="el" href="_enemy_8h.html">Enemy.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

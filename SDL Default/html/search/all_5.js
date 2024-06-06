@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['game_0',['Game',['../class_game.html',1,'Game'],['../class_game.html#ad59df6562a58a614fda24622d3715b65',1,'Game::Game()']]],
-  ['getcollider_1',['GetCollider',['../class_bitmap.html#aa98e965caac5b1c8c36c9cc8f781b723',1,'Bitmap']]],
-  ['getobjheight_2',['GetObjHeight',['../class_bitmap.html#ae247924cfcca3b96bdd63e7046c0ab62',1,'Bitmap']]],
-  ['getobjposx_3',['GetOBJPosX',['../class_bitmap.html#a3b3ebff902b08dd8881c2d50a0a77bc3',1,'Bitmap']]],
-  ['getobjposy_4',['GetOBJPosY',['../class_bitmap.html#a2fd01168f329d5c6af0673e742cda7c9',1,'Bitmap']]],
-  ['getobjwidth_5',['GetObjWidth',['../class_bitmap.html#a6371f2ca249224e93293bf31a5d100e2',1,'Bitmap']]],
-  ['guidraw_6',['GuiDraw',['../class_bitmap.html#aab7b7c873a6bebda83041a77a1bec5ae',1,'Bitmap']]]
+  ['filename_0',['FileName',['../class_bitmap.html#a00bacbc40d43c963243e5af1b6fa97dc',1,'Bitmap']]],
+  ['flamegraph_1',['FlameGraph',['../class_flame_graph.html',1,'']]],
+  ['flamegraph_2ecpp_2',['FlameGraph.cpp',['../_flame_graph_8cpp.html',1,'']]],
+  ['flamegraph_2eh_3',['FlameGraph.h',['../_flame_graph_8h.html',1,'']]],
+  ['framemap_4',['FrameMap',['../_profiler_8h.html#ab1b49ac083856f4fb48add947394a13a',1,'Profiler.h']]],
+  ['framereference_5',['frameReference',['../struct_sample_data.html#acab5c4bbe349d1f216e84deceb803046',1,'SampleData']]],
+  ['functiontime_6',['functionTime',['../struct_sample_data.html#a0a5c38dd40d80e48e96dd0dfba8d4353',1,'SampleData']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['m_5fx_0',['m_x',['../class_bitmap.html#a7ade805194dabe9d4ac1051fb7b44075',1,'Bitmap']]]
+  ['_5fname_0',['_name',['../struct_profile.html#a0e7c2707a0db7a00d4a0cb278a4ad803',1,'Profile']]]
 ];

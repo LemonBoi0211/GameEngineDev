@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Bitmap.h Source File</title>
+<title>Game Engine Development: Bitmap.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Game Engine Development
    </div>
   </td>
  </tr>
@@ -99,120 +99,145 @@ $(function(){initNavTree('_bitmap_8h_source.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Bitmap.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;I_GUIWindow.h&quot;</span></div>
+<a href="_bitmap_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_i___g_u_i_window_8h.html">I_GUIWindow.h</a>&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">struct </span>SDL_Surface;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">struct </span>SDL_Texture;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">struct </span>SDL_Renderer;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="struct_vector2.html">   10</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_vector2.html">Vector2</a> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{ </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_struct" href="struct_vector2.html">Vector2</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y) : X(x), Y(y) {};</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">float</span> X;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">float</span> Y;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">class </span><a class="code hl_class" href="class_game.html">Game</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">struct </span>SDL_Surface;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">struct </span>SDL_Texture;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">struct </span>SDL_Renderer;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_vector2.html">   15</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_vector2.html">Vector2</a> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{ </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_vector2.html#a061ab58a0e216c759d64e3746d712b12">   17</a></span>    <a class="code hl_function" href="struct_vector2.html#a061ab58a0e216c759d64e3746d712b12">Vector2</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y) : <a class="code hl_variable" href="struct_vector2.html#ae01506fa3d0fb79821bee7445a0c7baf">X</a>(x), <a class="code hl_variable" href="struct_vector2.html#ab79dce0b924a27a639e0a3cb82b20cec">Y</a>(y) {};</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_vector2.html#ae01506fa3d0fb79821bee7445a0c7baf">   19</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_vector2.html#ae01506fa3d0fb79821bee7445a0c7baf">X</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_vector2.html#ab79dce0b924a27a639e0a3cb82b20cec">   20</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_vector2.html#ab79dce0b924a27a639e0a3cb82b20cec">Y</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
 </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_circle.html">   19</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_circle.html">Circle</a></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">int</span> x, y;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">int</span> r;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_circle.html">   26</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_circle.html">Circle</a></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_circle.html#abceecd15b990054ddc30441cfcbb205d">   28</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_circle.html#abceecd15b990054ddc30441cfcbb205d">x</a>, <a class="code hl_variable" href="struct_circle.html#a78aef28b3c176d14e8d25f8cd84e7dfd">y</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_circle.html#a067c0b8ccbda5ca1f518dd89a1d55989">   29</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_circle.html#a067c0b8ccbda5ca1f518dd89a1d55989">r</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>};</div>
 </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_bitmap.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="class_bitmap.html">Bitmap</a>:<span class="keyword">public</span> <a class="code hl_class" href="class_i___g_u_i_window.html">I_GUIWindow</a></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    SDL_Surface* m_pbitmapSurface;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    SDL_Texture* m_pbitmapTexture;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    SDL_Renderer* m_pRenderer;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_bitmap.html">   32</a></span><span class="keyword">class </span><a class="code hl_class" href="class_bitmap.html">Bitmap</a>:<span class="keyword">public</span> <a class="code hl_class" href="class_i___g_u_i_window.html">I_GUIWindow</a></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_bitmap.html#a7ade805194dabe9d4ac1051fb7b44075">   35</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_bitmap.html#a7ade805194dabe9d4ac1051fb7b44075">m_x</a>, m_y;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">int</span> mPosX, mPosY;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">int</span> mVelX, mVelY;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_struct" href="struct_circle.html">Circle</a> mCollider;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> DOT_VEL = 1;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_class" href="class_bitmap.html">Bitmap</a>();</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_class" href="class_bitmap.html">Bitmap</a>(SDL_Renderer* renderer, std::string fileName,<span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos, <span class="keywordtype">bool</span> useTransparency = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_bitmap.html#a72d2a301ec1eb1c8d0f3d64823659a8e">~Bitmap</a>();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">virtual</span> SDL_Texture* GetTextureRef()</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> m_pbitmapTexture;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_bitmap.html#a6bee6c1f00faf97ad49b40a7ee56fe0e">Draw</a>();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::string FileName;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_bitmap.html#af8ac45cf41d54336c9e08f4c8394532c">Update</a>();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_bitmap.html#aab7b7c873a6bebda83041a77a1bec5ae">GuiDraw</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">//Get Set m_x m_y</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_bitmap.html#a3b3ebff902b08dd8881c2d50a0a77bc3">GetOBJPosX</a>();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_bitmap.html#a8fdf9db2bb0e70fc717ae085e6a8a1e1">SetOBJPosX</a>(<span class="keywordtype">int</span> newObjX);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_bitmap.html#a2fd01168f329d5c6af0673e742cda7c9">GetOBJPosY</a>();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_bitmap.html#ab7d516cd1e9d15c0a8ea94c3f2e6d8ad">SetOBJPosY</a>(<span class="keywordtype">int</span> newObjY);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">//Get bmp/obj width and height</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_bitmap.html#a6371f2ca249224e93293bf31a5d100e2">GetObjWidth</a>();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_bitmap.html#ae247924cfcca3b96bdd63e7046c0ab62">GetObjHeight</a>();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">//collider function</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_struct" href="struct_circle.html">Circle</a>&amp; <a class="code hl_function" href="class_bitmap.html#aa98e965caac5b1c8c36c9cc8f781b723">GetCollider</a>();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bitmap.html#ab6c6bb65ecb0cebb0b7b7c584816bbf9">ShiftCollider</a>();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">//Circle/Circle collision detector</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_bitmap.html#a91289e10700660e6048e8e8e41775b39">checkCollision</a>(<a class="code hl_struct" href="struct_circle.html">Circle</a>&amp; a, <a class="code hl_struct" href="struct_circle.html">Circle</a>&amp; b);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">//Calculates distance squared between two points</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_bitmap.html#a57b9d77f88e80072e65851f0c58db927">distanceSquared</a>(<span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> x2, <span class="keywordtype">int</span> y2);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">//save/load stuff</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_bitmap.html#a9b48953689d8923614721d0291d1a606">SaveData</a>();</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_bitmap.html#a6c3365cfb162674388a9452820adf569">   36</a></span>    SDL_Surface* <a class="code hl_variable" href="class_bitmap.html#a6c3365cfb162674388a9452820adf569">m_pbitmapSurface</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_bitmap.html#a6c48f459ff1de3f34c935ce49e0b474b">   37</a></span>    SDL_Texture* <a class="code hl_variable" href="class_bitmap.html#a6c48f459ff1de3f34c935ce49e0b474b">m_pbitmapTexture</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_bitmap.html#ace621d4947809c755584af37753e652d">   38</a></span>    SDL_Renderer* <a class="code hl_variable" href="class_bitmap.html#ace621d4947809c755584af37753e652d">m_pRenderer</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_bitmap.html#a7ade805194dabe9d4ac1051fb7b44075">   42</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_bitmap.html#a7ade805194dabe9d4ac1051fb7b44075">m_x</a>, <a class="code hl_variable" href="class_bitmap.html#af4eee64e60c65393ee7c13f65824dff4">m_y</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_bitmap.html#a93bd2cdfdf202bdfffc63757c4aafa6c">   43</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_bitmap.html#a93bd2cdfdf202bdfffc63757c4aafa6c">mPosX</a>, <a class="code hl_variable" href="class_bitmap.html#a7137855cf1d4dc12b82ecd4f76fad611">mPosY</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_bitmap.html#a6319e065c640a12ea8bb84f455b75bbc">   44</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_bitmap.html#a6319e065c640a12ea8bb84f455b75bbc">mVelX</a>, <a class="code hl_variable" href="class_bitmap.html#a48ae0ee6d6de3b9c7a58510cd02b8bf7">mVelY</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_bitmap.html#a73576a084861a0d6d200e41eb2a92cc4">   45</a></span>    <a class="code hl_struct" href="struct_circle.html">Circle</a> <a class="code hl_variable" href="class_bitmap.html#a73576a084861a0d6d200e41eb2a92cc4">mCollider</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_bitmap.html#a9e449fe1c5e03346f4a2a484476cc141">   46</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_bitmap.html#a9e449fe1c5e03346f4a2a484476cc141">DOT_VEL</a> = 1;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_function" href="class_bitmap.html#aa6ef6d8c0b66664350ef4dd062db3aec">Bitmap</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_bitmap.html#a7b98c1d189f97fc5f8d4758d854176fa">   51</a></span>    <a class="code hl_function" href="class_bitmap.html#a7b98c1d189f97fc5f8d4758d854176fa">Bitmap</a>(SDL_Renderer* renderer, std::string fileName, <span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos, <a class="code hl_class" href="class_game.html">Game</a>* owningGame, <span class="keywordtype">bool</span> useTransparency = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_bitmap.html#a72d2a301ec1eb1c8d0f3d64823659a8e">~Bitmap</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_bitmap.html#a10e7065b785d62c54e8639249526442d">   54</a></span>    <span class="keyword">virtual</span> SDL_Texture* <a class="code hl_function" href="class_bitmap.html#a10e7065b785d62c54e8639249526442d">GetTextureRef</a>()</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_bitmap.html#a6c48f459ff1de3f34c935ce49e0b474b">m_pbitmapTexture</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
 </div>
-<div class="ttc" id="aclass_bitmap_html"><div class="ttname"><a href="class_bitmap.html">Bitmap</a></div><div class="ttdef"><b>Definition</b> Bitmap.h:26</div></div>
-<div class="ttc" id="aclass_bitmap_html_a2fd01168f329d5c6af0673e742cda7c9"><div class="ttname"><a href="class_bitmap.html#a2fd01168f329d5c6af0673e742cda7c9">Bitmap::GetOBJPosY</a></div><div class="ttdeci">virtual int GetOBJPosY()</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:96</div></div>
-<div class="ttc" id="aclass_bitmap_html_a3b3ebff902b08dd8881c2d50a0a77bc3"><div class="ttname"><a href="class_bitmap.html#a3b3ebff902b08dd8881c2d50a0a77bc3">Bitmap::GetOBJPosX</a></div><div class="ttdeci">virtual int GetOBJPosX()</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:80</div></div>
-<div class="ttc" id="aclass_bitmap_html_a57b9d77f88e80072e65851f0c58db927"><div class="ttname"><a href="class_bitmap.html#a57b9d77f88e80072e65851f0c58db927">Bitmap::distanceSquared</a></div><div class="ttdeci">double distanceSquared(int x1, int y1, int x2, int y2)</div><div class="ttdoc">squares the distance between objects for collision calcs</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:166</div></div>
-<div class="ttc" id="aclass_bitmap_html_a6371f2ca249224e93293bf31a5d100e2"><div class="ttname"><a href="class_bitmap.html#a6371f2ca249224e93293bf31a5d100e2">Bitmap::GetObjWidth</a></div><div class="ttdeci">virtual int GetObjWidth()</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:112</div></div>
-<div class="ttc" id="aclass_bitmap_html_a6bee6c1f00faf97ad49b40a7ee56fe0e"><div class="ttname"><a href="class_bitmap.html#a6bee6c1f00faf97ad49b40a7ee56fe0e">Bitmap::Draw</a></div><div class="ttdeci">virtual void Draw()</div><div class="ttdoc">draws the bitmap</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:69</div></div>
-<div class="ttc" id="aclass_bitmap_html_a72d2a301ec1eb1c8d0f3d64823659a8e"><div class="ttname"><a href="class_bitmap.html#a72d2a301ec1eb1c8d0f3d64823659a8e">Bitmap::~Bitmap</a></div><div class="ttdeci">virtual ~Bitmap()</div><div class="ttdoc">Bitmap Deconstructor.</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:223</div></div>
-<div class="ttc" id="aclass_bitmap_html_a7ade805194dabe9d4ac1051fb7b44075"><div class="ttname"><a href="class_bitmap.html#a7ade805194dabe9d4ac1051fb7b44075">Bitmap::m_x</a></div><div class="ttdeci">int m_x</div><div class="ttdoc">variables for objects and collisions positions</div><div class="ttdef"><b>Definition</b> Bitmap.h:35</div></div>
-<div class="ttc" id="aclass_bitmap_html_a8fdf9db2bb0e70fc717ae085e6a8a1e1"><div class="ttname"><a href="class_bitmap.html#a8fdf9db2bb0e70fc717ae085e6a8a1e1">Bitmap::SetOBJPosX</a></div><div class="ttdeci">virtual int SetOBJPosX(int newObjX)</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:88</div></div>
-<div class="ttc" id="aclass_bitmap_html_a91289e10700660e6048e8e8e41775b39"><div class="ttname"><a href="class_bitmap.html#a91289e10700660e6048e8e8e41775b39">Bitmap::checkCollision</a></div><div class="ttdeci">bool checkCollision(Circle &amp;a, Circle &amp;b)</div><div class="ttdoc">checks if a collision betwen 2 circles occured</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:143</div></div>
-<div class="ttc" id="aclass_bitmap_html_a9b48953689d8923614721d0291d1a606"><div class="ttname"><a href="class_bitmap.html#a9b48953689d8923614721d0291d1a606">Bitmap::SaveData</a></div><div class="ttdeci">virtual std::string SaveData()</div><div class="ttdoc">gives some chars for the save file to differentiate between diff things</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:175</div></div>
-<div class="ttc" id="aclass_bitmap_html_aa98e965caac5b1c8c36c9cc8f781b723"><div class="ttname"><a href="class_bitmap.html#aa98e965caac5b1c8c36c9cc8f781b723">Bitmap::GetCollider</a></div><div class="ttdeci">Circle &amp; GetCollider()</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:126</div></div>
-<div class="ttc" id="aclass_bitmap_html_aab7b7c873a6bebda83041a77a1bec5ae"><div class="ttname"><a href="class_bitmap.html#aab7b7c873a6bebda83041a77a1bec5ae">Bitmap::GuiDraw</a></div><div class="ttdeci">virtual void GuiDraw() override</div><div class="ttdoc">Inherited via I_GUIWindow.</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:197</div></div>
-<div class="ttc" id="aclass_bitmap_html_ab6c6bb65ecb0cebb0b7b7c584816bbf9"><div class="ttname"><a href="class_bitmap.html#ab6c6bb65ecb0cebb0b7b7c584816bbf9">Bitmap::ShiftCollider</a></div><div class="ttdeci">void ShiftCollider()</div><div class="ttdoc">offsets collider to center of an object</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:132</div></div>
-<div class="ttc" id="aclass_bitmap_html_ab7d516cd1e9d15c0a8ea94c3f2e6d8ad"><div class="ttname"><a href="class_bitmap.html#ab7d516cd1e9d15c0a8ea94c3f2e6d8ad">Bitmap::SetOBJPosY</a></div><div class="ttdeci">virtual int SetOBJPosY(int newObjY)</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:104</div></div>
-<div class="ttc" id="aclass_bitmap_html_ae247924cfcca3b96bdd63e7046c0ab62"><div class="ttname"><a href="class_bitmap.html#ae247924cfcca3b96bdd63e7046c0ab62">Bitmap::GetObjHeight</a></div><div class="ttdeci">virtual int GetObjHeight()</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:119</div></div>
-<div class="ttc" id="aclass_bitmap_html_af8ac45cf41d54336c9e08f4c8394532c"><div class="ttname"><a href="class_bitmap.html#af8ac45cf41d54336c9e08f4c8394532c">Bitmap::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdoc">Updates the Bitmap logic.</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:191</div></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_bitmap.html#a6bee6c1f00faf97ad49b40a7ee56fe0e">Draw</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_bitmap.html#a00bacbc40d43c963243e5af1b6fa97dc">   61</a></span>    std::string <a class="code hl_variable" href="class_bitmap.html#a00bacbc40d43c963243e5af1b6fa97dc">FileName</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_bitmap.html#af8ac45cf41d54336c9e08f4c8394532c">Update</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_bitmap.html#aab7b7c873a6bebda83041a77a1bec5ae">GuiDraw</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_bitmap.html#a3b3ebff902b08dd8881c2d50a0a77bc3">GetOBJPosX</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_bitmap.html#a8fdf9db2bb0e70fc717ae085e6a8a1e1">SetOBJPosX</a>(<span class="keywordtype">int</span> newObjX);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_bitmap.html#a2fd01168f329d5c6af0673e742cda7c9">GetOBJPosY</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_bitmap.html#ab7d516cd1e9d15c0a8ea94c3f2e6d8ad">SetOBJPosY</a>(<span class="keywordtype">int</span> newObjY);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_bitmap.html#a6371f2ca249224e93293bf31a5d100e2">GetObjWidth</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_bitmap.html#ae247924cfcca3b96bdd63e7046c0ab62">GetObjHeight</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_struct" href="struct_circle.html">Circle</a>&amp; <a class="code hl_function" href="class_bitmap.html#aa98e965caac5b1c8c36c9cc8f781b723">GetCollider</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bitmap.html#ab6c6bb65ecb0cebb0b7b7c584816bbf9">ShiftCollider</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_bitmap.html#a1b6e42950d8785b2d68714dfc6baa43c">HandleCollisions</a>(std::vector&lt;Bitmap*&gt; scenehir);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_bitmap.html#a91289e10700660e6048e8e8e41775b39">checkCollision</a>(<a class="code hl_struct" href="struct_circle.html">Circle</a>&amp; a, <a class="code hl_struct" href="struct_circle.html">Circle</a>&amp; b);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_bitmap.html#a57b9d77f88e80072e65851f0c58db927">distanceSquared</a>(<span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> x2, <span class="keywordtype">int</span> y2);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_bitmap.html#a9b48953689d8923614721d0291d1a606">SaveData</a>();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>};</div>
+</div>
+<div class="ttc" id="a_i___g_u_i_window_8h_html"><div class="ttname"><a href="_i___g_u_i_window_8h.html">I_GUIWindow.h</a></div></div>
+<div class="ttc" id="aclass_bitmap_html"><div class="ttname"><a href="class_bitmap.html">Bitmap</a></div><div class="ttdef"><b>Definition</b> Bitmap.h:33</div></div>
+<div class="ttc" id="aclass_bitmap_html_a00bacbc40d43c963243e5af1b6fa97dc"><div class="ttname"><a href="class_bitmap.html#a00bacbc40d43c963243e5af1b6fa97dc">Bitmap::FileName</a></div><div class="ttdeci">std::string FileName</div><div class="ttdef"><b>Definition</b> Bitmap.h:61</div></div>
+<div class="ttc" id="aclass_bitmap_html_a10e7065b785d62c54e8639249526442d"><div class="ttname"><a href="class_bitmap.html#a10e7065b785d62c54e8639249526442d">Bitmap::GetTextureRef</a></div><div class="ttdeci">virtual SDL_Texture * GetTextureRef()</div><div class="ttdef"><b>Definition</b> Bitmap.h:54</div></div>
+<div class="ttc" id="aclass_bitmap_html_a1b6e42950d8785b2d68714dfc6baa43c"><div class="ttname"><a href="class_bitmap.html#a1b6e42950d8785b2d68714dfc6baa43c">Bitmap::HandleCollisions</a></div><div class="ttdeci">virtual void HandleCollisions(std::vector&lt; Bitmap * &gt; scenehir)</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:134</div></div>
+<div class="ttc" id="aclass_bitmap_html_a2fd01168f329d5c6af0673e742cda7c9"><div class="ttname"><a href="class_bitmap.html#a2fd01168f329d5c6af0673e742cda7c9">Bitmap::GetOBJPosY</a></div><div class="ttdeci">virtual int GetOBJPosY()</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:91</div></div>
+<div class="ttc" id="aclass_bitmap_html_a3b3ebff902b08dd8881c2d50a0a77bc3"><div class="ttname"><a href="class_bitmap.html#a3b3ebff902b08dd8881c2d50a0a77bc3">Bitmap::GetOBJPosX</a></div><div class="ttdeci">virtual int GetOBJPosX()</div><div class="ttdoc">Get Set X and Y.</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:75</div></div>
+<div class="ttc" id="aclass_bitmap_html_a48ae0ee6d6de3b9c7a58510cd02b8bf7"><div class="ttname"><a href="class_bitmap.html#a48ae0ee6d6de3b9c7a58510cd02b8bf7">Bitmap::mVelY</a></div><div class="ttdeci">int mVelY</div><div class="ttdef"><b>Definition</b> Bitmap.h:44</div></div>
+<div class="ttc" id="aclass_bitmap_html_a57b9d77f88e80072e65851f0c58db927"><div class="ttname"><a href="class_bitmap.html#a57b9d77f88e80072e65851f0c58db927">Bitmap::distanceSquared</a></div><div class="ttdeci">double distanceSquared(int x1, int y1, int x2, int y2)</div><div class="ttdoc">Calculates distance squared between two points.</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:167</div></div>
+<div class="ttc" id="aclass_bitmap_html_a6319e065c640a12ea8bb84f455b75bbc"><div class="ttname"><a href="class_bitmap.html#a6319e065c640a12ea8bb84f455b75bbc">Bitmap::mVelX</a></div><div class="ttdeci">int mVelX</div><div class="ttdef"><b>Definition</b> Bitmap.h:44</div></div>
+<div class="ttc" id="aclass_bitmap_html_a6371f2ca249224e93293bf31a5d100e2"><div class="ttname"><a href="class_bitmap.html#a6371f2ca249224e93293bf31a5d100e2">Bitmap::GetObjWidth</a></div><div class="ttdeci">virtual int GetObjWidth()</div><div class="ttdoc">Get bmp/obj width and height.</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:107</div></div>
+<div class="ttc" id="aclass_bitmap_html_a6bee6c1f00faf97ad49b40a7ee56fe0e"><div class="ttname"><a href="class_bitmap.html#a6bee6c1f00faf97ad49b40a7ee56fe0e">Bitmap::Draw</a></div><div class="ttdeci">virtual void Draw()</div><div class="ttdoc">draws the bitmap</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:64</div></div>
+<div class="ttc" id="aclass_bitmap_html_a6c3365cfb162674388a9452820adf569"><div class="ttname"><a href="class_bitmap.html#a6c3365cfb162674388a9452820adf569">Bitmap::m_pbitmapSurface</a></div><div class="ttdeci">SDL_Surface * m_pbitmapSurface</div><div class="ttdef"><b>Definition</b> Bitmap.h:36</div></div>
+<div class="ttc" id="aclass_bitmap_html_a6c48f459ff1de3f34c935ce49e0b474b"><div class="ttname"><a href="class_bitmap.html#a6c48f459ff1de3f34c935ce49e0b474b">Bitmap::m_pbitmapTexture</a></div><div class="ttdeci">SDL_Texture * m_pbitmapTexture</div><div class="ttdef"><b>Definition</b> Bitmap.h:37</div></div>
+<div class="ttc" id="aclass_bitmap_html_a7137855cf1d4dc12b82ecd4f76fad611"><div class="ttname"><a href="class_bitmap.html#a7137855cf1d4dc12b82ecd4f76fad611">Bitmap::mPosY</a></div><div class="ttdeci">int mPosY</div><div class="ttdef"><b>Definition</b> Bitmap.h:43</div></div>
+<div class="ttc" id="aclass_bitmap_html_a72d2a301ec1eb1c8d0f3d64823659a8e"><div class="ttname"><a href="class_bitmap.html#a72d2a301ec1eb1c8d0f3d64823659a8e">Bitmap::~Bitmap</a></div><div class="ttdeci">virtual ~Bitmap()</div><div class="ttdoc">Bitmap Deconstructor.</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:224</div></div>
+<div class="ttc" id="aclass_bitmap_html_a73576a084861a0d6d200e41eb2a92cc4"><div class="ttname"><a href="class_bitmap.html#a73576a084861a0d6d200e41eb2a92cc4">Bitmap::mCollider</a></div><div class="ttdeci">Circle mCollider</div><div class="ttdef"><b>Definition</b> Bitmap.h:45</div></div>
+<div class="ttc" id="aclass_bitmap_html_a7ade805194dabe9d4ac1051fb7b44075"><div class="ttname"><a href="class_bitmap.html#a7ade805194dabe9d4ac1051fb7b44075">Bitmap::m_x</a></div><div class="ttdeci">int m_x</div><div class="ttdoc">variables for objects and collisions positions</div><div class="ttdef"><b>Definition</b> Bitmap.h:42</div></div>
+<div class="ttc" id="aclass_bitmap_html_a7b98c1d189f97fc5f8d4758d854176fa"><div class="ttname"><a href="class_bitmap.html#a7b98c1d189f97fc5f8d4758d854176fa">Bitmap::Bitmap</a></div><div class="ttdeci">Bitmap(SDL_Renderer *renderer, std::string fileName, int xpos, int ypos, Game *owningGame, bool useTransparency=true)</div></div>
+<div class="ttc" id="aclass_bitmap_html_a8fdf9db2bb0e70fc717ae085e6a8a1e1"><div class="ttname"><a href="class_bitmap.html#a8fdf9db2bb0e70fc717ae085e6a8a1e1">Bitmap::SetOBJPosX</a></div><div class="ttdeci">virtual int SetOBJPosX(int newObjX)</div><div class="ttdoc">sets an objects x position</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:83</div></div>
+<div class="ttc" id="aclass_bitmap_html_a91289e10700660e6048e8e8e41775b39"><div class="ttname"><a href="class_bitmap.html#a91289e10700660e6048e8e8e41775b39">Bitmap::checkCollision</a></div><div class="ttdeci">bool checkCollision(Circle &amp;a, Circle &amp;b)</div><div class="ttdoc">Circle/Circle collision detector.</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:144</div></div>
+<div class="ttc" id="aclass_bitmap_html_a93bd2cdfdf202bdfffc63757c4aafa6c"><div class="ttname"><a href="class_bitmap.html#a93bd2cdfdf202bdfffc63757c4aafa6c">Bitmap::mPosX</a></div><div class="ttdeci">int mPosX</div><div class="ttdef"><b>Definition</b> Bitmap.h:43</div></div>
+<div class="ttc" id="aclass_bitmap_html_a9b48953689d8923614721d0291d1a606"><div class="ttname"><a href="class_bitmap.html#a9b48953689d8923614721d0291d1a606">Bitmap::SaveData</a></div><div class="ttdeci">virtual std::string SaveData()</div><div class="ttdoc">save/load stuff</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:176</div></div>
+<div class="ttc" id="aclass_bitmap_html_a9e449fe1c5e03346f4a2a484476cc141"><div class="ttname"><a href="class_bitmap.html#a9e449fe1c5e03346f4a2a484476cc141">Bitmap::DOT_VEL</a></div><div class="ttdeci">static const int DOT_VEL</div><div class="ttdef"><b>Definition</b> Bitmap.h:46</div></div>
+<div class="ttc" id="aclass_bitmap_html_aa6ef6d8c0b66664350ef4dd062db3aec"><div class="ttname"><a href="class_bitmap.html#aa6ef6d8c0b66664350ef4dd062db3aec">Bitmap::Bitmap</a></div><div class="ttdeci">Bitmap()</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:15</div></div>
+<div class="ttc" id="aclass_bitmap_html_aa98e965caac5b1c8c36c9cc8f781b723"><div class="ttname"><a href="class_bitmap.html#aa98e965caac5b1c8c36c9cc8f781b723">Bitmap::GetCollider</a></div><div class="ttdeci">Circle &amp; GetCollider()</div><div class="ttdoc">collider function</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:121</div></div>
+<div class="ttc" id="aclass_bitmap_html_aab7b7c873a6bebda83041a77a1bec5ae"><div class="ttname"><a href="class_bitmap.html#aab7b7c873a6bebda83041a77a1bec5ae">Bitmap::GuiDraw</a></div><div class="ttdeci">virtual void GuiDraw() override</div><div class="ttdoc">Inherited via I_GUIWindow.</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:198</div></div>
+<div class="ttc" id="aclass_bitmap_html_ab6c6bb65ecb0cebb0b7b7c584816bbf9"><div class="ttname"><a href="class_bitmap.html#ab6c6bb65ecb0cebb0b7b7c584816bbf9">Bitmap::ShiftCollider</a></div><div class="ttdeci">void ShiftCollider()</div><div class="ttdoc">offsets collider to center of an object</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:127</div></div>
+<div class="ttc" id="aclass_bitmap_html_ab7d516cd1e9d15c0a8ea94c3f2e6d8ad"><div class="ttname"><a href="class_bitmap.html#ab7d516cd1e9d15c0a8ea94c3f2e6d8ad">Bitmap::SetOBJPosY</a></div><div class="ttdeci">virtual int SetOBJPosY(int newObjY)</div><div class="ttdoc">sets an objects y position</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:99</div></div>
+<div class="ttc" id="aclass_bitmap_html_ace621d4947809c755584af37753e652d"><div class="ttname"><a href="class_bitmap.html#ace621d4947809c755584af37753e652d">Bitmap::m_pRenderer</a></div><div class="ttdeci">SDL_Renderer * m_pRenderer</div><div class="ttdef"><b>Definition</b> Bitmap.h:38</div></div>
+<div class="ttc" id="aclass_bitmap_html_ae247924cfcca3b96bdd63e7046c0ab62"><div class="ttname"><a href="class_bitmap.html#ae247924cfcca3b96bdd63e7046c0ab62">Bitmap::GetObjHeight</a></div><div class="ttdeci">virtual int GetObjHeight()</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:114</div></div>
+<div class="ttc" id="aclass_bitmap_html_af4eee64e60c65393ee7c13f65824dff4"><div class="ttname"><a href="class_bitmap.html#af4eee64e60c65393ee7c13f65824dff4">Bitmap::m_y</a></div><div class="ttdeci">int m_y</div><div class="ttdef"><b>Definition</b> Bitmap.h:42</div></div>
+<div class="ttc" id="aclass_bitmap_html_af8ac45cf41d54336c9e08f4c8394532c"><div class="ttname"><a href="class_bitmap.html#af8ac45cf41d54336c9e08f4c8394532c">Bitmap::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdoc">Updates the Bitmap logic.</div><div class="ttdef"><b>Definition</b> Bitmap.cpp:192</div></div>
+<div class="ttc" id="aclass_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdef"><b>Definition</b> Game.h:22</div></div>
 <div class="ttc" id="aclass_i___g_u_i_window_html"><div class="ttname"><a href="class_i___g_u_i_window.html">I_GUIWindow</a></div><div class="ttdef"><b>Definition</b> I_GUIWindow.h:9</div></div>
-<div class="ttc" id="astruct_circle_html"><div class="ttname"><a href="struct_circle.html">Circle</a></div><div class="ttdoc">variables for a collision circle</div><div class="ttdef"><b>Definition</b> Bitmap.h:20</div></div>
-<div class="ttc" id="astruct_vector2_html"><div class="ttname"><a href="struct_vector2.html">Vector2</a></div><div class="ttdoc">Vector2 Calculation.</div><div class="ttdef"><b>Definition</b> Bitmap.h:11</div></div>
+<div class="ttc" id="astruct_circle_html"><div class="ttname"><a href="struct_circle.html">Circle</a></div><div class="ttdef"><b>Definition</b> Bitmap.h:27</div></div>
+<div class="ttc" id="astruct_circle_html_a067c0b8ccbda5ca1f518dd89a1d55989"><div class="ttname"><a href="struct_circle.html#a067c0b8ccbda5ca1f518dd89a1d55989">Circle::r</a></div><div class="ttdeci">int r</div><div class="ttdef"><b>Definition</b> Bitmap.h:29</div></div>
+<div class="ttc" id="astruct_circle_html_a78aef28b3c176d14e8d25f8cd84e7dfd"><div class="ttname"><a href="struct_circle.html#a78aef28b3c176d14e8d25f8cd84e7dfd">Circle::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition</b> Bitmap.h:28</div></div>
+<div class="ttc" id="astruct_circle_html_abceecd15b990054ddc30441cfcbb205d"><div class="ttname"><a href="struct_circle.html#abceecd15b990054ddc30441cfcbb205d">Circle::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition</b> Bitmap.h:28</div></div>
+<div class="ttc" id="astruct_vector2_html"><div class="ttname"><a href="struct_vector2.html">Vector2</a></div><div class="ttdoc">calculates the bitmaps vector2</div><div class="ttdef"><b>Definition</b> Bitmap.h:16</div></div>
+<div class="ttc" id="astruct_vector2_html_a061ab58a0e216c759d64e3746d712b12"><div class="ttname"><a href="struct_vector2.html#a061ab58a0e216c759d64e3746d712b12">Vector2::Vector2</a></div><div class="ttdeci">Vector2(float x, float y)</div><div class="ttdef"><b>Definition</b> Bitmap.h:17</div></div>
+<div class="ttc" id="astruct_vector2_html_ab79dce0b924a27a639e0a3cb82b20cec"><div class="ttname"><a href="struct_vector2.html#ab79dce0b924a27a639e0a3cb82b20cec">Vector2::Y</a></div><div class="ttdeci">float Y</div><div class="ttdef"><b>Definition</b> Bitmap.h:20</div></div>
+<div class="ttc" id="astruct_vector2_html_ae01506fa3d0fb79821bee7445a0c7baf"><div class="ttname"><a href="struct_vector2.html#ae01506fa3d0fb79821bee7445a0c7baf">Vector2::X</a></div><div class="ttdeci">float X</div><div class="ttdef"><b>Definition</b> Bitmap.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Bitmap.h</b></li>
+    <li class="navelem"><a class="el" href="_bitmap_8h.html">Bitmap.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

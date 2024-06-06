@@ -1,5 +1,9 @@
 \doxysection{Bitmap Class Reference}
 \hypertarget{class_bitmap}{}\label{class_bitmap}\index{Bitmap@{Bitmap}}
+
+
+{\ttfamily \#include $<$Bitmap.\+h$>$}
+
 Inheritance diagram for Bitmap\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,90 +13,102 @@ Inheritance diagram for Bitmap\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_bitmap_a2e5aca76ecaad32ce61ad874b74facbe}\label{class_bitmap_a2e5aca76ecaad32ce61ad874b74facbe} 
-{\bfseries Bitmap} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, std\+::string file\+Name, int xpos, int ypos, bool use\+Transparency=true)
+\mbox{\hyperlink{class_bitmap_aa6ef6d8c0b66664350ef4dd062db3aec}{Bitmap}} ()
 \item 
-\Hypertarget{class_bitmap_a72d2a301ec1eb1c8d0f3d64823659a8e}\label{class_bitmap_a72d2a301ec1eb1c8d0f3d64823659a8e} 
-virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Bitmap} ()
+\mbox{\hyperlink{class_bitmap_a7b98c1d189f97fc5f8d4758d854176fa}{Bitmap}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, std\+::string file\+Name, int xpos, int ypos, \mbox{\hyperlink{class_game}{Game}} \texorpdfstring{$\ast$}{*}owning\+Game, bool use\+Transparency=true)
+\item 
+virtual \mbox{\hyperlink{class_bitmap_a72d2a301ec1eb1c8d0f3d64823659a8e}{\texorpdfstring{$\sim$}{\string~}\+Bitmap}} ()
 \begin{DoxyCompactList}\small\item\em \doxylink{class_bitmap}{Bitmap} Deconstructor. \end{DoxyCompactList}\item 
-\Hypertarget{class_bitmap_a10e7065b785d62c54e8639249526442d}\label{class_bitmap_a10e7065b785d62c54e8639249526442d} 
-virtual SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} {\bfseries Get\+Texture\+Ref} ()
+virtual SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bitmap_a10e7065b785d62c54e8639249526442d}{Get\+Texture\+Ref}} ()
 \item 
-\Hypertarget{class_bitmap_a6bee6c1f00faf97ad49b40a7ee56fe0e}\label{class_bitmap_a6bee6c1f00faf97ad49b40a7ee56fe0e} 
-virtual void {\bfseries Draw} ()
+virtual void \mbox{\hyperlink{class_bitmap_a6bee6c1f00faf97ad49b40a7ee56fe0e}{Draw}} ()
 \begin{DoxyCompactList}\small\item\em draws the bitmap \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_bitmap_af8ac45cf41d54336c9e08f4c8394532c}{Update}} ()
 \begin{DoxyCompactList}\small\item\em Updates the \doxylink{class_bitmap}{Bitmap} logic. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_bitmap_aab7b7c873a6bebda83041a77a1bec5ae}{Gui\+Draw}} () override
 \begin{DoxyCompactList}\small\item\em Inherited via \doxylink{class_i___g_u_i_window}{I\+\_\+\+GUIWindow}. \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{class_bitmap_a3b3ebff902b08dd8881c2d50a0a77bc3}{Get\+OBJPosX}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Get Set X and Y. \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{class_bitmap_a8fdf9db2bb0e70fc717ae085e6a8a1e1}{Set\+OBJPosX}} (int new\+ObjX)
-\item 
+\begin{DoxyCompactList}\small\item\em sets an objects x position \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{class_bitmap_a2fd01168f329d5c6af0673e742cda7c9}{Get\+OBJPosY}} ()
 \item 
 virtual int \mbox{\hyperlink{class_bitmap_ab7d516cd1e9d15c0a8ea94c3f2e6d8ad}{Set\+OBJPosY}} (int new\+ObjY)
-\item 
+\begin{DoxyCompactList}\small\item\em sets an objects y position \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{class_bitmap_a6371f2ca249224e93293bf31a5d100e2}{Get\+Obj\+Width}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Get bmp/obj width and height. \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{class_bitmap_ae247924cfcca3b96bdd63e7046c0ab62}{Get\+Obj\+Height}} ()
 \item 
 \mbox{\hyperlink{struct_circle}{Circle}} \& \mbox{\hyperlink{class_bitmap_aa98e965caac5b1c8c36c9cc8f781b723}{Get\+Collider}} ()
-\item 
-\Hypertarget{class_bitmap_ab6c6bb65ecb0cebb0b7b7c584816bbf9}\label{class_bitmap_ab6c6bb65ecb0cebb0b7b7c584816bbf9} 
-void {\bfseries Shift\+Collider} ()
+\begin{DoxyCompactList}\small\item\em collider function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bitmap_ab6c6bb65ecb0cebb0b7b7c584816bbf9}{Shift\+Collider}} ()
 \begin{DoxyCompactList}\small\item\em offsets collider to center of an object \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_bitmap_a1b6e42950d8785b2d68714dfc6baa43c}{Handle\+Collisions}} (std\+::vector$<$ \mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*} $>$ scenehir)
+\item 
 bool \mbox{\hyperlink{class_bitmap_a91289e10700660e6048e8e8e41775b39}{check\+Collision}} (\mbox{\hyperlink{struct_circle}{Circle}} \&a, \mbox{\hyperlink{struct_circle}{Circle}} \&b)
-\begin{DoxyCompactList}\small\item\em checks if a collision betwen 2 circles occured \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Circle/\+Circle collision detector. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_bitmap_a57b9d77f88e80072e65851f0c58db927}{distance\+Squared}} (int x1, int y1, int x2, int y2)
-\begin{DoxyCompactList}\small\item\em squares the distance between objects for collision calcs \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Calculates distance squared between two points. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{class_bitmap_a9b48953689d8923614721d0291d1a606}{Save\+Data}} ()
-\begin{DoxyCompactList}\small\item\em gives some chars for the save file to differentiate between diff things \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em save/load stuff \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_bitmap_a00bacbc40d43c963243e5af1b6fa97dc}\label{class_bitmap_a00bacbc40d43c963243e5af1b6fa97dc} 
-std\+::string {\bfseries File\+Name}
+std\+::string \mbox{\hyperlink{class_bitmap_a00bacbc40d43c963243e5af1b6fa97dc}{File\+Name}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_bitmap_a6c3365cfb162674388a9452820adf569}\label{class_bitmap_a6c3365cfb162674388a9452820adf569} 
-SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+pbitmap\+Surface}
+SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bitmap_a6c3365cfb162674388a9452820adf569}{m\+\_\+pbitmap\+Surface}}
 \item 
-\Hypertarget{class_bitmap_a6c48f459ff1de3f34c935ce49e0b474b}\label{class_bitmap_a6c48f459ff1de3f34c935ce49e0b474b} 
-SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+pbitmap\+Texture}
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bitmap_a6c48f459ff1de3f34c935ce49e0b474b}{m\+\_\+pbitmap\+Texture}}
 \item 
-\Hypertarget{class_bitmap_ace621d4947809c755584af37753e652d}\label{class_bitmap_ace621d4947809c755584af37753e652d} 
-SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+p\+Renderer}
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bitmap_ace621d4947809c755584af37753e652d}{m\+\_\+p\+Renderer}}
 \item 
-\Hypertarget{class_bitmap_a7ade805194dabe9d4ac1051fb7b44075}\label{class_bitmap_a7ade805194dabe9d4ac1051fb7b44075} 
-int {\bfseries m\+\_\+x}
+int \mbox{\hyperlink{class_bitmap_a7ade805194dabe9d4ac1051fb7b44075}{m\+\_\+x}}
 \begin{DoxyCompactList}\small\item\em variables for objects and collisions positions \end{DoxyCompactList}\item 
-\Hypertarget{class_bitmap_af4eee64e60c65393ee7c13f65824dff4}\label{class_bitmap_af4eee64e60c65393ee7c13f65824dff4} 
-int {\bfseries m\+\_\+y}
+int \mbox{\hyperlink{class_bitmap_af4eee64e60c65393ee7c13f65824dff4}{m\+\_\+y}}
 \item 
-\Hypertarget{class_bitmap_a93bd2cdfdf202bdfffc63757c4aafa6c}\label{class_bitmap_a93bd2cdfdf202bdfffc63757c4aafa6c} 
-int {\bfseries m\+PosX}
+int \mbox{\hyperlink{class_bitmap_a93bd2cdfdf202bdfffc63757c4aafa6c}{m\+PosX}}
 \item 
-\Hypertarget{class_bitmap_a7137855cf1d4dc12b82ecd4f76fad611}\label{class_bitmap_a7137855cf1d4dc12b82ecd4f76fad611} 
-int {\bfseries m\+PosY}
+int \mbox{\hyperlink{class_bitmap_a7137855cf1d4dc12b82ecd4f76fad611}{m\+PosY}}
 \item 
-\Hypertarget{class_bitmap_a6319e065c640a12ea8bb84f455b75bbc}\label{class_bitmap_a6319e065c640a12ea8bb84f455b75bbc} 
-int {\bfseries m\+VelX}
+int \mbox{\hyperlink{class_bitmap_a6319e065c640a12ea8bb84f455b75bbc}{m\+VelX}}
 \item 
-\Hypertarget{class_bitmap_a48ae0ee6d6de3b9c7a58510cd02b8bf7}\label{class_bitmap_a48ae0ee6d6de3b9c7a58510cd02b8bf7} 
-int {\bfseries m\+VelY}
+int \mbox{\hyperlink{class_bitmap_a48ae0ee6d6de3b9c7a58510cd02b8bf7}{m\+VelY}}
 \item 
-\Hypertarget{class_bitmap_a73576a084861a0d6d200e41eb2a92cc4}\label{class_bitmap_a73576a084861a0d6d200e41eb2a92cc4} 
-\mbox{\hyperlink{struct_circle}{Circle}} {\bfseries m\+Collider}
+\mbox{\hyperlink{struct_circle}{Circle}} \mbox{\hyperlink{class_bitmap_a73576a084861a0d6d200e41eb2a92cc4}{m\+Collider}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Static Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_bitmap_a9e449fe1c5e03346f4a2a484476cc141}\label{class_bitmap_a9e449fe1c5e03346f4a2a484476cc141} 
-static const int {\bfseries DOT\+\_\+\+VEL} = 1
+static const int \mbox{\hyperlink{class_bitmap_a9e449fe1c5e03346f4a2a484476cc141}{DOT\+\_\+\+VEL}} = 1
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_bitmap_aa6ef6d8c0b66664350ef4dd062db3aec}\label{class_bitmap_aa6ef6d8c0b66664350ef4dd062db3aec} 
+\index{Bitmap@{Bitmap}!Bitmap@{Bitmap}}
+\index{Bitmap@{Bitmap}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{Bitmap()}{Bitmap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Bitmap\+::\+Bitmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_bitmap_a7b98c1d189f97fc5f8d4758d854176fa}\label{class_bitmap_a7b98c1d189f97fc5f8d4758d854176fa} 
+\index{Bitmap@{Bitmap}!Bitmap@{Bitmap}}
+\index{Bitmap@{Bitmap}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{Bitmap()}{Bitmap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Bitmap\+::\+Bitmap (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer,  }\item[{std\+::string}]{file\+Name,  }\item[{int}]{xpos,  }\item[{int}]{ypos,  }\item[{\mbox{\hyperlink{class_game}{Game}} \texorpdfstring{$\ast$}{*}}]{owning\+Game,  }\item[{bool}]{use\+Transparency = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_bitmap_a72d2a301ec1eb1c8d0f3d64823659a8e}\label{class_bitmap_a72d2a301ec1eb1c8d0f3d64823659a8e} 
+\index{Bitmap@{Bitmap}!````~Bitmap@{\texorpdfstring{$\sim$}{\string~}Bitmap}}
+\index{````~Bitmap@{\texorpdfstring{$\sim$}{\string~}Bitmap}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Bitmap()}{\string~Bitmap()}}
+{\footnotesize\ttfamily Bitmap\+::\texorpdfstring{$\sim$}{\string~}\+Bitmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxylink{class_bitmap}{Bitmap} Deconstructor. 
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -104,7 +120,9 @@ static const int {\bfseries DOT\+\_\+\+VEL} = 1
 
 
 
-checks if a collision betwen 2 circles occured 
+Circle/\+Circle collision detector. 
+
+checks if a collision betwen 2 circles occured
 
 
 \begin{DoxyParams}{Parameters}
@@ -114,8 +132,7 @@ checks if a collision betwen 2 circles occured
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-~\newline
- 
+returns a boolean if collisions have occured between objects 
 \end{DoxyReturn}
 \Hypertarget{class_bitmap_a57b9d77f88e80072e65851f0c58db927}\label{class_bitmap_a57b9d77f88e80072e65851f0c58db927} 
 \index{Bitmap@{Bitmap}!distanceSquared@{distanceSquared}}
@@ -125,7 +142,9 @@ checks if a collision betwen 2 circles occured
 
 
 
-squares the distance between objects for collision calcs 
+Calculates distance squared between two points. 
+
+squares the distance between objects for collision calcs
 
 
 \begin{DoxyParams}{Parameters}
@@ -139,18 +158,32 @@ squares the distance between objects for collision calcs
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-~\newline
- 
+returns the squared distance between object colliders 
 \end{DoxyReturn}
+\Hypertarget{class_bitmap_a6bee6c1f00faf97ad49b40a7ee56fe0e}\label{class_bitmap_a6bee6c1f00faf97ad49b40a7ee56fe0e} 
+\index{Bitmap@{Bitmap}!Draw@{Draw}}
+\index{Draw@{Draw}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Bitmap\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+draws the bitmap 
+
 \Hypertarget{class_bitmap_aa98e965caac5b1c8c36c9cc8f781b723}\label{class_bitmap_aa98e965caac5b1c8c36c9cc8f781b723} 
 \index{Bitmap@{Bitmap}!GetCollider@{GetCollider}}
 \index{GetCollider@{GetCollider}!Bitmap@{Bitmap}}
 \doxysubsubsection{\texorpdfstring{GetCollider()}{GetCollider()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_circle}{Circle}} \& Bitmap\+::\+Get\+Collider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+collider function 
+
+function used to find the collider attached to the object
+
 \begin{DoxyReturn}{Returns}
-~\newline
- 
+returns the current collider attached to the object 
 \end{DoxyReturn}
 \Hypertarget{class_bitmap_ae247924cfcca3b96bdd63e7046c0ab62}\label{class_bitmap_ae247924cfcca3b96bdd63e7046c0ab62} 
 \index{Bitmap@{Bitmap}!GetObjHeight@{GetObjHeight}}
@@ -159,8 +192,7 @@ squares the distance between objects for collision calcs
 {\footnotesize\ttfamily int Bitmap\+::\+Get\+Obj\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 \begin{DoxyReturn}{Returns}
-~\newline
- 
+returns the objects current bitmap height 
 \end{DoxyReturn}
 \Hypertarget{class_bitmap_a3b3ebff902b08dd8881c2d50a0a77bc3}\label{class_bitmap_a3b3ebff902b08dd8881c2d50a0a77bc3} 
 \index{Bitmap@{Bitmap}!GetOBJPosX@{GetOBJPosX}}
@@ -168,9 +200,21 @@ squares the distance between objects for collision calcs
 \doxysubsubsection{\texorpdfstring{GetOBJPosX()}{GetOBJPosX()}}
 {\footnotesize\ttfamily int Bitmap\+::\+Get\+OBJPosX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+
+
+Get Set X and Y. 
+
+gets an objects x position
+
+
+\begin{DoxyParams}{Parameters}
+{\em allows} & the system to find and set the gameobjs x and y pos \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-~\newline
- 
+The X and Y value and Sets X and Y values
+
+returns objects current x position 
 \end{DoxyReturn}
 \Hypertarget{class_bitmap_a2fd01168f329d5c6af0673e742cda7c9}\label{class_bitmap_a2fd01168f329d5c6af0673e742cda7c9} 
 \index{Bitmap@{Bitmap}!GetOBJPosY@{GetOBJPosY}}
@@ -179,8 +223,7 @@ squares the distance between objects for collision calcs
 {\footnotesize\ttfamily int Bitmap\+::\+Get\+OBJPosY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 \begin{DoxyReturn}{Returns}
-~\newline
- 
+returns objects current y position 
 \end{DoxyReturn}
 \Hypertarget{class_bitmap_a6371f2ca249224e93293bf31a5d100e2}\label{class_bitmap_a6371f2ca249224e93293bf31a5d100e2} 
 \index{Bitmap@{Bitmap}!GetObjWidth@{GetObjWidth}}
@@ -188,10 +231,19 @@ squares the distance between objects for collision calcs
 \doxysubsubsection{\texorpdfstring{GetObjWidth()}{GetObjWidth()}}
 {\footnotesize\ttfamily int Bitmap\+::\+Get\+Obj\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+
+
+Get bmp/obj width and height. 
+
 \begin{DoxyReturn}{Returns}
-~\newline
- 
+returns the objects current bitmap width 
 \end{DoxyReturn}
+\Hypertarget{class_bitmap_a10e7065b785d62c54e8639249526442d}\label{class_bitmap_a10e7065b785d62c54e8639249526442d} 
+\index{Bitmap@{Bitmap}!GetTextureRef@{GetTextureRef}}
+\index{GetTextureRef@{GetTextureRef}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{GetTextureRef()}{GetTextureRef()}}
+{\footnotesize\ttfamily virtual SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} Bitmap\+::\+Get\+Texture\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 \Hypertarget{class_bitmap_aab7b7c873a6bebda83041a77a1bec5ae}\label{class_bitmap_aab7b7c873a6bebda83041a77a1bec5ae} 
 \index{Bitmap@{Bitmap}!GuiDraw@{GuiDraw}}
 \index{GuiDraw@{GuiDraw}!Bitmap@{Bitmap}}
@@ -206,6 +258,16 @@ Draw Function for the Gui.
 
 Implements \mbox{\hyperlink{class_i___g_u_i_window}{I\+\_\+\+GUIWindow}}.
 
+\Hypertarget{class_bitmap_a1b6e42950d8785b2d68714dfc6baa43c}\label{class_bitmap_a1b6e42950d8785b2d68714dfc6baa43c} 
+\index{Bitmap@{Bitmap}!HandleCollisions@{HandleCollisions}}
+\index{HandleCollisions@{HandleCollisions}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{HandleCollisions()}{HandleCollisions()}}
+{\footnotesize\ttfamily void Bitmap\+::\+Handle\+Collisions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*} $>$}]{scenehir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_enemy_a40fa63c318540917c9a2e05deb9c123a}{Enemy}}, \mbox{\hyperlink{class_hero_a3f937163beafede75ec260b256157fcc}{Hero}}, and \mbox{\hyperlink{class_meat_pickup_abcdb374ca9971cea40694bce39882f96}{Meat\+Pickup}}.
+
 \Hypertarget{class_bitmap_a9b48953689d8923614721d0291d1a606}\label{class_bitmap_a9b48953689d8923614721d0291d1a606} 
 \index{Bitmap@{Bitmap}!SaveData@{SaveData}}
 \index{SaveData@{SaveData}!Bitmap@{Bitmap}}
@@ -214,7 +276,9 @@ Implements \mbox{\hyperlink{class_i___g_u_i_window}{I\+\_\+\+GUIWindow}}.
 
 
 
-gives some chars for the save file to differentiate between diff things 
+save/load stuff 
+
+gives some chars for the save file to differentiate between diff things
 
 \begin{DoxyReturn}{Returns}
 ~\newline
@@ -227,13 +291,16 @@ gives some chars for the save file to differentiate between diff things
 {\footnotesize\ttfamily int Bitmap\+::\+Set\+OBJPosX (\begin{DoxyParamCaption}\item[{int}]{new\+ObjX }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
+
+sets an objects x position 
+
+
 \begin{DoxyParams}{Parameters}
-{\em new\+ObjX} & \\
+{\em changes} & current x position with new objects x position \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-~\newline
- 
+returns the objects new x position 
 \end{DoxyReturn}
 \Hypertarget{class_bitmap_ab7d516cd1e9d15c0a8ea94c3f2e6d8ad}\label{class_bitmap_ab7d516cd1e9d15c0a8ea94c3f2e6d8ad} 
 \index{Bitmap@{Bitmap}!SetOBJPosY@{SetOBJPosY}}
@@ -242,14 +309,28 @@ gives some chars for the save file to differentiate between diff things
 {\footnotesize\ttfamily int Bitmap\+::\+Set\+OBJPosY (\begin{DoxyParamCaption}\item[{int}]{new\+ObjY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
+
+sets an objects y position 
+
+
 \begin{DoxyParams}{Parameters}
-{\em new\+ObjY} & \\
+{\em changes} & current y position with new objects y position \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-~\newline
+returns the objects new y position ~\newline
  
 \end{DoxyReturn}
+\Hypertarget{class_bitmap_ab6c6bb65ecb0cebb0b7b7c584816bbf9}\label{class_bitmap_ab6c6bb65ecb0cebb0b7b7c584816bbf9} 
+\index{Bitmap@{Bitmap}!ShiftCollider@{ShiftCollider}}
+\index{ShiftCollider@{ShiftCollider}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{ShiftCollider()}{ShiftCollider()}}
+{\footnotesize\ttfamily void Bitmap\+::\+Shift\+Collider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+offsets collider to center of an object 
+
 \Hypertarget{class_bitmap_af8ac45cf41d54336c9e08f4c8394532c}\label{class_bitmap_af8ac45cf41d54336c9e08f4c8394532c} 
 \index{Bitmap@{Bitmap}!Update@{Update}}
 \index{Update@{Update}!Bitmap@{Bitmap}}
@@ -260,13 +341,92 @@ gives some chars for the save file to differentiate between diff things
 
 Updates the \doxylink{class_bitmap}{Bitmap} logic. 
 
-update for the bitmap to allow the sprite to be moved via player input 
 
-Reimplemented in \mbox{\hyperlink{class_hero_af6713a11b69a1f14f09ba410f49f427c}{Hero}}.
+
+Reimplemented in \mbox{\hyperlink{class_enemy_a614ad271f07ecf63cb3e665155b7e258}{Enemy}}, \mbox{\hyperlink{class_hero_af6713a11b69a1f14f09ba410f49f427c}{Hero}}, and \mbox{\hyperlink{class_meat_pickup_acc40deaf43ade11f3f3d4a6dabf1892a}{Meat\+Pickup}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_bitmap_a9e449fe1c5e03346f4a2a484476cc141}\label{class_bitmap_a9e449fe1c5e03346f4a2a484476cc141} 
+\index{Bitmap@{Bitmap}!DOT\_VEL@{DOT\_VEL}}
+\index{DOT\_VEL@{DOT\_VEL}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{DOT\_VEL}{DOT\_VEL}}
+{\footnotesize\ttfamily const int Bitmap\+::\+DOT\+\_\+\+VEL = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_bitmap_a00bacbc40d43c963243e5af1b6fa97dc}\label{class_bitmap_a00bacbc40d43c963243e5af1b6fa97dc} 
+\index{Bitmap@{Bitmap}!FileName@{FileName}}
+\index{FileName@{FileName}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{FileName}{FileName}}
+{\footnotesize\ttfamily std\+::string Bitmap\+::\+File\+Name}
+
+\Hypertarget{class_bitmap_a6c3365cfb162674388a9452820adf569}\label{class_bitmap_a6c3365cfb162674388a9452820adf569} 
+\index{Bitmap@{Bitmap}!m\_pbitmapSurface@{m\_pbitmapSurface}}
+\index{m\_pbitmapSurface@{m\_pbitmapSurface}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{m\_pbitmapSurface}{m\_pbitmapSurface}}
+{\footnotesize\ttfamily SDL\+\_\+\+Surface\texorpdfstring{$\ast$}{*} Bitmap\+::m\+\_\+pbitmap\+Surface\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bitmap_a6c48f459ff1de3f34c935ce49e0b474b}\label{class_bitmap_a6c48f459ff1de3f34c935ce49e0b474b} 
+\index{Bitmap@{Bitmap}!m\_pbitmapTexture@{m\_pbitmapTexture}}
+\index{m\_pbitmapTexture@{m\_pbitmapTexture}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{m\_pbitmapTexture}{m\_pbitmapTexture}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture\texorpdfstring{$\ast$}{*} Bitmap\+::m\+\_\+pbitmap\+Texture\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bitmap_ace621d4947809c755584af37753e652d}\label{class_bitmap_ace621d4947809c755584af37753e652d} 
+\index{Bitmap@{Bitmap}!m\_pRenderer@{m\_pRenderer}}
+\index{m\_pRenderer@{m\_pRenderer}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{m\_pRenderer}{m\_pRenderer}}
+{\footnotesize\ttfamily SDL\+\_\+\+Renderer\texorpdfstring{$\ast$}{*} Bitmap\+::m\+\_\+p\+Renderer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bitmap_a7ade805194dabe9d4ac1051fb7b44075}\label{class_bitmap_a7ade805194dabe9d4ac1051fb7b44075} 
+\index{Bitmap@{Bitmap}!m\_x@{m\_x}}
+\index{m\_x@{m\_x}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{m\_x}{m\_x}}
+{\footnotesize\ttfamily int Bitmap\+::m\+\_\+x\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+variables for objects and collisions positions 
+
+\Hypertarget{class_bitmap_af4eee64e60c65393ee7c13f65824dff4}\label{class_bitmap_af4eee64e60c65393ee7c13f65824dff4} 
+\index{Bitmap@{Bitmap}!m\_y@{m\_y}}
+\index{m\_y@{m\_y}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{m\_y}{m\_y}}
+{\footnotesize\ttfamily int Bitmap\+::m\+\_\+y\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bitmap_a73576a084861a0d6d200e41eb2a92cc4}\label{class_bitmap_a73576a084861a0d6d200e41eb2a92cc4} 
+\index{Bitmap@{Bitmap}!mCollider@{mCollider}}
+\index{mCollider@{mCollider}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{mCollider}{mCollider}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_circle}{Circle}} Bitmap\+::m\+Collider\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bitmap_a93bd2cdfdf202bdfffc63757c4aafa6c}\label{class_bitmap_a93bd2cdfdf202bdfffc63757c4aafa6c} 
+\index{Bitmap@{Bitmap}!mPosX@{mPosX}}
+\index{mPosX@{mPosX}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{mPosX}{mPosX}}
+{\footnotesize\ttfamily int Bitmap\+::m\+PosX\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bitmap_a7137855cf1d4dc12b82ecd4f76fad611}\label{class_bitmap_a7137855cf1d4dc12b82ecd4f76fad611} 
+\index{Bitmap@{Bitmap}!mPosY@{mPosY}}
+\index{mPosY@{mPosY}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{mPosY}{mPosY}}
+{\footnotesize\ttfamily int Bitmap\+::m\+PosY\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bitmap_a6319e065c640a12ea8bb84f455b75bbc}\label{class_bitmap_a6319e065c640a12ea8bb84f455b75bbc} 
+\index{Bitmap@{Bitmap}!mVelX@{mVelX}}
+\index{mVelX@{mVelX}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{mVelX}{mVelX}}
+{\footnotesize\ttfamily int Bitmap\+::m\+VelX\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bitmap_a48ae0ee6d6de3b9c7a58510cd02b8bf7}\label{class_bitmap_a48ae0ee6d6de3b9c7a58510cd02b8bf7} 
+\index{Bitmap@{Bitmap}!mVelY@{mVelY}}
+\index{mVelY@{mVelY}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{mVelY}{mVelY}}
+{\footnotesize\ttfamily int Bitmap\+::m\+VelY\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Bitmap.\+h\item 
-Bitmap.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_bitmap_8h}{Bitmap.\+h}}\item 
+\mbox{\hyperlink{_bitmap_8cpp}{Bitmap.\+cpp}}\end{DoxyCompactItemize}

@@ -1,10 +1,13 @@
 \doxysection{Game Class Reference}
 \hypertarget{class_game}{}\label{class_game}\index{Game@{Game}}
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\label{class_game_ad59df6562a58a614fda24622d3715b65} 
-{\bfseries Game} ()
+\mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
 \begin{DoxyCompactList}\small\item\em Main Setup for the game engine. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{\texorpdfstring{$\sim$}{\string~}\+Game}} ()
 \item 
@@ -14,20 +17,38 @@ void \mbox{\hyperlink{class_game_ad52624318ad8015682645af96b4ac1c3}{Update\+Text
 \begin{DoxyCompactList}\small\item\em method for adding and using font for text \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_game_a1c5373c68261c54aff03e6abe40fee52}{Update}} ()
 \begin{DoxyCompactList}\small\item\em main game loop \end{DoxyCompactList}\item 
-\Hypertarget{class_game_a4c6e213afd7a79acdaf53225b9b6eaae}\label{class_game_a4c6e213afd7a79acdaf53225b9b6eaae} 
-void {\bfseries Check\+Events} ()
+void \mbox{\hyperlink{class_game_a4c6e213afd7a79acdaf53225b9b6eaae}{Check\+Events}} ()
 \item 
-\Hypertarget{class_game_a96341ca5b54d90adc3ecb3bf0bcd2312}\label{class_game_a96341ca5b54d90adc3ecb3bf0bcd2312} 
-void {\bfseries Run} ()
+void \mbox{\hyperlink{class_game_a96341ca5b54d90adc3ecb3bf0bcd2312}{Run}} ()
 \begin{DoxyCompactList}\small\item\em change background colour with RGB keys \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_game_a7c9b71a129384f3beccbac42a1d8d1ef}{Save}} ()
 \begin{DoxyCompactList}\small\item\em save and load stuff \end{DoxyCompactList}\item 
-\Hypertarget{class_game_a6b43d04d1e47356d918e2afa27e1985d}\label{class_game_a6b43d04d1e47356d918e2afa27e1985d} 
-void {\bfseries Load} ()
-\begin{DoxyCompactList}\small\item\em Loading Functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_game_a6b43d04d1e47356d918e2afa27e1985d}{Load}} ()
+\begin{DoxyCompactList}\small\item\em Loading Functions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_ae6572d58ec96cb59168d9f6b8790b808}{Get\+Hero}} ()
+\item 
+\mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_a802bcaf44ddfe236b0ed798b283d8ed4}{Get\+Enemy}} ()
+\item 
+\mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_a162a9b318a01595334e7a13c85491e2d}{Get\+Item}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_game_a90fd83ee23ee5b639223213e9d0fa298}{Is\+Game\+Running}} = true
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\label{class_game_ad59df6562a58a614fda24622d3715b65} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main Setup for the game engine. 
+
 \Hypertarget{class_game_ae3d112ca6e0e55150d2fdbc704474530}\label{class_game_ae3d112ca6e0e55150d2fdbc704474530} 
 \index{Game@{Game}!````~Game@{\texorpdfstring{$\sim$}{\string~}Game}}
 \index{````~Game@{\texorpdfstring{$\sim$}{\string~}Game}!Game@{Game}}
@@ -41,6 +62,50 @@ destroy fonts
 destroy bitmaps
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_a4c6e213afd7a79acdaf53225b9b6eaae}\label{class_game_a4c6e213afd7a79acdaf53225b9b6eaae} 
+\index{Game@{Game}!CheckEvents@{CheckEvents}}
+\index{CheckEvents@{CheckEvents}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{CheckEvents()}{CheckEvents()}}
+{\footnotesize\ttfamily void Game\+::\+Check\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_a802bcaf44ddfe236b0ed798b283d8ed4}\label{class_game_a802bcaf44ddfe236b0ed798b283d8ed4} 
+\index{Game@{Game}!GetEnemy@{GetEnemy}}
+\index{GetEnemy@{GetEnemy}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{GetEnemy()}{GetEnemy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*} Game\+::\+Get\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_ae6572d58ec96cb59168d9f6b8790b808}\label{class_game_ae6572d58ec96cb59168d9f6b8790b808} 
+\index{Game@{Game}!GetHero@{GetHero}}
+\index{GetHero@{GetHero}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{GetHero()}{GetHero()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*} Game\+::\+Get\+Hero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_a162a9b318a01595334e7a13c85491e2d}\label{class_game_a162a9b318a01595334e7a13c85491e2d} 
+\index{Game@{Game}!GetItem@{GetItem}}
+\index{GetItem@{GetItem}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{GetItem()}{GetItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*} Game\+::\+Get\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_a6b43d04d1e47356d918e2afa27e1985d}\label{class_game_a6b43d04d1e47356d918e2afa27e1985d} 
+\index{Game@{Game}!Load@{Load}}
+\index{Load@{Load}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void Game\+::\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loading Functions. 
+
+\Hypertarget{class_game_a96341ca5b54d90adc3ecb3bf0bcd2312}\label{class_game_a96341ca5b54d90adc3ecb3bf0bcd2312} 
+\index{Game@{Game}!Run@{Run}}
+\index{Run@{Run}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void Game\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+change background colour with RGB keys 
+
 \Hypertarget{class_game_a7c9b71a129384f3beccbac42a1d8d1ef}\label{class_game_a7c9b71a129384f3beccbac42a1d8d1ef} 
 \index{Game@{Game}!Save@{Save}}
 \index{Save@{Save}!Game@{Game}}
@@ -137,7 +202,16 @@ method for adding and using font for text
 \end{DoxyParams}
 
 
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_game_a90fd83ee23ee5b639223213e9d0fa298}\label{class_game_a90fd83ee23ee5b639223213e9d0fa298} 
+\index{Game@{Game}!IsGameRunning@{IsGameRunning}}
+\index{IsGameRunning@{IsGameRunning}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{IsGameRunning}{IsGameRunning}}
+{\footnotesize\ttfamily bool Game\+::\+Is\+Game\+Running = true\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Game.\+h\item 
-Game.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_game_8h}{Game.\+h}}\item 
+\mbox{\hyperlink{_game_8cpp}{Game.\+cpp}}\end{DoxyCompactItemize}

@@ -1,5 +1,5 @@
 \doxysection{Profiler.\+h}
-\hypertarget{_profiler_8h_source}{}\label{_profiler_8h_source}
+\hypertarget{_profiler_8h_source}{}\label{_profiler_8h_source}\mbox{\hyperlink{_profiler_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}SDL.h"{}}}
@@ -11,53 +11,53 @@
 \DoxyCodeLine{00008\ }
 \DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_sample_data}{SampleData}}}
 \DoxyCodeLine{00011\ \{}
-\DoxyCodeLine{00012\ \ \ \ \ \_\_int64\ functionTime;}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ frameReference;}
+\DoxyCodeLine{00012\ \ \ \ \ \_\_int64\ \mbox{\hyperlink{struct_sample_data_a0a5c38dd40d80e48e96dd0dfba8d4353}{functionTime}};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_sample_data_acab5c4bbe349d1f216e84deceb803046}{frameReference}};}
 \DoxyCodeLine{00014\ \};}
 \DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ std::map<const\ char*,\ std::vector<SampleData*>>\ FrameMap;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ std::map<const\ char*,\ std::vector<SampleData*>>\ \mbox{\hyperlink{_profiler_8h_ab1b49ac083856f4fb48add947394a13a}{FrameMap}};}
 \DoxyCodeLine{00017\ }
 \DoxyCodeLine{00018\ }
 \DoxyCodeLine{00019\ }
 \DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_profiler_system}{ProfilerSystem}}}
 \DoxyCodeLine{00021\ \{}
 \DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_profiler_system}{ProfilerSystem}}();}
-\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_profiler_system}{\string~ProfilerSystem}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_profiler_system_aa7e3ea767c34204f9ff3c700388cfa45}{ProfilerSystem}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_profiler_system_a6828f2c94031f607cad96f1f92a42ab9}{\string~ProfilerSystem}}();}
 \DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ startFrame();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_profiler_system_a498888d536a6d82d12d2b58703e80505}{startFrame}}();}
 \DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_profiler_system_a730a549816e2e48f092576b1f08f3962}{storeSample}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ name,\ \_\_int64\ elapsedTime);}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ endFrame();}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_profiler_system_aa73e8057f424a729ec4f37d49fef3fa4}{endFrame}}();}
 \DoxyCodeLine{00029\ }
 \DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00031\ }
 \DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ currentFrame;}
-\DoxyCodeLine{00033\ \ \ \ \ FrameMap\ frameData;}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{_profiler_8h_ab1b49ac083856f4fb48add947394a13a}{FrameMap}}\ frameData;}
 \DoxyCodeLine{00034\ \};}
 \DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{class_profiler_system}{ProfilerSystem}}\ g\_profileManager;}
+\DoxyCodeLine{00036\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{class_profiler_system}{ProfilerSystem}}\ \mbox{\hyperlink{_profiler_8h_a6f00dbbe483432624a7b14bc8f72379a}{g\_profileManager}};}
 \DoxyCodeLine{00037\ }
 \DoxyCodeLine{00038\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_profile}{Profile}}}
 \DoxyCodeLine{00039\ \{}
-\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{struct_profile}{Profile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ name)}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{struct_profile_a2187c1c354a2095ea925093163a9b247}{Profile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ name)}
 \DoxyCodeLine{00041\ \ \ \ \ \{}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \_name\ =\ name;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_profile_a0e7c2707a0db7a00d4a0cb278a4ad803}{\_name}}\ =\ name;}
 \DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ LARGE\_INTEGER\ li;}
 \DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ QueryPerformanceCounter(\&li);}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ startTime\ =\ li.QuadPart;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_profile_a2034eac7c13860ce5a0156495a9c9b9c}{startTime}}\ =\ li.QuadPart;}
 \DoxyCodeLine{00046\ \ \ \ \ \}}
 \DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{struct_profile}{\string~Profile}}()}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{struct_profile_a58fa758a59bc4ee3c1a9980e360e4e98}{\string~Profile}}()}
 \DoxyCodeLine{00049\ \ \ \ \ \{}
 \DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ LARGE\_INTEGER\ li;}
 \DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ QueryPerformanceCounter(\&li);}
 \DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \_\_int64\ endTime\ =\ li.QuadPart;}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \_\_int64\ elapsedTime\ =\ endTime\ -\/\ startTime;}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ g\_profileManager.\mbox{\hyperlink{class_profiler_system_a730a549816e2e48f092576b1f08f3962}{storeSample}}(\_name,\ elapsedTime);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \_\_int64\ elapsedTime\ =\ endTime\ -\/\ \mbox{\hyperlink{struct_profile_a2034eac7c13860ce5a0156495a9c9b9c}{startTime}};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_profiler_8h_a6f00dbbe483432624a7b14bc8f72379a}{g\_profileManager}}.\mbox{\hyperlink{class_profiler_system_a730a549816e2e48f092576b1f08f3962}{storeSample}}(\mbox{\hyperlink{struct_profile_a0e7c2707a0db7a00d4a0cb278a4ad803}{\_name}},\ elapsedTime);}
 \DoxyCodeLine{00055\ \ \ \ \ \}}
 \DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \_name;}
-\DoxyCodeLine{00058\ \ \ \ \ \_\_int64\ startTime;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_profile_a0e7c2707a0db7a00d4a0cb278a4ad803}{\_name}};}
+\DoxyCodeLine{00058\ \ \ \ \ \_\_int64\ \mbox{\hyperlink{struct_profile_a2034eac7c13860ce5a0156495a9c9b9c}{startTime}};}
 \DoxyCodeLine{00059\ \};}
 \DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ PROFILE(name)\ Profile\ p(name)}}
 

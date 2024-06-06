@@ -7,7 +7,8 @@ var hierarchy =
     [ "I_GUIWindow", "class_i___g_u_i_window.html", [
       [ "Bitmap", "class_bitmap.html", [
         [ "Enemy", "class_enemy.html", null ],
-        [ "Hero", "class_hero.html", null ]
+        [ "Hero", "class_hero.html", null ],
+        [ "MeatPickup", "class_meat_pickup.html", null ]
       ] ]
     ] ],
     [ "Input", "class_input.html", null ],
